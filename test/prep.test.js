@@ -4,7 +4,7 @@
 const test = require("node:test");
 const assert = require("node:assert");
 const P = require("../prep.js");
-const B = require("../bank/bank.js");
+const B = require("./fixtures/sample-bank.js");
 
 const day = "2026-11-18";
 const formatsOf = (s) => s.steps.map((x) => P.findItem(B, x.item).format);

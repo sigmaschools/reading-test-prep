@@ -210,6 +210,8 @@
       return;
     }
     box.append(el("h2", { text: p.title }));
+    // A poem's strings are its lines, one under the other; a stanza is a paragraph.
+    box.classList.toggle("poem", p.genre === "poem");
     var idx = 0;
     p.paragraphs.forEach(function (para) {
       var pe = el("p");

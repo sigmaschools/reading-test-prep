@@ -1,0 +1,2986 @@
+{
+ "source": "Compass topic map (server/interests/topicmap/seed.json)",
+ "roots": {
+  "animals": [
+   {
+    "id": "dolphins",
+    "label": "Dolphins",
+    "chain": [
+     "dolphins",
+     "marine-animals",
+     "animals"
+    ]
+   },
+   {
+    "id": "sea-turtles",
+    "label": "Sea turtles",
+    "chain": [
+     "sea-turtles",
+     "marine-animals",
+     "animals"
+    ]
+   },
+   {
+    "id": "coral-reefs",
+    "label": "Coral reefs",
+    "chain": [
+     "coral-reefs",
+     "marine-animals",
+     "animals"
+    ]
+   },
+   {
+    "id": "horses",
+    "label": "Horses",
+    "chain": [
+     "horses",
+     "mammals",
+     "animals"
+    ]
+   },
+   {
+    "id": "bats",
+    "label": "Bats",
+    "chain": [
+     "bats",
+     "mammals",
+     "animals"
+    ]
+   },
+   {
+    "id": "parrots",
+    "label": "Parrots",
+    "chain": [
+     "parrots",
+     "birds",
+     "animals"
+    ]
+   },
+   {
+    "id": "bird-migration",
+    "label": "Bird migration",
+    "chain": [
+     "bird-migration",
+     "birds",
+     "animals"
+    ]
+   },
+   {
+    "id": "crocodiles",
+    "label": "Crocodiles and alligators",
+    "chain": [
+     "crocodiles",
+     "reptiles-amphibians",
+     "animals"
+    ]
+   },
+   {
+    "id": "turtles",
+    "label": "Turtles and tortoises",
+    "chain": [
+     "turtles",
+     "reptiles-amphibians",
+     "animals"
+    ]
+   },
+   {
+    "id": "ants",
+    "label": "Ants",
+    "chain": [
+     "ants",
+     "insects",
+     "animals"
+    ]
+   },
+   {
+    "id": "beetles",
+    "label": "Beetles",
+    "chain": [
+     "beetles",
+     "insects",
+     "animals"
+    ]
+   },
+   {
+    "id": "fossils",
+    "label": "Fossils",
+    "chain": [
+     "fossils",
+     "dinosaurs-prehistoric",
+     "animals"
+    ]
+   },
+   {
+    "id": "endangered-animals",
+    "label": "Endangered animals",
+    "chain": [
+     "endangered-animals",
+     "animals"
+    ]
+   },
+   {
+    "id": "animal-behavior",
+    "label": "Animal behavior",
+    "chain": [
+     "animal-behavior",
+     "animals"
+    ]
+   },
+   {
+    "id": "great-white-shark",
+    "label": "Great white sharks",
+    "chain": [
+     "great-white-shark",
+     "sharks",
+     "marine-animals",
+     "animals"
+    ]
+   },
+   {
+    "id": "hammerhead-shark",
+    "label": "Hammerhead sharks",
+    "chain": [
+     "hammerhead-shark",
+     "sharks",
+     "marine-animals",
+     "animals"
+    ]
+   },
+   {
+    "id": "whale-shark",
+    "label": "Whale sharks",
+    "chain": [
+     "whale-shark",
+     "sharks",
+     "marine-animals",
+     "animals"
+    ]
+   },
+   {
+    "id": "megalodon",
+    "label": "Megalodon",
+    "chain": [
+     "megalodon",
+     "sharks",
+     "marine-animals",
+     "animals"
+    ]
+   },
+   {
+    "id": "orca",
+    "label": "Orcas",
+    "chain": [
+     "orca",
+     "whales",
+     "marine-animals",
+     "animals"
+    ]
+   },
+   {
+    "id": "blue-whale",
+    "label": "Blue whales",
+    "chain": [
+     "blue-whale",
+     "whales",
+     "marine-animals",
+     "animals"
+    ]
+   },
+   {
+    "id": "humpback-whale",
+    "label": "Humpback whales",
+    "chain": [
+     "humpback-whale",
+     "whales",
+     "marine-animals",
+     "animals"
+    ]
+   },
+   {
+    "id": "narwhal",
+    "label": "Narwhals",
+    "chain": [
+     "narwhal",
+     "whales",
+     "marine-animals",
+     "animals"
+    ]
+   },
+   {
+    "id": "giant-squid",
+    "label": "Giant squid",
+    "chain": [
+     "giant-squid",
+     "octopuses",
+     "marine-animals",
+     "animals"
+    ]
+   },
+   {
+    "id": "anglerfish",
+    "label": "Anglerfish",
+    "chain": [
+     "anglerfish",
+     "deep-sea",
+     "marine-animals",
+     "animals"
+    ]
+   },
+   {
+    "id": "jellyfish",
+    "label": "Jellyfish",
+    "chain": [
+     "jellyfish",
+     "deep-sea",
+     "marine-animals",
+     "animals"
+    ]
+   },
+   {
+    "id": "lion",
+    "label": "Lions",
+    "chain": [
+     "lion",
+     "big-cats",
+     "mammals",
+     "animals"
+    ]
+   },
+   {
+    "id": "tiger",
+    "label": "Tigers",
+    "chain": [
+     "tiger",
+     "big-cats",
+     "mammals",
+     "animals"
+    ]
+   },
+   {
+    "id": "cheetah",
+    "label": "Cheetahs",
+    "chain": [
+     "cheetah",
+     "big-cats",
+     "mammals",
+     "animals"
+    ]
+   },
+   {
+    "id": "leopard",
+    "label": "Leopards",
+    "chain": [
+     "leopard",
+     "big-cats",
+     "mammals",
+     "animals"
+    ]
+   },
+   {
+    "id": "jaguar",
+    "label": "Jaguars",
+    "chain": [
+     "jaguar",
+     "big-cats",
+     "mammals",
+     "animals"
+    ]
+   },
+   {
+    "id": "gray-wolf",
+    "label": "Gray wolves",
+    "chain": [
+     "gray-wolf",
+     "wolves",
+     "mammals",
+     "animals"
+    ]
+   },
+   {
+    "id": "fox",
+    "label": "Foxes",
+    "chain": [
+     "fox",
+     "wolves",
+     "mammals",
+     "animals"
+    ]
+   },
+   {
+    "id": "polar-bear",
+    "label": "Polar bears",
+    "chain": [
+     "polar-bear",
+     "bears",
+     "mammals",
+     "animals"
+    ]
+   },
+   {
+    "id": "grizzly-bear",
+    "label": "Grizzly bears",
+    "chain": [
+     "grizzly-bear",
+     "bears",
+     "mammals",
+     "animals"
+    ]
+   },
+   {
+    "id": "giant-panda",
+    "label": "Giant pandas",
+    "chain": [
+     "giant-panda",
+     "bears",
+     "mammals",
+     "animals"
+    ]
+   },
+   {
+    "id": "gorilla",
+    "label": "Gorillas",
+    "chain": [
+     "gorilla",
+     "primates",
+     "mammals",
+     "animals"
+    ]
+   },
+   {
+    "id": "chimpanzee",
+    "label": "Chimpanzees",
+    "chain": [
+     "chimpanzee",
+     "primates",
+     "mammals",
+     "animals"
+    ]
+   },
+   {
+    "id": "orangutan",
+    "label": "Orangutans",
+    "chain": [
+     "orangutan",
+     "primates",
+     "mammals",
+     "animals"
+    ]
+   },
+   {
+    "id": "african-elephant",
+    "label": "African elephants",
+    "chain": [
+     "african-elephant",
+     "elephants",
+     "mammals",
+     "animals"
+    ]
+   },
+   {
+    "id": "asian-elephant",
+    "label": "Asian elephants",
+    "chain": [
+     "asian-elephant",
+     "elephants",
+     "mammals",
+     "animals"
+    ]
+   },
+   {
+    "id": "giraffes",
+    "label": "Giraffes",
+    "chain": [
+     "giraffes",
+     "mammals",
+     "animals"
+    ]
+   },
+   {
+    "id": "kangaroos",
+    "label": "Kangaroos and koalas",
+    "chain": [
+     "kangaroos",
+     "mammals",
+     "animals"
+    ]
+   },
+   {
+    "id": "sloths",
+    "label": "Sloths",
+    "chain": [
+     "sloths",
+     "mammals",
+     "animals"
+    ]
+   },
+   {
+    "id": "otters",
+    "label": "Otters",
+    "chain": [
+     "otters",
+     "mammals",
+     "animals"
+    ]
+   },
+   {
+    "id": "rhinos",
+    "label": "Rhinos and hippos",
+    "chain": [
+     "rhinos",
+     "mammals",
+     "animals"
+    ]
+   },
+   {
+    "id": "bald-eagle",
+    "label": "Bald eagles",
+    "chain": [
+     "bald-eagle",
+     "birds-of-prey",
+     "birds",
+     "animals"
+    ]
+   },
+   {
+    "id": "owl",
+    "label": "Owls",
+    "chain": [
+     "owl",
+     "birds-of-prey",
+     "birds",
+     "animals"
+    ]
+   },
+   {
+    "id": "peregrine-falcon",
+    "label": "Peregrine falcons",
+    "chain": [
+     "peregrine-falcon",
+     "birds-of-prey",
+     "birds",
+     "animals"
+    ]
+   },
+   {
+    "id": "emperor-penguin",
+    "label": "Emperor penguins",
+    "chain": [
+     "emperor-penguin",
+     "penguins",
+     "birds",
+     "animals"
+    ]
+   },
+   {
+    "id": "hummingbirds",
+    "label": "Hummingbirds",
+    "chain": [
+     "hummingbirds",
+     "birds",
+     "animals"
+    ]
+   },
+   {
+    "id": "chickens",
+    "label": "Chickens and farm birds",
+    "chain": [
+     "chickens",
+     "birds",
+     "animals"
+    ]
+   },
+   {
+    "id": "python-snake",
+    "label": "Pythons and boas",
+    "chain": [
+     "python-snake",
+     "snakes",
+     "reptiles-amphibians",
+     "animals"
+    ]
+   },
+   {
+    "id": "venomous-snakes",
+    "label": "Venomous snakes",
+    "chain": [
+     "venomous-snakes",
+     "snakes",
+     "reptiles-amphibians",
+     "animals"
+    ]
+   },
+   {
+    "id": "komodo-dragon",
+    "label": "Komodo dragons",
+    "chain": [
+     "komodo-dragon",
+     "lizards",
+     "reptiles-amphibians",
+     "animals"
+    ]
+   },
+   {
+    "id": "chameleon",
+    "label": "Chameleons",
+    "chain": [
+     "chameleon",
+     "lizards",
+     "reptiles-amphibians",
+     "animals"
+    ]
+   },
+   {
+    "id": "gecko",
+    "label": "Geckos",
+    "chain": [
+     "gecko",
+     "lizards",
+     "reptiles-amphibians",
+     "animals"
+    ]
+   },
+   {
+    "id": "axolotl",
+    "label": "Axolotls",
+    "chain": [
+     "axolotl",
+     "frogs",
+     "reptiles-amphibians",
+     "animals"
+    ]
+   },
+   {
+    "id": "poison-dart-frog",
+    "label": "Poison dart frogs",
+    "chain": [
+     "poison-dart-frog",
+     "frogs",
+     "reptiles-amphibians",
+     "animals"
+    ]
+   },
+   {
+    "id": "tarantula",
+    "label": "Tarantulas",
+    "chain": [
+     "tarantula",
+     "spiders",
+     "insects",
+     "animals"
+    ]
+   },
+   {
+    "id": "honeybee",
+    "label": "Honeybees",
+    "chain": [
+     "honeybee",
+     "bees",
+     "insects",
+     "animals"
+    ]
+   },
+   {
+    "id": "monarch-butterfly",
+    "label": "Monarch butterflies",
+    "chain": [
+     "monarch-butterfly",
+     "butterflies",
+     "insects",
+     "animals"
+    ]
+   },
+   {
+    "id": "dog-breeds",
+    "label": "Dog breeds",
+    "chain": [
+     "dog-breeds",
+     "dogs",
+     "pets",
+     "animals"
+    ]
+   },
+   {
+    "id": "dog-training",
+    "label": "Dog training",
+    "chain": [
+     "dog-training",
+     "dogs",
+     "pets",
+     "animals"
+    ]
+   },
+   {
+    "id": "cat-breeds",
+    "label": "Cat breeds",
+    "chain": [
+     "cat-breeds",
+     "cats",
+     "pets",
+     "animals"
+    ]
+   },
+   {
+    "id": "rabbits",
+    "label": "Rabbits",
+    "chain": [
+     "rabbits",
+     "small-pets",
+     "pets",
+     "animals"
+    ]
+   },
+   {
+    "id": "hamsters",
+    "label": "Hamsters and guinea pigs",
+    "chain": [
+     "hamsters",
+     "small-pets",
+     "pets",
+     "animals"
+    ]
+   },
+   {
+    "id": "aquarium-fish",
+    "label": "Aquarium fish",
+    "chain": [
+     "aquarium-fish",
+     "small-pets",
+     "pets",
+     "animals"
+    ]
+   },
+   {
+    "id": "tyrannosaurus",
+    "label": "Tyrannosaurus rex",
+    "chain": [
+     "tyrannosaurus",
+     "dinosaurs",
+     "dinosaurs-prehistoric",
+     "animals"
+    ]
+   },
+   {
+    "id": "velociraptor",
+    "label": "Velociraptor",
+    "chain": [
+     "velociraptor",
+     "dinosaurs",
+     "dinosaurs-prehistoric",
+     "animals"
+    ]
+   },
+   {
+    "id": "triceratops",
+    "label": "Triceratops",
+    "chain": [
+     "triceratops",
+     "dinosaurs",
+     "dinosaurs-prehistoric",
+     "animals"
+    ]
+   },
+   {
+    "id": "stegosaurus",
+    "label": "Stegosaurus",
+    "chain": [
+     "stegosaurus",
+     "dinosaurs",
+     "dinosaurs-prehistoric",
+     "animals"
+    ]
+   },
+   {
+    "id": "brachiosaurus",
+    "label": "Brachiosaurus",
+    "chain": [
+     "brachiosaurus",
+     "dinosaurs",
+     "dinosaurs-prehistoric",
+     "animals"
+    ]
+   },
+   {
+    "id": "spinosaurus",
+    "label": "Spinosaurus",
+    "chain": [
+     "spinosaurus",
+     "dinosaurs",
+     "dinosaurs-prehistoric",
+     "animals"
+    ]
+   },
+   {
+    "id": "pterosaurs",
+    "label": "Pterosaurs",
+    "chain": [
+     "pterosaurs",
+     "dinosaurs",
+     "dinosaurs-prehistoric",
+     "animals"
+    ]
+   },
+   {
+    "id": "marine-reptiles",
+    "label": "Prehistoric sea reptiles",
+    "chain": [
+     "marine-reptiles",
+     "dinosaurs",
+     "dinosaurs-prehistoric",
+     "animals"
+    ]
+   },
+   {
+    "id": "dinosaur-extinction",
+    "label": "Dinosaur extinction",
+    "chain": [
+     "dinosaur-extinction",
+     "dinosaurs",
+     "dinosaurs-prehistoric",
+     "animals"
+    ]
+   },
+   {
+    "id": "woolly-mammoth",
+    "label": "Woolly mammoths",
+    "chain": [
+     "woolly-mammoth",
+     "ice-age-animals",
+     "dinosaurs-prehistoric",
+     "animals"
+    ]
+   },
+   {
+    "id": "saber-toothed-cat",
+    "label": "Saber-toothed cats",
+    "chain": [
+     "saber-toothed-cat",
+     "ice-age-animals",
+     "dinosaurs-prehistoric",
+     "animals"
+    ]
+   }
+  ],
+  "nature-earth": [
+   {
+    "id": "climate",
+    "label": "Climate and climate change",
+    "chain": [
+     "climate",
+     "weather",
+     "nature-earth"
+    ]
+   },
+   {
+    "id": "caves",
+    "label": "Caves",
+    "chain": [
+     "caves",
+     "geology",
+     "nature-earth"
+    ]
+   },
+   {
+    "id": "deserts",
+    "label": "Deserts",
+    "chain": [
+     "deserts",
+     "ecosystems",
+     "nature-earth"
+    ]
+   },
+   {
+    "id": "rivers-lakes",
+    "label": "Rivers and lakes",
+    "chain": [
+     "rivers-lakes",
+     "ecosystems",
+     "nature-earth"
+    ]
+   },
+   {
+    "id": "flowers",
+    "label": "Flowers",
+    "chain": [
+     "flowers",
+     "plants",
+     "nature-earth"
+    ]
+   },
+   {
+    "id": "gardening",
+    "label": "Gardening",
+    "chain": [
+     "gardening",
+     "plants",
+     "nature-earth"
+    ]
+   },
+   {
+    "id": "fungi",
+    "label": "Mushrooms and fungi",
+    "chain": [
+     "fungi",
+     "plants",
+     "nature-earth"
+    ]
+   },
+   {
+    "id": "hurricanes",
+    "label": "Hurricanes",
+    "chain": [
+     "hurricanes",
+     "storms",
+     "weather",
+     "nature-earth"
+    ]
+   },
+   {
+    "id": "tornadoes",
+    "label": "Tornadoes",
+    "chain": [
+     "tornadoes",
+     "storms",
+     "weather",
+     "nature-earth"
+    ]
+   },
+   {
+    "id": "lightning",
+    "label": "Lightning and thunderstorms",
+    "chain": [
+     "lightning",
+     "storms",
+     "weather",
+     "nature-earth"
+    ]
+   },
+   {
+    "id": "snow-ice",
+    "label": "Snow and ice",
+    "chain": [
+     "snow-ice",
+     "seasons",
+     "weather",
+     "nature-earth"
+    ]
+   },
+   {
+    "id": "mount-vesuvius",
+    "label": "Mount Vesuvius and Pompeii",
+    "chain": [
+     "mount-vesuvius",
+     "volcanoes",
+     "geology",
+     "nature-earth"
+    ]
+   },
+   {
+    "id": "yellowstone",
+    "label": "Yellowstone",
+    "chain": [
+     "yellowstone",
+     "volcanoes",
+     "geology",
+     "nature-earth"
+    ]
+   },
+   {
+    "id": "tsunamis",
+    "label": "Tsunamis",
+    "chain": [
+     "tsunamis",
+     "earthquakes",
+     "geology",
+     "nature-earth"
+    ]
+   },
+   {
+    "id": "plate-tectonics",
+    "label": "Plate tectonics",
+    "chain": [
+     "plate-tectonics",
+     "earthquakes",
+     "geology",
+     "nature-earth"
+    ]
+   },
+   {
+    "id": "crystals-gems",
+    "label": "Crystals and gems",
+    "chain": [
+     "crystals-gems",
+     "rocks-minerals",
+     "geology",
+     "nature-earth"
+    ]
+   },
+   {
+    "id": "mariana-trench",
+    "label": "The Mariana Trench",
+    "chain": [
+     "mariana-trench",
+     "oceans",
+     "ecosystems",
+     "nature-earth"
+    ]
+   },
+   {
+    "id": "amazon-rainforest",
+    "label": "The Amazon rainforest",
+    "chain": [
+     "amazon-rainforest",
+     "rainforests",
+     "ecosystems",
+     "nature-earth"
+    ]
+   },
+   {
+    "id": "mount-everest",
+    "label": "Mount Everest",
+    "chain": [
+     "mount-everest",
+     "mountains",
+     "ecosystems",
+     "nature-earth"
+    ]
+   },
+   {
+    "id": "mountain-climbing",
+    "label": "Mountain climbing",
+    "chain": [
+     "mountain-climbing",
+     "mountains",
+     "ecosystems",
+     "nature-earth"
+    ]
+   },
+   {
+    "id": "antarctica",
+    "label": "Antarctica",
+    "chain": [
+     "antarctica",
+     "polar-regions",
+     "ecosystems",
+     "nature-earth"
+    ]
+   },
+   {
+    "id": "arctic",
+    "label": "The Arctic",
+    "chain": [
+     "arctic",
+     "polar-regions",
+     "ecosystems",
+     "nature-earth"
+    ]
+   },
+   {
+    "id": "glaciers",
+    "label": "Glaciers and icebergs",
+    "chain": [
+     "glaciers",
+     "polar-regions",
+     "ecosystems",
+     "nature-earth"
+    ]
+   },
+   {
+    "id": "redwoods",
+    "label": "Redwoods and giant trees",
+    "chain": [
+     "redwoods",
+     "trees",
+     "plants",
+     "nature-earth"
+    ]
+   },
+   {
+    "id": "venus-flytrap",
+    "label": "Venus flytraps",
+    "chain": [
+     "venus-flytrap",
+     "carnivorous-plants",
+     "plants",
+     "nature-earth"
+    ]
+   },
+   {
+    "id": "recycling",
+    "label": "Recycling",
+    "chain": [
+     "recycling",
+     "environment",
+     "nature-earth"
+    ]
+   },
+   {
+    "id": "pollution",
+    "label": "Pollution",
+    "chain": [
+     "pollution",
+     "environment",
+     "nature-earth"
+    ]
+   }
+  ],
+  "space": [
+   {
+    "id": "black-holes",
+    "label": "Black holes",
+    "chain": [
+     "black-holes",
+     "space"
+    ]
+   },
+   {
+    "id": "moon",
+    "label": "The Moon",
+    "chain": [
+     "moon",
+     "space"
+    ]
+   },
+   {
+    "id": "mars",
+    "label": "Mars",
+    "chain": [
+     "mars",
+     "planets",
+     "space"
+    ]
+   },
+   {
+    "id": "jupiter",
+    "label": "Jupiter",
+    "chain": [
+     "jupiter",
+     "planets",
+     "space"
+    ]
+   },
+   {
+    "id": "saturn",
+    "label": "Saturn",
+    "chain": [
+     "saturn",
+     "planets",
+     "space"
+    ]
+   },
+   {
+    "id": "earth-planet",
+    "label": "Earth as a planet",
+    "chain": [
+     "earth-planet",
+     "planets",
+     "space"
+    ]
+   },
+   {
+    "id": "pluto",
+    "label": "Pluto and dwarf planets",
+    "chain": [
+     "pluto",
+     "planets",
+     "space"
+    ]
+   },
+   {
+    "id": "venus",
+    "label": "Venus",
+    "chain": [
+     "venus",
+     "planets",
+     "space"
+    ]
+   },
+   {
+    "id": "mercury-planet",
+    "label": "Mercury",
+    "chain": [
+     "mercury-planet",
+     "planets",
+     "space"
+    ]
+   },
+   {
+    "id": "neptune-uranus",
+    "label": "Neptune and Uranus",
+    "chain": [
+     "neptune-uranus",
+     "planets",
+     "space"
+    ]
+   },
+   {
+    "id": "sun",
+    "label": "The Sun",
+    "chain": [
+     "sun",
+     "stars-galaxies",
+     "space"
+    ]
+   },
+   {
+    "id": "milky-way",
+    "label": "The Milky Way",
+    "chain": [
+     "milky-way",
+     "stars-galaxies",
+     "space"
+    ]
+   },
+   {
+    "id": "supernovas",
+    "label": "Supernovas",
+    "chain": [
+     "supernovas",
+     "stars-galaxies",
+     "space"
+    ]
+   },
+   {
+    "id": "constellations",
+    "label": "Constellations",
+    "chain": [
+     "constellations",
+     "stars-galaxies",
+     "space"
+    ]
+   },
+   {
+    "id": "apollo-11",
+    "label": "Apollo 11 and the Moon landing",
+    "chain": [
+     "apollo-11",
+     "space-exploration",
+     "space"
+    ]
+   },
+   {
+    "id": "international-space-station",
+    "label": "International Space Station",
+    "chain": [
+     "international-space-station",
+     "space-exploration",
+     "space"
+    ]
+   },
+   {
+    "id": "mars-rovers",
+    "label": "Mars rovers",
+    "chain": [
+     "mars-rovers",
+     "space-exploration",
+     "space"
+    ]
+   },
+   {
+    "id": "rockets",
+    "label": "Rockets",
+    "chain": [
+     "rockets",
+     "space-exploration",
+     "space"
+    ]
+   },
+   {
+    "id": "james-webb-telescope",
+    "label": "James Webb Space Telescope",
+    "chain": [
+     "james-webb-telescope",
+     "space-exploration",
+     "space"
+    ]
+   },
+   {
+    "id": "neil-armstrong",
+    "label": "Neil Armstrong",
+    "chain": [
+     "neil-armstrong",
+     "astronauts",
+     "space"
+    ]
+   },
+   {
+    "id": "sally-ride",
+    "label": "Sally Ride",
+    "chain": [
+     "sally-ride",
+     "astronauts",
+     "space"
+    ]
+   },
+   {
+    "id": "ufos",
+    "label": "UFOs",
+    "chain": [
+     "ufos",
+     "aliens",
+     "space"
+    ]
+   },
+   {
+    "id": "comets-asteroids",
+    "label": "Comets and asteroids",
+    "chain": [
+     "comets-asteroids",
+     "astronomy",
+     "space"
+    ]
+   },
+   {
+    "id": "eclipses",
+    "label": "Eclipses",
+    "chain": [
+     "eclipses",
+     "astronomy",
+     "space"
+    ]
+   }
+  ],
+  "science": [
+   {
+    "id": "nutrition",
+    "label": "Food and nutrition",
+    "chain": [
+     "nutrition",
+     "human-body",
+     "science"
+    ]
+   },
+   {
+    "id": "senses",
+    "label": "The five senses",
+    "chain": [
+     "senses",
+     "human-body",
+     "science"
+    ]
+   },
+   {
+    "id": "dreams-sleep",
+    "label": "Dreams and sleep",
+    "chain": [
+     "dreams-sleep",
+     "brain",
+     "human-body",
+     "science"
+    ]
+   },
+   {
+    "id": "germs-viruses",
+    "label": "Germs and viruses",
+    "chain": [
+     "germs-viruses",
+     "health",
+     "human-body",
+     "science"
+    ]
+   },
+   {
+    "id": "doctors-medicine",
+    "label": "Doctors and medicine",
+    "chain": [
+     "doctors-medicine",
+     "health",
+     "human-body",
+     "science"
+    ]
+   },
+   {
+    "id": "bones-skeleton",
+    "label": "Bones and the skeleton",
+    "chain": [
+     "bones-skeleton",
+     "human-body",
+     "science"
+    ]
+   },
+   {
+    "id": "heart-blood",
+    "label": "The heart and blood",
+    "chain": [
+     "heart-blood",
+     "human-body",
+     "science"
+    ]
+   },
+   {
+    "id": "slime",
+    "label": "Slime",
+    "chain": [
+     "slime",
+     "experiments",
+     "chemistry",
+     "science"
+    ]
+   },
+   {
+    "id": "science-fair",
+    "label": "Science fair projects",
+    "chain": [
+     "science-fair",
+     "experiments",
+     "chemistry",
+     "science"
+    ]
+   },
+   {
+    "id": "periodic-table",
+    "label": "The periodic table",
+    "chain": [
+     "periodic-table",
+     "elements",
+     "chemistry",
+     "science"
+    ]
+   },
+   {
+    "id": "atoms-molecules",
+    "label": "Atoms and molecules",
+    "chain": [
+     "atoms-molecules",
+     "elements",
+     "chemistry",
+     "science"
+    ]
+   },
+   {
+    "id": "electricity",
+    "label": "Electricity",
+    "chain": [
+     "electricity",
+     "energy",
+     "physics",
+     "science"
+    ]
+   },
+   {
+    "id": "magnets",
+    "label": "Magnets",
+    "chain": [
+     "magnets",
+     "energy",
+     "physics",
+     "science"
+    ]
+   },
+   {
+    "id": "renewable-energy",
+    "label": "Renewable energy",
+    "chain": [
+     "renewable-energy",
+     "energy",
+     "physics",
+     "science"
+    ]
+   },
+   {
+    "id": "rainbows",
+    "label": "Rainbows",
+    "chain": [
+     "rainbows",
+     "light-sound",
+     "physics",
+     "science"
+    ]
+   },
+   {
+    "id": "optical-illusions",
+    "label": "Optical illusions",
+    "chain": [
+     "optical-illusions",
+     "light-sound",
+     "physics",
+     "science"
+    ]
+   },
+   {
+    "id": "gravity",
+    "label": "Gravity",
+    "chain": [
+     "gravity",
+     "forces-motion",
+     "physics",
+     "science"
+    ]
+   },
+   {
+    "id": "roller-coasters",
+    "label": "Roller coasters",
+    "chain": [
+     "roller-coasters",
+     "forces-motion",
+     "physics",
+     "science"
+    ]
+   },
+   {
+    "id": "dna",
+    "label": "DNA",
+    "chain": [
+     "dna",
+     "cells-dna",
+     "biology",
+     "science"
+    ]
+   },
+   {
+    "id": "charles-darwin",
+    "label": "Charles Darwin",
+    "chain": [
+     "charles-darwin",
+     "evolution",
+     "biology",
+     "science"
+    ]
+   },
+   {
+    "id": "bacteria",
+    "label": "Bacteria",
+    "chain": [
+     "bacteria",
+     "microbes",
+     "biology",
+     "science"
+    ]
+   },
+   {
+    "id": "microscopes",
+    "label": "Microscopes",
+    "chain": [
+     "microscopes",
+     "microbes",
+     "biology",
+     "science"
+    ]
+   },
+   {
+    "id": "thomas-edison",
+    "label": "Thomas Edison",
+    "chain": [
+     "thomas-edison",
+     "inventions",
+     "science"
+    ]
+   },
+   {
+    "id": "wright-brothers",
+    "label": "The Wright brothers",
+    "chain": [
+     "wright-brothers",
+     "inventions",
+     "science"
+    ]
+   },
+   {
+    "id": "nikola-tesla",
+    "label": "Nikola Tesla",
+    "chain": [
+     "nikola-tesla",
+     "inventions",
+     "science"
+    ]
+   },
+   {
+    "id": "printing-press",
+    "label": "The printing press",
+    "chain": [
+     "printing-press",
+     "inventions",
+     "science"
+    ]
+   },
+   {
+    "id": "geometry",
+    "label": "Geometry and shapes",
+    "chain": [
+     "geometry",
+     "math",
+     "science"
+    ]
+   },
+   {
+    "id": "big-numbers",
+    "label": "Big numbers and infinity",
+    "chain": [
+     "big-numbers",
+     "math",
+     "science"
+    ]
+   },
+   {
+    "id": "codes-ciphers",
+    "label": "Codes and secret messages",
+    "chain": [
+     "codes-ciphers",
+     "math",
+     "science"
+    ]
+   }
+  ],
+  "technology": [
+   {
+    "id": "video-game-design",
+    "label": "Making video games",
+    "chain": [
+     "video-game-design",
+     "technology"
+    ]
+   },
+   {
+    "id": "3d-printing",
+    "label": "3D printing",
+    "chain": [
+     "3d-printing",
+     "technology"
+    ]
+   },
+   {
+    "id": "robot-competitions",
+    "label": "Robot competitions",
+    "chain": [
+     "robot-competitions",
+     "robots",
+     "technology"
+    ]
+   },
+   {
+    "id": "chatbots",
+    "label": "Chatbots",
+    "chain": [
+     "chatbots",
+     "artificial-intelligence",
+     "technology"
+    ]
+   },
+   {
+    "id": "scratch-coding",
+    "label": "Scratch",
+    "chain": [
+     "scratch-coding",
+     "coding",
+     "technology"
+    ]
+   },
+   {
+    "id": "python-coding",
+    "label": "Python programming",
+    "chain": [
+     "python-coding",
+     "coding",
+     "technology"
+    ]
+   },
+   {
+    "id": "web-design",
+    "label": "Making websites",
+    "chain": [
+     "web-design",
+     "coding",
+     "technology"
+    ]
+   },
+   {
+    "id": "internet",
+    "label": "The internet",
+    "chain": [
+     "internet",
+     "computers",
+     "technology"
+    ]
+   },
+   {
+    "id": "computer-building",
+    "label": "Building computers",
+    "chain": [
+     "computer-building",
+     "computers",
+     "technology"
+    ]
+   },
+   {
+    "id": "smartphones",
+    "label": "Smartphones",
+    "chain": [
+     "smartphones",
+     "gadgets",
+     "technology"
+    ]
+   },
+   {
+    "id": "drones",
+    "label": "Drones",
+    "chain": [
+     "drones",
+     "gadgets",
+     "technology"
+    ]
+   }
+  ],
+  "vehicles-engineering": [
+   {
+    "id": "engineering",
+    "label": "Engineering",
+    "chain": [
+     "engineering",
+     "vehicles-engineering"
+    ]
+   },
+   {
+    "id": "supercars",
+    "label": "Supercars",
+    "chain": [
+     "supercars",
+     "cars",
+     "vehicles-engineering"
+    ]
+   },
+   {
+    "id": "electric-cars",
+    "label": "Electric cars",
+    "chain": [
+     "electric-cars",
+     "cars",
+     "vehicles-engineering"
+    ]
+   },
+   {
+    "id": "monster-trucks",
+    "label": "Monster trucks",
+    "chain": [
+     "monster-trucks",
+     "cars",
+     "vehicles-engineering"
+    ]
+   },
+   {
+    "id": "bullet-trains",
+    "label": "Bullet trains",
+    "chain": [
+     "bullet-trains",
+     "trains",
+     "vehicles-engineering"
+    ]
+   },
+   {
+    "id": "steam-trains",
+    "label": "Steam trains",
+    "chain": [
+     "steam-trains",
+     "trains",
+     "vehicles-engineering"
+    ]
+   },
+   {
+    "id": "fighter-jets",
+    "label": "Fighter jets",
+    "chain": [
+     "fighter-jets",
+     "airplanes",
+     "vehicles-engineering"
+    ]
+   },
+   {
+    "id": "helicopters",
+    "label": "Helicopters",
+    "chain": [
+     "helicopters",
+     "airplanes",
+     "vehicles-engineering"
+    ]
+   },
+   {
+    "id": "titanic",
+    "label": "The Titanic",
+    "chain": [
+     "titanic",
+     "ships",
+     "vehicles-engineering"
+    ]
+   },
+   {
+    "id": "submarines",
+    "label": "Submarines",
+    "chain": [
+     "submarines",
+     "ships",
+     "vehicles-engineering"
+    ]
+   },
+   {
+    "id": "aircraft-carriers",
+    "label": "Aircraft carriers",
+    "chain": [
+     "aircraft-carriers",
+     "ships",
+     "vehicles-engineering"
+    ]
+   },
+   {
+    "id": "construction-vehicles",
+    "label": "Construction vehicles",
+    "chain": [
+     "construction-vehicles",
+     "trucks",
+     "vehicles-engineering"
+    ]
+   },
+   {
+    "id": "fire-trucks",
+    "label": "Fire trucks",
+    "chain": [
+     "fire-trucks",
+     "trucks",
+     "vehicles-engineering"
+    ]
+   },
+   {
+    "id": "skyscrapers",
+    "label": "Skyscrapers",
+    "chain": [
+     "skyscrapers",
+     "buildings",
+     "vehicles-engineering"
+    ]
+   },
+   {
+    "id": "bridges",
+    "label": "Bridges",
+    "chain": [
+     "bridges",
+     "buildings",
+     "vehicles-engineering"
+    ]
+   },
+   {
+    "id": "castles",
+    "label": "Castles",
+    "chain": [
+     "castles",
+     "buildings",
+     "vehicles-engineering"
+    ]
+   }
+  ],
+  "people-places": [
+   {
+    "id": "cities",
+    "label": "Cities",
+    "chain": [
+     "cities",
+     "people-places"
+    ]
+   },
+   {
+    "id": "japan",
+    "label": "Japan",
+    "chain": [
+     "japan",
+     "countries-cultures",
+     "people-places"
+    ]
+   },
+   {
+    "id": "mexico",
+    "label": "Mexico",
+    "chain": [
+     "mexico",
+     "countries-cultures",
+     "people-places"
+    ]
+   },
+   {
+    "id": "india",
+    "label": "India",
+    "chain": [
+     "india",
+     "countries-cultures",
+     "people-places"
+    ]
+   },
+   {
+    "id": "china-today",
+    "label": "China",
+    "chain": [
+     "china-today",
+     "countries-cultures",
+     "people-places"
+    ]
+   },
+   {
+    "id": "france",
+    "label": "France",
+    "chain": [
+     "france",
+     "countries-cultures",
+     "people-places"
+    ]
+   },
+   {
+    "id": "united-kingdom",
+    "label": "The United Kingdom",
+    "chain": [
+     "united-kingdom",
+     "countries-cultures",
+     "people-places"
+    ]
+   },
+   {
+    "id": "maps-flags",
+    "label": "Maps and flags",
+    "chain": [
+     "maps-flags",
+     "geography",
+     "people-places"
+    ]
+   },
+   {
+    "id": "continents",
+    "label": "Continents and countries",
+    "chain": [
+     "continents",
+     "geography",
+     "people-places"
+    ]
+   },
+   {
+    "id": "spanish",
+    "label": "Spanish",
+    "chain": [
+     "spanish",
+     "languages",
+     "people-places"
+    ]
+   },
+   {
+    "id": "sign-language",
+    "label": "Sign language",
+    "chain": [
+     "sign-language",
+     "languages",
+     "people-places"
+    ]
+   },
+   {
+    "id": "halloween",
+    "label": "Halloween",
+    "chain": [
+     "halloween",
+     "holidays",
+     "people-places"
+    ]
+   },
+   {
+    "id": "christmas",
+    "label": "Christmas",
+    "chain": [
+     "christmas",
+     "holidays",
+     "people-places"
+    ]
+   },
+   {
+    "id": "norse-mythology",
+    "label": "Norse mythology",
+    "chain": [
+     "norse-mythology",
+     "mythology",
+     "people-places"
+    ]
+   },
+   {
+    "id": "dragons",
+    "label": "Dragons",
+    "chain": [
+     "dragons",
+     "mythology",
+     "people-places"
+    ]
+   },
+   {
+    "id": "mythical-creatures",
+    "label": "Mythical creatures",
+    "chain": [
+     "mythical-creatures",
+     "mythology",
+     "people-places"
+    ]
+   }
+  ],
+  "arts-entertainment": [
+   {
+    "id": "photography",
+    "label": "Photography",
+    "chain": [
+     "photography",
+     "arts-entertainment"
+    ]
+   },
+   {
+    "id": "fashion",
+    "label": "Fashion and design",
+    "chain": [
+     "fashion",
+     "arts-entertainment"
+    ]
+   },
+   {
+    "id": "painting",
+    "label": "Painting",
+    "chain": [
+     "painting",
+     "drawing",
+     "arts-entertainment"
+    ]
+   },
+   {
+    "id": "anime-drawing",
+    "label": "Drawing anime and manga",
+    "chain": [
+     "anime-drawing",
+     "drawing",
+     "arts-entertainment"
+    ]
+   },
+   {
+    "id": "famous-artists",
+    "label": "Famous artists",
+    "chain": [
+     "famous-artists",
+     "drawing",
+     "arts-entertainment"
+    ]
+   },
+   {
+    "id": "piano",
+    "label": "Piano",
+    "chain": [
+     "piano",
+     "music",
+     "arts-entertainment"
+    ]
+   },
+   {
+    "id": "guitar",
+    "label": "Guitar",
+    "chain": [
+     "guitar",
+     "music",
+     "arts-entertainment"
+    ]
+   },
+   {
+    "id": "drums",
+    "label": "Drums",
+    "chain": [
+     "drums",
+     "music",
+     "arts-entertainment"
+    ]
+   },
+   {
+    "id": "singing",
+    "label": "Singing",
+    "chain": [
+     "singing",
+     "music",
+     "arts-entertainment"
+    ]
+   },
+   {
+    "id": "composers",
+    "label": "Classical music and composers",
+    "chain": [
+     "composers",
+     "music",
+     "arts-entertainment"
+    ]
+   },
+   {
+    "id": "animated-movies",
+    "label": "Animated movies",
+    "chain": [
+     "animated-movies",
+     "movies",
+     "arts-entertainment"
+    ]
+   },
+   {
+    "id": "star-wars",
+    "label": "Star Wars",
+    "chain": [
+     "star-wars",
+     "movies",
+     "arts-entertainment"
+    ]
+   },
+   {
+    "id": "filmmaking",
+    "label": "Making movies",
+    "chain": [
+     "filmmaking",
+     "movies",
+     "arts-entertainment"
+    ]
+   },
+   {
+    "id": "harry-potter",
+    "label": "Harry Potter",
+    "chain": [
+     "harry-potter",
+     "books-writing",
+     "arts-entertainment"
+    ]
+   },
+   {
+    "id": "writing-stories",
+    "label": "Writing stories",
+    "chain": [
+     "writing-stories",
+     "books-writing",
+     "arts-entertainment"
+    ]
+   },
+   {
+    "id": "poetry",
+    "label": "Poetry",
+    "chain": [
+     "poetry",
+     "books-writing",
+     "arts-entertainment"
+    ]
+   },
+   {
+    "id": "fantasy-books",
+    "label": "Fantasy books",
+    "chain": [
+     "fantasy-books",
+     "books-writing",
+     "arts-entertainment"
+    ]
+   },
+   {
+    "id": "mystery-books",
+    "label": "Mysteries and detective stories",
+    "chain": [
+     "mystery-books",
+     "books-writing",
+     "arts-entertainment"
+    ]
+   },
+   {
+    "id": "ballet",
+    "label": "Ballet",
+    "chain": [
+     "ballet",
+     "theater-dance",
+     "arts-entertainment"
+    ]
+   },
+   {
+    "id": "hip-hop-dance",
+    "label": "Hip-hop dance",
+    "chain": [
+     "hip-hop-dance",
+     "theater-dance",
+     "arts-entertainment"
+    ]
+   },
+   {
+    "id": "acting",
+    "label": "Acting",
+    "chain": [
+     "acting",
+     "theater-dance",
+     "arts-entertainment"
+    ]
+   },
+   {
+    "id": "superheroes",
+    "label": "Superheroes",
+    "chain": [
+     "superheroes",
+     "comics",
+     "arts-entertainment"
+    ]
+   },
+   {
+    "id": "manga",
+    "label": "Manga and anime",
+    "chain": [
+     "manga",
+     "comics",
+     "arts-entertainment"
+    ]
+   }
+  ],
+  "sports": [
+   {
+    "id": "swimming",
+    "label": "Swimming",
+    "chain": [
+     "swimming",
+     "sports"
+    ]
+   },
+   {
+    "id": "gymnastics",
+    "label": "Gymnastics",
+    "chain": [
+     "gymnastics",
+     "sports"
+    ]
+   },
+   {
+    "id": "world-cup",
+    "label": "The World Cup",
+    "chain": [
+     "world-cup",
+     "soccer",
+     "sports"
+    ]
+   },
+   {
+    "id": "lionel-messi",
+    "label": "Lionel Messi",
+    "chain": [
+     "lionel-messi",
+     "soccer",
+     "sports"
+    ]
+   },
+   {
+    "id": "cristiano-ronaldo",
+    "label": "Cristiano Ronaldo",
+    "chain": [
+     "cristiano-ronaldo",
+     "soccer",
+     "sports"
+    ]
+   },
+   {
+    "id": "nba",
+    "label": "The NBA",
+    "chain": [
+     "nba",
+     "basketball",
+     "sports"
+    ]
+   },
+   {
+    "id": "wnba",
+    "label": "The WNBA",
+    "chain": [
+     "wnba",
+     "basketball",
+     "sports"
+    ]
+   },
+   {
+    "id": "nfl",
+    "label": "The NFL",
+    "chain": [
+     "nfl",
+     "football",
+     "sports"
+    ]
+   },
+   {
+    "id": "super-bowl",
+    "label": "The Super Bowl",
+    "chain": [
+     "super-bowl",
+     "football",
+     "sports"
+    ]
+   },
+   {
+    "id": "mlb",
+    "label": "Major League Baseball",
+    "chain": [
+     "mlb",
+     "baseball",
+     "sports"
+    ]
+   },
+   {
+    "id": "softball",
+    "label": "Softball",
+    "chain": [
+     "softball",
+     "baseball",
+     "sports"
+    ]
+   },
+   {
+    "id": "olympic-history",
+    "label": "Olympic history",
+    "chain": [
+     "olympic-history",
+     "olympics",
+     "sports"
+    ]
+   },
+   {
+    "id": "bmx",
+    "label": "BMX and bikes",
+    "chain": [
+     "bmx",
+     "skateboarding",
+     "sports"
+    ]
+   },
+   {
+    "id": "scooters",
+    "label": "Scooters",
+    "chain": [
+     "scooters",
+     "skateboarding",
+     "sports"
+    ]
+   },
+   {
+    "id": "ice-hockey",
+    "label": "Ice hockey",
+    "chain": [
+     "ice-hockey",
+     "winter-sports",
+     "sports"
+    ]
+   },
+   {
+    "id": "skiing",
+    "label": "Skiing and snowboarding",
+    "chain": [
+     "skiing",
+     "winter-sports",
+     "sports"
+    ]
+   },
+   {
+    "id": "figure-skating",
+    "label": "Figure skating",
+    "chain": [
+     "figure-skating",
+     "winter-sports",
+     "sports"
+    ]
+   },
+   {
+    "id": "karate",
+    "label": "Karate",
+    "chain": [
+     "karate",
+     "martial-arts",
+     "sports"
+    ]
+   },
+   {
+    "id": "taekwondo",
+    "label": "Taekwondo",
+    "chain": [
+     "taekwondo",
+     "martial-arts",
+     "sports"
+    ]
+   },
+   {
+    "id": "jiu-jitsu",
+    "label": "Jiu-jitsu and judo",
+    "chain": [
+     "jiu-jitsu",
+     "martial-arts",
+     "sports"
+    ]
+   },
+   {
+    "id": "formula-1",
+    "label": "Formula 1",
+    "chain": [
+     "formula-1",
+     "racing",
+     "sports"
+    ]
+   },
+   {
+    "id": "nascar",
+    "label": "NASCAR",
+    "chain": [
+     "nascar",
+     "racing",
+     "sports"
+    ]
+   },
+   {
+    "id": "pickleball",
+    "label": "Pickleball",
+    "chain": [
+     "pickleball",
+     "tennis",
+     "sports"
+    ]
+   },
+   {
+    "id": "badminton",
+    "label": "Badminton and table tennis",
+    "chain": [
+     "badminton",
+     "tennis",
+     "sports"
+    ]
+   },
+   {
+    "id": "track-and-field",
+    "label": "Track and field",
+    "chain": [
+     "track-and-field",
+     "running",
+     "sports"
+    ]
+   },
+   {
+    "id": "marathons",
+    "label": "Marathons",
+    "chain": [
+     "marathons",
+     "running",
+     "sports"
+    ]
+   },
+   {
+    "id": "volleyball",
+    "label": "Volleyball",
+    "chain": [
+     "volleyball",
+     "sports"
+    ]
+   },
+   {
+    "id": "golf",
+    "label": "Golf",
+    "chain": [
+     "golf",
+     "sports"
+    ]
+   },
+   {
+    "id": "lacrosse",
+    "label": "Lacrosse",
+    "chain": [
+     "lacrosse",
+     "sports"
+    ]
+   },
+   {
+    "id": "rugby",
+    "label": "Rugby",
+    "chain": [
+     "rugby",
+     "sports"
+    ]
+   },
+   {
+    "id": "surfing",
+    "label": "Surfing",
+    "chain": [
+     "surfing",
+     "sports"
+    ]
+   },
+   {
+    "id": "fishing",
+    "label": "Fishing",
+    "chain": [
+     "fishing",
+     "sports"
+    ]
+   },
+   {
+    "id": "equestrian",
+    "label": "Horse riding",
+    "chain": [
+     "equestrian",
+     "sports"
+    ]
+   }
+  ],
+  "games-hobbies": [
+   {
+    "id": "magic-tricks",
+    "label": "Magic tricks",
+    "chain": [
+     "magic-tricks",
+     "games-hobbies"
+    ]
+   },
+   {
+    "id": "minecraft",
+    "label": "Minecraft",
+    "chain": [
+     "minecraft",
+     "video-games",
+     "games-hobbies"
+    ]
+   },
+   {
+    "id": "pokemon",
+    "label": "Pokémon",
+    "chain": [
+     "pokemon",
+     "video-games",
+     "games-hobbies"
+    ]
+   },
+   {
+    "id": "roblox",
+    "label": "Roblox",
+    "chain": [
+     "roblox",
+     "video-games",
+     "games-hobbies"
+    ]
+   },
+   {
+    "id": "fortnite",
+    "label": "Fortnite",
+    "chain": [
+     "fortnite",
+     "video-games",
+     "games-hobbies"
+    ]
+   },
+   {
+    "id": "mario",
+    "label": "Mario",
+    "chain": [
+     "mario",
+     "video-games",
+     "games-hobbies"
+    ]
+   },
+   {
+    "id": "speedrunning",
+    "label": "Speedrunning",
+    "chain": [
+     "speedrunning",
+     "video-games",
+     "games-hobbies"
+    ]
+   },
+   {
+    "id": "chess",
+    "label": "Chess",
+    "chain": [
+     "chess",
+     "board-games",
+     "games-hobbies"
+    ]
+   },
+   {
+    "id": "card-games",
+    "label": "Card games",
+    "chain": [
+     "card-games",
+     "board-games",
+     "games-hobbies"
+    ]
+   },
+   {
+    "id": "tabletop-rpgs",
+    "label": "Tabletop role-playing games",
+    "chain": [
+     "tabletop-rpgs",
+     "board-games",
+     "games-hobbies"
+    ]
+   },
+   {
+    "id": "rubiks-cube",
+    "label": "Rubik's Cube",
+    "chain": [
+     "rubiks-cube",
+     "puzzles",
+     "games-hobbies"
+    ]
+   },
+   {
+    "id": "riddles",
+    "label": "Riddles and brain teasers",
+    "chain": [
+     "riddles",
+     "puzzles",
+     "games-hobbies"
+    ]
+   },
+   {
+    "id": "sudoku",
+    "label": "Sudoku and logic puzzles",
+    "chain": [
+     "sudoku",
+     "puzzles",
+     "games-hobbies"
+    ]
+   },
+   {
+    "id": "lego-technic",
+    "label": "LEGO Technic and machines",
+    "chain": [
+     "lego-technic",
+     "lego",
+     "games-hobbies"
+    ]
+   },
+   {
+    "id": "origami",
+    "label": "Origami",
+    "chain": [
+     "origami",
+     "crafts",
+     "games-hobbies"
+    ]
+   },
+   {
+    "id": "knitting-sewing",
+    "label": "Knitting and sewing",
+    "chain": [
+     "knitting-sewing",
+     "crafts",
+     "games-hobbies"
+    ]
+   },
+   {
+    "id": "woodworking",
+    "label": "Woodworking",
+    "chain": [
+     "woodworking",
+     "crafts",
+     "games-hobbies"
+    ]
+   },
+   {
+    "id": "trading-cards",
+    "label": "Trading cards",
+    "chain": [
+     "trading-cards",
+     "collecting",
+     "games-hobbies"
+    ]
+   },
+   {
+    "id": "coins-stamps",
+    "label": "Coins and stamps",
+    "chain": [
+     "coins-stamps",
+     "collecting",
+     "games-hobbies"
+    ]
+   },
+   {
+    "id": "hiking",
+    "label": "Hiking",
+    "chain": [
+     "hiking",
+     "camping",
+     "games-hobbies"
+    ]
+   },
+   {
+    "id": "survival-skills",
+    "label": "Survival skills",
+    "chain": [
+     "survival-skills",
+     "camping",
+     "games-hobbies"
+    ]
+   }
+  ],
+  "history": [
+   {
+    "id": "pyramids-of-giza",
+    "label": "The pyramids of Giza",
+    "chain": [
+     "pyramids-of-giza",
+     "ancient-egypt",
+     "ancient-world",
+     "history"
+    ]
+   },
+   {
+    "id": "mummies",
+    "label": "Mummies",
+    "chain": [
+     "mummies",
+     "ancient-egypt",
+     "ancient-world",
+     "history"
+    ]
+   },
+   {
+    "id": "tutankhamun",
+    "label": "Tutankhamun",
+    "chain": [
+     "tutankhamun",
+     "ancient-egypt",
+     "ancient-world",
+     "history"
+    ]
+   },
+   {
+    "id": "cleopatra",
+    "label": "Cleopatra",
+    "chain": [
+     "cleopatra",
+     "ancient-egypt",
+     "ancient-world",
+     "history"
+    ]
+   },
+   {
+    "id": "greek-mythology",
+    "label": "Greek mythology",
+    "chain": [
+     "greek-mythology",
+     "ancient-greece",
+     "ancient-world",
+     "history"
+    ]
+   },
+   {
+    "id": "ancient-olympics",
+    "label": "The ancient Olympics",
+    "chain": [
+     "ancient-olympics",
+     "ancient-greece",
+     "ancient-world",
+     "history"
+    ]
+   },
+   {
+    "id": "gladiators",
+    "label": "Gladiators",
+    "chain": [
+     "gladiators",
+     "ancient-rome",
+     "ancient-world",
+     "history"
+    ]
+   },
+   {
+    "id": "julius-caesar",
+    "label": "Julius Caesar",
+    "chain": [
+     "julius-caesar",
+     "ancient-rome",
+     "ancient-world",
+     "history"
+    ]
+   },
+   {
+    "id": "great-wall-of-china",
+    "label": "The Great Wall of China",
+    "chain": [
+     "great-wall-of-china",
+     "ancient-china",
+     "ancient-world",
+     "history"
+    ]
+   },
+   {
+    "id": "terracotta-army",
+    "label": "The Terracotta Army",
+    "chain": [
+     "terracotta-army",
+     "ancient-china",
+     "ancient-world",
+     "history"
+    ]
+   },
+   {
+    "id": "inca",
+    "label": "The Inca",
+    "chain": [
+     "inca",
+     "mayans-aztecs",
+     "ancient-world",
+     "history"
+    ]
+   },
+   {
+    "id": "knights",
+    "label": "Knights",
+    "chain": [
+     "knights",
+     "medieval-times",
+     "history"
+    ]
+   },
+   {
+    "id": "viking-ships",
+    "label": "Viking ships and voyages",
+    "chain": [
+     "viking-ships",
+     "vikings",
+     "history"
+    ]
+   },
+   {
+    "id": "blackbeard",
+    "label": "Blackbeard",
+    "chain": [
+     "blackbeard",
+     "pirates",
+     "history"
+    ]
+   },
+   {
+    "id": "pirate-treasure",
+    "label": "Pirate treasure",
+    "chain": [
+     "pirate-treasure",
+     "pirates",
+     "history"
+    ]
+   },
+   {
+    "id": "lewis-and-clark",
+    "label": "Lewis and Clark",
+    "chain": [
+     "lewis-and-clark",
+     "explorers",
+     "history"
+    ]
+   },
+   {
+    "id": "christopher-columbus",
+    "label": "Christopher Columbus",
+    "chain": [
+     "christopher-columbus",
+     "explorers",
+     "history"
+    ]
+   },
+   {
+    "id": "polar-explorers",
+    "label": "Polar explorers",
+    "chain": [
+     "polar-explorers",
+     "explorers",
+     "history"
+    ]
+   },
+   {
+    "id": "us-presidents",
+    "label": "US presidents",
+    "chain": [
+     "us-presidents",
+     "american-history",
+     "history"
+    ]
+   },
+   {
+    "id": "american-revolution",
+    "label": "The American Revolution",
+    "chain": [
+     "american-revolution",
+     "american-history",
+     "history"
+    ]
+   },
+   {
+    "id": "civil-rights-movement",
+    "label": "The civil rights movement",
+    "chain": [
+     "civil-rights-movement",
+     "american-history",
+     "history"
+    ]
+   },
+   {
+    "id": "wild-west",
+    "label": "The Wild West",
+    "chain": [
+     "wild-west",
+     "american-history",
+     "history"
+    ]
+   },
+   {
+    "id": "world-war-ii",
+    "label": "World War II",
+    "chain": [
+     "world-war-ii",
+     "world-wars",
+     "history"
+    ]
+   },
+   {
+    "id": "world-war-i",
+    "label": "World War I",
+    "chain": [
+     "world-war-i",
+     "world-wars",
+     "history"
+    ]
+   },
+   {
+    "id": "albert-einstein",
+    "label": "Albert Einstein",
+    "chain": [
+     "albert-einstein",
+     "famous-people",
+     "history"
+    ]
+   },
+   {
+    "id": "leonardo-da-vinci",
+    "label": "Leonardo da Vinci",
+    "chain": [
+     "leonardo-da-vinci",
+     "famous-people",
+     "history"
+    ]
+   },
+   {
+    "id": "marie-curie",
+    "label": "Marie Curie",
+    "chain": [
+     "marie-curie",
+     "famous-people",
+     "history"
+    ]
+   },
+   {
+    "id": "lost-cities",
+    "label": "Lost cities and ruins",
+    "chain": [
+     "lost-cities",
+     "archaeology",
+     "history"
+    ]
+   }
+  ],
+  "food": [
+   {
+    "id": "baking",
+    "label": "Baking",
+    "chain": [
+     "baking",
+     "cooking",
+     "food"
+    ]
+   },
+   {
+    "id": "barbecue",
+    "label": "Barbecue",
+    "chain": [
+     "barbecue",
+     "cooking",
+     "food"
+    ]
+   },
+   {
+    "id": "candy",
+    "label": "Candy",
+    "chain": [
+     "candy",
+     "food-science",
+     "food"
+    ]
+   },
+   {
+    "id": "chocolate",
+    "label": "Chocolate",
+    "chain": [
+     "chocolate",
+     "food-science",
+     "food"
+    ]
+   },
+   {
+    "id": "ice-cream",
+    "label": "Ice cream",
+    "chain": [
+     "ice-cream",
+     "food-science",
+     "food"
+    ]
+   },
+   {
+    "id": "pizza",
+    "label": "Pizza",
+    "chain": [
+     "pizza",
+     "food-around-world",
+     "food"
+    ]
+   },
+   {
+    "id": "sushi",
+    "label": "Sushi",
+    "chain": [
+     "sushi",
+     "food-around-world",
+     "food"
+    ]
+   },
+   {
+    "id": "tacos",
+    "label": "Mexican food",
+    "chain": [
+     "tacos",
+     "food-around-world",
+     "food"
+    ]
+   }
+  ],
+  "money-careers": [
+   {
+    "id": "entrepreneurs",
+    "label": "Starting a business",
+    "chain": [
+     "entrepreneurs",
+     "business",
+     "money-careers"
+    ]
+   },
+   {
+    "id": "money-saving",
+    "label": "Money and saving",
+    "chain": [
+     "money-saving",
+     "business",
+     "money-careers"
+    ]
+   },
+   {
+    "id": "firefighters",
+    "label": "Firefighters",
+    "chain": [
+     "firefighters",
+     "jobs",
+     "money-careers"
+    ]
+   },
+   {
+    "id": "veterinarians",
+    "label": "Veterinarians",
+    "chain": [
+     "veterinarians",
+     "jobs",
+     "money-careers"
+    ]
+   },
+   {
+    "id": "police",
+    "label": "Police and detectives",
+    "chain": [
+     "police",
+     "jobs",
+     "money-careers"
+    ]
+   }
+  ]
+ }
+}
