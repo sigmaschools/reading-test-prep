@@ -1,0 +1,21 @@
+{
+  "slug": "reading-test-prep",
+  "name": "Reading Test Prep",
+  "kind": "first-party",
+  "launchUrl": "https://reading-test-prep.vercel.app/",
+  "allowedHosts": ["reading-test-prep.vercel.app"],
+  "signIn": "none",
+  "doneWhen": { "selector": "#finished" },
+  "awayAfterSeconds": 120,
+  "masteryPercent": 85,
+  "xp": {
+    "unit": "session",
+    "rate": 8,
+    "scoreBands": [
+      { "fromPercent": 85, "share": 1 },
+      { "fromPercent": 70, "share": 0.5 }
+    ]
+  },
+  "workLogRow": { "label": "Test prep", "kind": "session" },
+  "aiContext": "A reading test practice app. It opens on a card with Start. Each question shows a passage on the left and the question on the right, with lettered options, a sentence to tap in the passage, two-part questions, or events to put in order, and a Check button. A right answer shows Right. A wrong one shows 'Not quite' with one line naming the mistake, asks the student to tap the supporting sentence, and lets them answer again. The end screen says Done. That's it for test prep today."
+}

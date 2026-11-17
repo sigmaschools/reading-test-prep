@@ -1,0 +1,58 @@
+# Reading Test Prep: design
+
+Short, honest practice with the kinds of questions a standardized reading test asks, so a student's score shows how well they read and not how well they handle an unfamiliar format. It runs inside Compass, before the reading app on scheduled days. Pictures of a full session: [one full session](https://claude.ai/artifact/XkkLDSFS4sfR7QBpeBfx4r) (owner-only page).
+
+## What must stay true
+
+- **Separate from the reading app.** Its own look (warm paper, a printed-page serif, one teal), no character, no chat, no read-aloud. It never mentions the reading app and the reading app never mentions it.
+- **Short and fixed.** 8 questions that count, about 8 minutes. One path: no menu, no skip, no "I don't know". A longer session is never the answer; more days are, through the Compass schedule.
+- **Honest.** The first session says why: the test shows growth, its question formats can cost points on their own, this practice takes that away. Later sessions open with one line.
+- **Slow down and go back to the text.** No timer. An answer faster than the passage could be read is not checked; the student is asked to look back first.
+- **Every miss is corrected and acted on.** One plain line names the trap the wrong answer fell into, the wrong answer is crossed out, the student taps the sentence that proves the right answer, then answers again. A second miss shows the right answer with its reason. Only the first try counts toward the student's record.
+- **No overall score for the student.** Right or wrong per question and "Question 3 of 8". Guides see the detail.
+
+## A session
+
+1. Two passages, one literary (story, fable or poem) and one informational, 3 questions each, then 2 vocabulary questions on one or two sentences. Passages are chosen at the student's level band, preferring the student's interests from the Compass profile, never one already read until the band's passages run out.
+2. Questions are chosen so the skills due back come first, formats are mixed, and they follow the order of the text.
+3. A format the student has not met gets a worked example first (about a minute: a tiny text, the solved answer, three steps, and the four-step routine used for every question). The first session teaches the two pick-one formats; after that at most one new format per session. A format missed last session gets its example again.
+4. The end screen ("Done. That's it for test prep today.") is the Compass done signal. Compass then opens the reading app.
+
+If a session is interrupted, it resumes where it stopped the same day; it is saved after every question. A session from an earlier day is dropped, so missed days never pile up.
+
+## Formats
+
+| Format | The student | Trains |
+| --- | --- | --- |
+| Pick one | picks one of four | reading every option |
+| What a word means | works out a word from one or two sentences, or from its parts | word meaning in context |
+| Find the sentence | taps a sentence in the passage | finding evidence |
+| Pick two | picks exactly two; Check stays off until two are picked | not stopping at the first right answer |
+| Two-part | Part A an answer, Part B its proof | tying a conclusion to evidence |
+| Put in order | moves events with arrows | sequence and structure |
+
+## Difficulty and spacing
+
+- Six level bands on the approximate Lexile scale. The start band comes from the reading level the reading app reports in the Compass profile, else from grade.
+- After each session the band moves up at 95% or more right first time and down below 60%, aiming at about 80 to 85% first-try.
+- A missed skill comes back next session, then a week later, then three weeks later; a miss starts it over.
+
+## What Compass gets
+
+- One `part` report per finished session (`part: "session"`), with every question as an item: `id`, `skill` (`reading.<area>.<skill>`), `prompt`, the first `answer`, `correct` for the first try, `ms`, and extra fields `format`, `rightAfterCorrection` and `rapid`. Its `correct` and `wrong` count questions right by the end, after the second chance.
+- A `state` report with the record (about 1.5 KB after a session, at most about 3 KB with a year of passages read): band, formats taught, skills due back, the last 120 passages read, today's unfinished session including a missed first try, so leaving after a miss does not erase it. A student who finished today gets the end screen again on reopening.
+- A `mastery` report at every save, so a visit stopped partway still updates the chart.
+- The `mastery` chart, "Reading test practice": every skill, grouped the way score reports group them. A skill is `mastered` only after right first tries on three different days with no miss since.
+- XP comes from the registry entry: 8 per finished session, full at 85% right by the end, half at 70%, none below. The app never sends an XP number.
+
+The app has no server, no accounts and no storage of its own, like Spell. It scales with static hosting: the repository is private and the page is served by Vercel from `main` (decided 17 Nov), with no build step.
+
+## Skill names
+
+Shared with the reading app so guides see both in the same terms (compass-lab issue 403). Areas: `literary-key-ideas`, `literary-craft`, `informational-key-ideas`, `informational-craft`, `vocabulary`. The names shown for areas live in one table in `prep.js` and can be renamed to match a school's score report without changing ids.
+
+## Not yet decided or built
+
+- The full question bank (docs/ITEM-BANK.md).
+- A guide view of first-try accuracy by area with at least 10 answers per area; today guides get the mastery chart and the session record.
+- Two levels of the test exist (grades 2 to 5, and 6 and up). The first bank targets grades 2 to 5.
