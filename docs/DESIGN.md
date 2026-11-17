@@ -6,7 +6,7 @@ Short, honest practice with the kinds of questions a standardized reading test a
 
 - **Separate from the reading app.** Its own look (warm paper, a printed-page serif, one teal), no character, no chat, no read-aloud. It never mentions the reading app and the reading app never mentions it.
 - **Short and fixed.** 8 questions that count, about 8 minutes. One path: no menu, no skip, no "I don't know". A longer session is never the answer; more days are, through the Compass schedule.
-- **Honest.** The first session says why: the test shows growth, its question formats can cost points on their own, this practice takes that away. Later sessions open with one line.
+- **Honest.** The first session says why in two lines: a few times a year you take a reading test, and this practice is so the questions never trip you up and your score shows your reading comprehension skills. Later sessions open with one line.
 - **Slow down and go back to the text.** No timer. An answer faster than the passage could be read is not checked; the student is asked to look back first.
 - **Every miss is corrected and acted on.** One plain line names the trap the wrong answer fell into, the wrong answer is crossed out, the student taps the sentence that proves the right answer, then answers again. A second miss shows the right answer with its reason. Only the first try counts toward the student's record.
 - **No overall score for the student.** Right or wrong per question, and a progress bar with one mark per question, grouped by part, above "Question 3 of 8". Guides see the detail.
