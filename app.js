@@ -40,43 +40,66 @@
     for (var i = 0; i < scores.length; i++) {
       if (scores[i].subject === "reading" && /map/i.test(scores[i].source || "")) return "MAP";
     }
-    return scores.length ? "your reading test" : "MAP";
+    return null;
   }
 
   // ---------- today's session ----------
 
-  var session = record.t && record.t.day === today ? record.t : Prep.plan(record, bank, profile, today);
-  var started = Date.now();
-
-  function save() {
-    record.t = session;
-    compass.saveState(JSON.stringify(record));
+  // A later major version of the contract: show the end screen, report nothing.
+  var contract = new URLSearchParams(location.search).get("compass_contract");
+  if (contract && contract !== CompassApp.contract) {
+    show("finished");
+    return;
   }
 
-  if (!session) {
-    show("rest");
+  // Already done today: the end screen again, so Compass moves on.
+  if (record.d === today) {
+    $("finished-note").textContent = "Your next practice is on another day.";
+    show("finished");
     return;
+  }
+
+  var saved = record.t && record.t.day === today && Prep.sessionValid(bank, record.t) ? record.t : null;
+  var session = saved || Prep.plan(record, bank, profile, today);
+  var visitStart = Date.now();
+
+  // Nothing in the bank for this student: end at once rather than leave them stuck.
+  if (!session) {
+    show("finished");
+    return;
+  }
+  session.secs = session.secs || 0;
+  session.shown = session.shown || [];
+
+  function save() {
+    var now = Date.now();
+    session.secs += (now - visitStart) / 1000;
+    visitStart = now;
+    record.t = session;
+    compass.saveState(JSON.stringify(record));
+    writeMastery(Prep.mastery(record));
   }
 
   // ---------- intro ----------
 
   function intro() {
     var name = testName();
+    var total = session.steps.length;
     var first = record.n === 0 && session.at === 0;
     $("intro-title").textContent = first ? "Why we're doing this" : session.at ? "Pick up where you left off" : "Test prep";
     var box = $("intro-text");
     box.textContent = "";
     if (first) {
-      var test = name === "MAP" ? "a reading test called MAP" : name;
+      var test = name === "MAP" ? "a reading test called MAP" : "a reading test";
       [
         "A few times a year you take " + test + ". It shows how much your reading has grown.",
         "The test asks questions in its own ways: pick two answers, find the sentence that proves it, answer in two parts. A question that looks strange can cost points even when you understood the reading.",
         "This practice is so the questions never trip you up, and your score shows how well you really read.",
-        "8 questions. There's no timer. Going back to the text is how you get them right.",
+        total + " questions. There's no timer. Going back to the text is how you get them right.",
       ].forEach(function (t) { box.append(el("p", { text: t })); });
     } else {
-      var left = session.steps.length - session.at;
-      box.append(el("p", { text: (left === session.steps.length ? "8 questions." : left + " questions left.") + " Take your time, and go back to the text." }));
+      var left = total - session.at;
+      box.append(el("p", { text: (left === total ? total + " questions." : left + (left === 1 ? " question left." : " questions left.")) + " Take your time, and go back to the text." }));
     }
     show("intro");
   }
@@ -84,10 +107,9 @@
 
   // ---------- worked examples ----------
 
-  var exampled = {};
   function example(format, then) {
     var ex = bank.examples[format];
-    exampled[format] = true;
+    if (session.shown.indexOf(format) < 0) session.shown.push(format);
     $("ex-kind").textContent = "New kind of question: " + Prep.FORMAT_NAMES[format];
     $("ex-lead").textContent = ex.lead;
     var t = $("ex-text");
@@ -114,7 +136,7 @@
     if (session.at >= session.steps.length) return finish();
     var step = session.steps[session.at];
     var item = Prep.findItem(bank, step.item);
-    if (session.teach.indexOf(item.format) >= 0 && !exampled[item.format]) {
+    if (session.teach.indexOf(item.format) >= 0 && session.shown.indexOf(item.format) < 0) {
       return example(item.format, nextStep);
     }
     ask(step, item);
@@ -138,9 +160,22 @@
       choice: initialChoice(item),
       struck: [],
     };
+    // A first try already made on an earlier visit today still counts as the first try.
+    var p = session.pending;
+    if (p && p.at === session.at) {
+      q.tries = 1;
+      q.first = p.first;
+      q.firstAnswer = p.firstAnswer;
+      q.ms = p.ms;
+      q.rapid = p.rapid;
+      q.nudged = true;
+      q.phase = "retry";
+      strikeWrong();
+    }
     drawPassage();
     drawAsk();
     $("feedback").textContent = "";
+    if (q.tries === 1) feedback("do", "You tried this one before. Answer it again.");
     $("progress").textContent = "Question " + (session.at + 1) + " of " + session.steps.length;
     $("check").classList.remove("hidden");
     $("next").classList.add("hidden");
@@ -355,6 +390,11 @@
       // An answer still under the reading time after the nudge stays marked rapid.
       q.rapid = q.rapid && ms < q.min * 1.5;
     }
+    if (q.tries === 1 && !res.correct) {
+      // Keep the miss even if the student leaves now.
+      session.pending = { at: session.at, first: false, firstAnswer: q.firstAnswer, ms: q.ms, rapid: q.rapid };
+      save();
+    }
     if (res.correct) {
       q.phase = "done";
       q.final = true;
@@ -434,6 +474,7 @@
       answer: describe(q.item, q.firstAnswer),
     };
     Prep.recordAnswer(record, q.item, q.first, today);
+    session.pending = null;
     session.at += 1;
     save();
     $("passage").classList.remove("tapping");
@@ -465,6 +506,7 @@
   function finish() {
     var titles = session.passages.map(function (id) { return Prep.findPassage(bank, id).title; });
     var finals = session.results.filter(function (r) { return r.final; }).length;
+    save();
     var items = session.results.map(function (r) {
       var it = Prep.findItem(bank, r.item);
       return {
@@ -485,7 +527,7 @@
       title: "Test prep: " + titles.join(" and "),
       correct: finals,
       wrong: session.results.length - finals,
-      seconds: Math.round((Date.now() - started) / 1000),
+      seconds: Math.round(session.secs),
       items: items,
     });
     compass.saveState(JSON.stringify(record));

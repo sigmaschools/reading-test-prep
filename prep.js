@@ -65,7 +65,8 @@
     // (skill id -> [due day, misses]); p: passages seen; n: sessions finished;
     // m: formats missed last session; t: today's unfinished session.
     // h: skill id -> [days with a right first try since the last miss, last such day].
-    return { v: 1, b: null, f: [], s: {}, p: [], n: 0, m: [], t: null, h: {} };
+    // d: the last day a session was finished.
+    return { v: 1, b: null, f: [], s: {}, p: [], n: 0, m: [], t: null, h: {}, d: null };
   }
 
   /** The record from `compass_state`, or a new one when it is missing or unreadable. */
@@ -163,8 +164,31 @@
    * Plan today's session: the passages, the questions and which worked
    * examples come first. Returns null when the bank has nothing left to give.
    */
+  /** The band with passages nearest to `band` (the band itself when it has them), or null. */
+  function nearestBand(bank, band) {
+    var ids = bank.bands.map(function (b) { return b.id; });
+    var at = Math.max(0, ids.indexOf(band));
+    for (var d = 0; d < ids.length; d++) {
+      var tries = d === 0 ? [at] : [at - d, at + d];
+      for (var i = 0; i < tries.length; i++) {
+        var id = ids[tries[i]];
+        if (id && bank.passages.some(function (p) { return p.band === id; })) return id;
+      }
+    }
+    return null;
+  }
+
+  /** Whether a saved session still matches the bank (a new bank can drop questions). */
+  function sessionValid(bank, session) {
+    if (!session || !session.steps || !session.steps.length) return false;
+    return session.steps.every(function (s) {
+      return findItem(bank, s.item) && (!s.passage || findPassage(bank, s.passage));
+    });
+  }
+
   function plan(record, bank, profile, today) {
-    var band = record.b || startBand(bank, profile);
+    var band = nearestBand(bank, record.b || startBand(bank, profile));
+    if (band === null) return null;
     var f = formatsFor(record);
     var steps = [];
     var used = [];
@@ -318,7 +342,9 @@
       record.p = record.p.filter(function (x) { return x !== id; });
       record.p.push(id);
     });
-    if (record.p.length > 400) record.p = record.p.slice(-400);
+    // Enough to avoid repeats for a year at four sessions a week, and short
+    // enough that the record stays well inside the launch address limit.
+    if (record.p.length > 120) record.p = record.p.slice(-120);
     var formats = session.steps.map(function (s) { return findItem(bank, s.item).format; });
     formats.forEach(function (f) { if (record.f.indexOf(f) < 0) record.f.push(f); });
     record.m = [];
@@ -328,9 +354,12 @@
     });
     var ids = bank.bands.map(function (b) { return b.id; });
     var at = ids.indexOf(session.band);
-    if (pct >= 95 && at < ids.length - 1) at += 1;
-    else if (pct < 60 && at > 0) at -= 1;
+    // Move only to a band that has passages, so a student is never left with nothing.
+    var hasPassages = function (i) { return bank.passages.some(function (p) { return p.band === ids[i]; }); };
+    if (pct >= 95 && at < ids.length - 1 && hasPassages(at + 1)) at += 1;
+    else if (pct < 60 && at > 0 && hasPassages(at - 1)) at -= 1;
     record.b = ids[at];
+    record.d = session.day;
     record.n += 1;
     record.t = null;
     return { firstTry: firsts, total: session.results.length, percent: Math.round(pct) };
@@ -375,6 +404,8 @@
     findItem: findItem,
     findPassage: findPassage,
     sentences: sentences,
+    nearestBand: nearestBand,
+    sessionValid: sessionValid,
     check: check,
     minSeconds: minSeconds,
     recordAnswer: recordAnswer,

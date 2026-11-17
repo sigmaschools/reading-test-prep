@@ -40,8 +40,9 @@ If a session is interrupted, it resumes where it stopped the same day; it is sav
 ## What Compass gets
 
 - One `part` report per finished session (`part: "session"`), with every question as an item: `id`, `skill` (`reading.<area>.<skill>`), `prompt`, the first `answer`, `correct` for the first try, `ms`, and extra fields `format`, `rightAfterCorrection` and `rapid`. Its `correct` and `wrong` count questions right by the end, after the second chance.
-- A `state` report with the record (well under 1 KB): band, formats taught, skills due back, passages read, today's unfinished session.
-- A `mastery` report, "Reading test practice": every skill, grouped the way score reports group them. A skill is `mastered` only after right first tries on three different days with no miss since.
+- A `state` report with the record (about 1.5 KB after a session, at most about 3 KB with a year of passages read): band, formats taught, skills due back, the last 120 passages read, today's unfinished session including a missed first try, so leaving after a miss does not erase it. A student who finished today gets the end screen again on reopening.
+- A `mastery` report at every save, so a visit stopped partway still updates the chart.
+- The `mastery` chart, "Reading test practice": every skill, grouped the way score reports group them. A skill is `mastered` only after right first tries on three different days with no miss since.
 - XP comes from the registry entry: 8 per finished session, full at 85% right by the end, half at 70%, none below. The app never sends an XP number.
 
 The app has no server, no accounts and no storage of its own, like Spell. It scales with static hosting: the repository is private and the page is served by Vercel from `main` (decided 17 Nov), with no build step.

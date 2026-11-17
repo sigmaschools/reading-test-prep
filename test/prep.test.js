@@ -75,15 +75,22 @@ test("mastered needs right first tries on three different days", () => {
 });
 
 test("the band moves toward about 80 to 85 percent first-try", () => {
+  // A bank with passages in the bands either side of b4.
+  const wide = Object.assign({}, B, {
+    passages: B.passages.concat(
+      B.passages.map((p) => Object.assign({}, p, { id: p.id + "-up", band: "b5" })),
+      B.passages.map((p) => Object.assign({}, p, { id: p.id + "-down", band: "b3" }))
+    ),
+  });
   const r = Object.assign(P.newRecord(), { b: "b4", f: ["single", "vocab"] });
-  const s = P.plan(r, B, null, day);
+  const s = P.plan(r, wide, null, day);
   s.results = s.steps.map(() => ({ first: true, final: true }));
-  P.finishSession(r, B, s);
+  P.finishSession(r, wide, s);
   assert.strictEqual(r.b, "b5");
-  const s2 = Object.assign(P.plan(Object.assign(P.newRecord(), { b: "b4" }), B, null, day), {});
-  s2.results = s2.steps.map(() => ({ first: false, final: true }));
   const r2 = Object.assign(P.newRecord(), { b: "b4" });
-  P.finishSession(r2, B, s2);
+  const s2 = P.plan(r2, wide, null, day);
+  s2.results = s2.steps.map(() => ({ first: false, final: true }));
+  P.finishSession(r2, wide, s2);
   assert.strictEqual(r2.b, "b3");
 });
 
@@ -109,4 +116,29 @@ test("every bank question points at real sentences and options", () => {
       opts.forEach((o, i) => { if (i !== q.key && !(q.keys || []).includes(i)) assert.ok(o.why, q.id + " option " + i + " needs a why"); });
     }
   }
+});
+
+test("a band with no passages falls back to the nearest one that has them", () => {
+  for (const b of ["b1", "b2", "b3", "b5", "b6"]) {
+    const s = P.plan(Object.assign(P.newRecord(), { b }), B, null, day);
+    assert.ok(s && s.steps.length, b);
+    assert.strictEqual(s.band, "b4");
+  }
+});
+
+test("a perfect session never moves the band to one with no passages", () => {
+  const r = Object.assign(P.newRecord(), { b: "b4", f: ["single", "vocab"] });
+  const s = P.plan(r, B, null, day);
+  s.results = s.steps.map(() => ({ first: true, final: true }));
+  P.finishSession(r, B, s);
+  assert.strictEqual(r.b, "b4");
+  assert.strictEqual(r.d, day);
+});
+
+test("a saved session that names a question the bank no longer has is not valid", () => {
+  const s = P.plan(P.newRecord(), B, null, day);
+  assert.ok(P.sessionValid(B, s));
+  s.steps[0].item = "q-gone";
+  assert.ok(!P.sessionValid(B, s));
+  assert.ok(!P.sessionValid(B, null));
 });
