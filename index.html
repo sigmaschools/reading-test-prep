@@ -1,0 +1,69 @@
+<!doctype html>
+<!-- Copyright 2026 Sigma. SPDX-License-Identifier: Apache-2.0 -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reading Test Prep</title>
+<link rel="stylesheet" href="style.css">
+<script src="compass-app.js"></script>
+<script src="bank/bank.js"></script>
+<script src="prep.js"></script>
+</head>
+<body>
+  <!-- Before the session: why, and one Start. -->
+  <section id="intro" class="screen card-screen hidden">
+    <div class="card">
+      <p class="eyebrow">Reading Test Prep</p>
+      <h1 id="intro-title"></h1>
+      <div id="intro-text"></div>
+      <button id="start" class="primary">Start</button>
+    </div>
+  </section>
+
+  <!-- A worked example, the first time a kind of question comes up. -->
+  <section id="example" class="screen card-screen hidden">
+    <div class="card wide">
+      <p class="eyebrow" id="ex-kind"></p>
+      <p id="ex-lead" class="lead"></p>
+      <div class="ex-text text" id="ex-text"></div>
+      <p class="ex-q" id="ex-prompt"></p>
+      <div class="ex-answer"><span class="tag">Answer</span><span id="ex-answer"></span></div>
+      <p class="how">How to get there</p>
+      <ol id="ex-steps"></ol>
+      <button id="ex-go" class="primary">Got it</button>
+    </div>
+  </section>
+
+  <!-- One question: the passage on the left, the question on the right. -->
+  <section id="question" class="screen hidden">
+    <article id="passage" class="passage text"></article>
+    <div id="side" class="side">
+      <p id="progress" class="progress"></p>
+      <div id="ask"></div>
+      <div id="feedback" class="feedback" aria-live="polite"></div>
+      <div class="actions">
+        <button id="check" class="primary">Check</button>
+        <button id="next" class="primary hidden">Next</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nothing today (only seen when opened outside a plan with nothing left). -->
+  <section id="rest" class="screen card-screen hidden">
+    <div class="card"><h1>Nothing to practice right now</h1><p>Come back on your next practice day.</p></div>
+  </section>
+
+  <!-- The end screen; compass.json's doneWhen matches it. -->
+  <section id="finished" class="screen card-screen hidden">
+    <div class="card">
+      <p class="eyebrow">Reading Test Prep</p>
+      <h1>Done.</h1>
+      <p>That's it for test prep today.</p>
+      <p id="finished-note" class="muted"></p>
+    </div>
+  </section>
+
+<script src="app.js"></script>
+</body>
+</html>
