@@ -22,11 +22,27 @@ First build: grades 2 to 5, three bands around a fifth grader (b3 to b5), 36 pas
 
 ## Checks before a question is used
 
-1. **Blind test.** A model answers without the passage, three times. If it gets a passage question right more than once, the question is rewritten or dropped.
-2. **Key test.** A model from a different family answers with the passage. It must pick the key and say no other option is defensible.
-3. **Level.** The passage is measured with the Compass reading-level measure and must fall inside its band.
-4. **Content.** Safe and neutral for children, the same content rules as the reading app.
-5. **Review.** A fresh reviewer reads every question of the first build cold; the owner plays full sessions before any student sees them.
+1. **Rules.** Every passage and question is checked against the shape above (`tools/lib/validate.js`): five questions, at least three pick-one, at least three formats, every quote a real sentence, every wrong option with its trap line, and no right answer that gives itself away by being much the longest.
+2. **Level.** The passage is measured with the Compass reading-level measure and must fall inside its band, give or take 30. The writer is told the band's sentence length and word mix before it writes, and gets the measure's advice when it misses.
+3. **Blind test.** Each question is shown on its own, without the passage, its title or the other questions, to a small model three times. A question it gets right all three times can be answered without reading. A passage may keep one such question, because even a small model is far more test-wise than a child and a theme or main idea question is the hardest to hide; two or more and it is rewritten.
+4. **Key test.** A model from a different family answers every question with the passage. It must pick the key and find no other option defensible. It also checks the facts (for nonfiction, every fact) and that the content is safe and neutral for children.
+5. **Review.** A fresh reviewer reads every passage and question cold: one clearly right answer, needs the passage, no giveaway, clear wording, kind and true trap lines, accurate and safe content.
+6. **Owner.** The owner plays full sessions before any student sees a band.
+
+A passage that fails a check is rewritten up to twice with the problems named, and checked again from the start; a slot that still fails gets one fresh passage. Vocabulary questions have no blind test (the sentences are part of the question) and get the rules and the key test.
+
+## Building the bank
+
+The pipeline lives in `tools/` (Node, plus Go for the level measure, which needs a `compass-lab` checkout beside this repository). It needs `EVAL_ANTHROPIC_API_KEY` (or `ANTHROPIC_API_KEY`) and `GEMINI_API_KEY` in the environment.
+
+```
+cd tools && npm ci && cd ..
+sh tools/run-band.sh b4          # write, check, retry rejected slots, top up vocabulary
+node tools/build.mjs b3 b4 b5    # accepted work becomes bank/bank.js, options shuffled
+node --test test/*.test.js
+```
+
+Work files (`tools/work/`) are not committed; `bank/bank.js` is. Which passages a band gets (kind, genre, topic and the five questions' formats and skills) is fixed by `tools/lib/plan.mjs`, so a rerun picks up where it stopped. Topics come from the Compass topic map, leaving out brands, franchises, living public figures and subjects that are not neutral for children.
 
 ## After launch
 

@@ -53,6 +53,6 @@ Shared with the reading app so guides see both in the same terms (compass-lab is
 
 ## Not yet decided or built
 
-- The full question bank (docs/ITEM-BANK.md).
+- The rest of the question bank (docs/ITEM-BANK.md). Built so far: the grades 4 to 5 band (b4), 26 passages (16 stories, fables and poems, 10 nonfiction) and 40 vocabulary questions, every one through all the checks. Next: the rest of b4, then b3 and b5, after the owner has played sessions.
 - A guide view of first-try accuracy by area with at least 10 answers per area; today guides get the mastery chart and the session record.
 - Two levels of the test exist (grades 2 to 5, and 6 and up). The first bank targets grades 2 to 5.
