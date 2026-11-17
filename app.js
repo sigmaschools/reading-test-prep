@@ -70,6 +70,8 @@
   }
   session.secs = session.secs || 0;
   session.shown = session.shown || [];
+  session.seen = session.seen || []; // parts whose opening card was shown
+  var parts = Prep.parts(session);
 
   function save() {
     var now = Date.now();
@@ -128,6 +130,51 @@
     show("example");
   }
 
+  // ---------- parts and progress ----------
+
+  function partAt(at) {
+    for (var i = 0; i < parts.length; i++) if (at >= parts[i].from && at <= parts[i].to) return parts[i];
+    return parts[parts.length - 1];
+  }
+
+  var KIND = { story: "a story", fable: "a fable", poem: "a poem", biography: "a true story about a person", history: "an article about the past" };
+
+  // Before each part: what comes next, so a new passage never arrives unannounced.
+  function partCard(part, then) {
+    var box = $("part-body");
+    box.textContent = "";
+    var count = part.to - part.from + 1;
+    box.append(progressBar(session.at));
+    box.append(el("p", { cls: "eyebrow", text: "Part " + part.n + " of " + parts.length }));
+    if (part.passage) {
+      var p = Prep.findPassage(bank, part.passage);
+      var kind = KIND[p.genre] || "an article";
+      box.append(el("h1", { text: part.n === 1 ? "First, " + kind : "Now a new passage: " + kind }));
+      box.append(el("p", { cls: "lead", text: "“" + p.title + "”" }));
+      box.append(el("p", { text: "Read it all the way through first. Then answer " + count + " questions about it." + (part.n > 1 ? " These questions are only about this new passage." : "") }));
+    } else {
+      box.append(el("h1", { text: "Last: word questions" }));
+      box.append(el("p", { text: "The last " + (count === 1 ? "question asks" : count + " questions ask") + " what a word means. Each one gives you a sentence or two to read, with the word in it." }));
+    }
+    box.append(el("button", { cls: "primary", text: part.passage ? "Start reading" : "Go", onclick: function () {
+      session.seen.push(part.n);
+      save();
+      then();
+    } }));
+    show("part");
+  }
+
+  // One mark per question, grouped by part: done, this one, still to come.
+  function progressBar(at) {
+    var bar = el("div", { cls: "bar", role: "img", "aria-label": "Question " + (at + 1) + " of " + session.steps.length });
+    parts.forEach(function (part) {
+      var g = el("div", { cls: "bar-group" });
+      for (var i = part.from; i <= part.to; i++) g.append(el("span", { cls: "bar-step" + (i < at ? " done" : i === at ? " now" : "") }));
+      bar.append(g);
+    });
+    return bar;
+  }
+
   // ---------- one question ----------
 
   var q = null; // the question on screen and what has happened to it
@@ -135,6 +182,8 @@
   function nextStep() {
     if (session.at >= session.steps.length) return finish();
     var step = session.steps[session.at];
+    var part = partAt(session.at);
+    if (part.from === session.at && session.seen.indexOf(part.n) < 0) return partCard(part, nextStep);
     var item = Prep.findItem(bank, step.item);
     if (session.teach.indexOf(item.format) >= 0 && session.shown.indexOf(item.format) < 0) {
       return example(item.format, nextStep);
@@ -176,7 +225,13 @@
     drawAsk();
     $("feedback").textContent = "";
     if (q.tries === 1) feedback("do", "You tried this one before. Answer it again.");
-    $("progress").textContent = "Question " + (session.at + 1) + " of " + session.steps.length;
+    var prog = $("progress");
+    prog.textContent = "";
+    prog.append(progressBar(session.at));
+    var part = partAt(session.at);
+    var where = part.passage ? "Passage " + part.n + ": " + passage.title : "Word questions";
+    prog.append(el("p", { cls: "progress-text", text: "Question " + (session.at + 1) + " of " + session.steps.length + " · " + where }));
+    $("question").classList.toggle("solo", !passage);
     $("check").classList.remove("hidden");
     $("next").classList.add("hidden");
     updateCheck();
@@ -204,11 +259,7 @@
     box.textContent = "";
     box.className = "passage text";
     var p = q.passage;
-    if (!p) {
-      box.classList.add("empty");
-      box.append(el("p", { cls: "muted", text: "This question has no passage. Everything you need is on the right." }));
-      return;
-    }
+    if (!p) return; // a word question: one column, nothing on the left
     box.append(el("h2", { text: p.title }));
     // A poem's strings are its lines, one under the other; a stanza is a paragraph.
     box.classList.toggle("poem", p.genre === "poem");

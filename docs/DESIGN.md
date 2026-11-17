@@ -9,7 +9,8 @@ Short, honest practice with the kinds of questions a standardized reading test a
 - **Honest.** The first session says why: the test shows growth, its question formats can cost points on their own, this practice takes that away. Later sessions open with one line.
 - **Slow down and go back to the text.** No timer. An answer faster than the passage could be read is not checked; the student is asked to look back first.
 - **Every miss is corrected and acted on.** One plain line names the trap the wrong answer fell into, the wrong answer is crossed out, the student taps the sentence that proves the right answer, then answers again. A second miss shows the right answer with its reason. Only the first try counts toward the student's record.
-- **No overall score for the student.** Right or wrong per question and "Question 3 of 8". Guides see the detail.
+- **No overall score for the student.** Right or wrong per question, and a progress bar with one mark per question, grouped by part, above "Question 3 of 8". Guides see the detail.
+- **Every new text is announced.** Before each part, a card names what comes next ("Now a new passage: an article", its title, "Read it all the way through first") or says the word questions are last. Word questions, which have no passage, fill one centred column.
 
 ## A session
 
