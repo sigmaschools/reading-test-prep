@@ -44,7 +44,7 @@ If a session is interrupted, it resumes where it stopped the same day; it is sav
 - A `mastery` report, "Reading test practice": every skill, grouped the way score reports group them. A skill is `mastered` only after right first tries on three different days with no miss since.
 - XP comes from the registry entry: 8 per finished session, full at 85% right by the end, half at 70%, none below. The app never sends an XP number.
 
-The app has no server, no accounts and no storage of its own, like Spell. It scales with static hosting.
+The app has no server, no accounts and no storage of its own, like Spell. It scales with static hosting: the repository is private and the page is served by Vercel from `main` (decided 17 Nov), with no build step.
 
 ## Skill names
 
@@ -52,7 +52,6 @@ Shared with the reading app so guides see both in the same terms (compass-lab is
 
 ## Not yet decided or built
 
-- Hosting: a static site. GitHub Pages like Spell if the repository is public, otherwise another static host; `compass.json` changes with it.
 - The full question bank (docs/ITEM-BANK.md).
 - A guide view of first-try accuracy by area with at least 10 answers per area; today guides get the mastery chart and the session record.
 - Two levels of the test exist (grades 2 to 5, and 6 and up). The first bank targets grades 2 to 5.
