@@ -95,7 +95,6 @@
     box.textContent = "";
     if (first) {
       [
-        "A few times a year you take a reading test. This practice is so the questions never trip you up, and your score shows your reading comprehension skills.",
         total + " questions. There's no timer.",
       ].forEach(function (t) { box.append(el("p", { text: t })); });
     } else {
@@ -111,20 +110,13 @@
   function example(format, then) {
     var ex = bank.examples[format];
     if (session.shown.indexOf(format) < 0) session.shown.push(format);
-    $("ex-kind").textContent = "New kind of question: " + Prep.FORMAT_NAMES[format];
+    $("ex-kind").textContent = "New: " + Prep.FORMAT_NAMES[format];
     $("ex-lead").textContent = ex.lead;
     var t = $("ex-text");
     t.textContent = "";
     t.append(el("p", { text: ex.text.join(" ") }));
     $("ex-prompt").textContent = ex.prompt;
     $("ex-answer").textContent = ex.answer;
-    var ol = $("ex-steps");
-    ol.textContent = "";
-    ex.steps.forEach(function (s) { ol.append(el("li", { text: s })); });
-    var card = $("example").querySelector(".card");
-    var old = card.querySelector(".routine");
-    if (old) old.remove();
-    card.insertBefore(el("p", { cls: "routine", text: "Every question: " + bank.routine.join(" ") }), $("ex-go"));
     $("ex-go").onclick = then;
     show("example");
   }
@@ -136,31 +128,27 @@
     return parts[parts.length - 1];
   }
 
-  var KIND = { story: "a story", fable: "a fable", poem: "a poem", biography: "a true story about a person", history: "an article about the past" };
+  var KIND = { story: "Story", fable: "Fable", poem: "Poem", biography: "Article", history: "Article" };
 
-  // Before each part: what comes next, so a new passage never arrives unannounced.
+  // Before each part, a short card naming what comes next; it moves on by itself.
+  var PART_MS = 3000;
+
   function partCard(part, then) {
     var box = $("part-body");
     box.textContent = "";
-    var count = part.to - part.from + 1;
     box.append(progressBar(session.at));
-    box.append(el("p", { cls: "eyebrow", text: "Part " + part.n + " of " + parts.length }));
     if (part.passage) {
       var p = Prep.findPassage(bank, part.passage);
-      var kind = KIND[p.genre] || "an article";
-      box.append(el("h1", { text: part.n === 1 ? "First, " + kind : "Now a new passage: " + kind }));
-      box.append(el("p", { cls: "lead", text: "“" + p.title + "”" }));
-      box.append(el("p", { text: "Read it all the way through first. Then answer " + count + " questions about it." + (part.n > 1 ? " These questions are only about this new passage." : "") }));
+      var kind = KIND[p.genre] || "Article";
+      box.append(el("h1", { text: (part.n === 1 ? "" : "New ") + (part.n === 1 ? kind : kind.toLowerCase()) }));
+      box.append(el("p", { cls: "lead", text: p.title }));
     } else {
-      box.append(el("h1", { text: "Last: word questions" }));
-      box.append(el("p", { text: "The last " + (count === 1 ? "question asks" : count + " questions ask") + " what a word means. Each one gives you a sentence or two to read, with the word in it." }));
+      box.append(el("h1", { text: "Word questions" }));
     }
-    box.append(el("button", { cls: "primary", text: part.passage ? "Start reading" : "Go", onclick: function () {
-      session.seen.push(part.n);
-      save();
-      then();
-    } }));
     show("part");
+    session.seen.push(part.n);
+    save();
+    setTimeout(then, PART_MS);
   }
 
   // One mark per question, grouped by part: done, this one, still to come.
@@ -199,7 +187,6 @@
       passage: passage,
       phase: "answer", // answer, evidence, retry, done
       tries: 0,
-      nudged: false,
       first: null,
       rapid: false,
       firstAnswer: null,
@@ -216,7 +203,6 @@
       q.firstAnswer = p.firstAnswer;
       q.ms = p.ms;
       q.rapid = p.rapid;
-      q.nudged = true;
       q.phase = "retry";
       strikeWrong();
     }
@@ -232,7 +218,6 @@
     prog.append(el("p", { cls: "progress-text", text: "Question " + (session.at + 1) + " of " + session.steps.length + " · " + where }));
     $("question").classList.toggle("solo", !passage);
     $("check").classList.remove("hidden");
-    $("next").classList.add("hidden");
     updateCheck();
     show("question");
     $("side").scrollTop = 0;
@@ -426,21 +411,15 @@
   $("check").addEventListener("click", function () {
     if ($("check").disabled) return;
     var ms = Date.now() - q.shownAt;
-    // Too quick to have read: ask them to look back before it is checked, once.
-    if (q.phase === "answer" && !q.nudged && ms < q.min) {
-      q.nudged = true;
-      q.rapid = true;
-      feedback("nudge", "That was quick. Look back at the passage first.");
-      return;
-    }
     var res = Prep.check(q.item, answerValue());
     q.tries += 1;
     if (q.tries === 1) {
       q.first = res.correct;
       q.firstAnswer = answerValue();
       q.ms = ms;
-      // An answer still under the reading time after the nudge stays marked rapid.
-      q.rapid = q.rapid && ms < q.min * 1.5;
+      // Faster than the passage could be read: checked like any answer, and
+      // marked for guides only.
+      q.rapid = ms < q.min;
     }
     if (q.tries === 1 && !res.correct) {
       // Keep the miss even if the student leaves now.
@@ -531,12 +510,16 @@
     save();
     $("passage").classList.remove("tapping");
     $("check").classList.add("hidden");
-    $("next").classList.remove("hidden");
-    $("next").textContent = session.at >= session.steps.length ? "Finish" : "Next";
-    $("next").focus();
+    // On to the next question by itself: soon after a right answer, and after
+    // time to read the right answer and why when it was shown.
+    var wait = q.reveal ? REVEAL_MS : RIGHT_MS;
+    var at = session.at;
+    setTimeout(function () { if (session.at === at) nextStep(); }, wait);
   }
 
-  $("next").addEventListener("click", nextStep);
+  var RIGHT_MS = 1200;
+  var REVEAL_MS = 6000;
+
 
   /** The student's first answer in words, for the session record adults see. */
   function describe(item, a) {
