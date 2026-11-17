@@ -142,3 +142,16 @@ test("a saved session that names a question the bank no longer has is not valid"
   assert.ok(!P.sessionValid(B, s));
   assert.ok(!P.sessionValid(B, null));
 });
+
+test("a session falls into parts: each passage, then the word questions", () => {
+  const s = P.plan(P.newRecord(), B, null, day);
+  const parts = P.parts(s);
+  assert.strictEqual(parts.length, 3);
+  parts.forEach((p, i) => {
+    assert.strictEqual(p.n, i + 1);
+    assert.strictEqual(p.from, i ? parts[i - 1].to + 1 : 0);
+  });
+  assert.strictEqual(parts[2].to, s.steps.length - 1);
+  assert.strictEqual(parts[parts.length - 1].passage, null);
+  assert.ok(parts[0].passage && parts[1].passage && parts[0].passage !== parts[1].passage);
+});

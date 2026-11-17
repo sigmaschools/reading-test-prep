@@ -393,7 +393,23 @@
     };
   }
 
+  /**
+   * The session in parts: each passage, then the word questions. Each part has
+   * its passage id (null for words), the first and last step, and its number.
+   */
+  function parts(session) {
+    var out = [];
+    session.steps.forEach(function (st, i) {
+      var key = st.passage || null;
+      var last = out[out.length - 1];
+      if (last && last.passage === key) last.to = i;
+      else out.push({ passage: key, from: i, to: i, n: out.length + 1 });
+    });
+    return out;
+  }
+
   var api = {
+    parts: parts,
     FORMATS: FORMATS,
     FORMAT_NAMES: FORMAT_NAMES,
     AREAS: AREAS,

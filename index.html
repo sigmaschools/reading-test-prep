@@ -35,11 +35,16 @@
     </div>
   </section>
 
+  <!-- Before each part of the session: a new passage, or the word questions. -->
+  <section id="part" class="screen card-screen hidden">
+    <div class="card" id="part-body"></div>
+  </section>
+
   <!-- One question: the passage on the left, the question on the right. -->
   <section id="question" class="screen hidden">
     <article id="passage" class="passage text"></article>
     <div id="side" class="side">
-      <p id="progress" class="progress"></p>
+      <div id="progress" class="progress"></div>
       <div id="ask"></div>
       <div id="feedback" class="feedback" aria-live="polite"></div>
       <div class="actions">
