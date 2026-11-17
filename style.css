@@ -67,10 +67,6 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid var(--teal);
 .ex-q { font-weight: 600; }
 .ex-answer { background: var(--teal-soft); border-radius: 10px; padding: 10px 14px; display: flex; gap: 12px; align-items: baseline; margin-bottom: 14px; }
 .tag { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; font-weight: 700; color: var(--teal); }
-.how { font-weight: 600; margin-bottom: 4px !important; }
-#ex-steps { margin: 0 0 12px; padding-left: 1.3em; }
-#ex-steps li { margin-bottom: 4px; }
-.routine { border-top: 1px solid var(--line); padding-top: 12px; font-size: 16px; color: var(--muted); }
 
 /* A question: passage left, question right; stacked on a narrow screen. */
 #question { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); height: 100%; }
@@ -128,7 +124,6 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid var(--teal);
 .fb.right { background: var(--right-soft); color: var(--right); font-weight: 600; }
 .fb.miss { background: var(--miss-soft); }
 .fb.miss strong { color: var(--miss); }
-.fb.nudge { background: var(--mark); }
 .fb.do { background: var(--teal-soft); }
 .actions { margin-top: auto; padding-top: 22px; display: flex; gap: 12px; }
 

@@ -6,17 +6,17 @@ Short, honest practice with the kinds of questions a standardized reading test a
 
 - **Separate from the reading app.** Its own look (warm paper, a printed-page serif, one teal), no character, no chat, no read-aloud. It never mentions the reading app and the reading app never mentions it.
 - **Short and fixed.** 8 questions that count, about 8 minutes. One path: no menu, no skip, no "I don't know". A longer session is never the answer; more days are, through the Compass schedule.
-- **Honest.** The first session says why in two lines: a few times a year you take a reading test, and this practice is so the questions never trip you up and your score shows your reading comprehension skills. Later sessions open with one line.
-- **Slow down and go back to the text.** No timer. An answer faster than the passage could be read is not checked; the student is asked to look back first.
+- **Honest, in few words.** The first screen is the title, "8 questions. There's no timer." and Start. Fewer words and fewer clicks for the student throughout.
+- **Go back to the text.** No timer. An answer faster than the passage could be read is checked like any other and marked for guides; a right answer is never held back.
 - **Every miss is corrected and acted on.** One plain line names the trap the wrong answer fell into, the wrong answer is crossed out, the student taps the sentence that proves the right answer, then answers again. A second miss shows the right answer with its reason. Only the first try counts toward the student's record.
 - **No overall score for the student.** Right or wrong per question, and a progress bar with one mark per question, grouped by part, above "Question 3 of 8". Guides see the detail.
-- **Every new text is announced.** Before each part, a card names what comes next ("Now a new passage: an article", its title, "Read it all the way through first") or says the word questions are last. Word questions, which have no passage, fill one centred column.
+- **Every new text is announced.** Before each part a short card names it ("New article" and its title, or "Word questions") and moves on by itself after 3 seconds. Questions move on by themselves too: a second after a right answer, six seconds after a shown answer. Word questions fill one centred column.
 
 ## A session
 
 1. Two passages, one literary (story, fable or poem) and one informational, 3 questions each, then 2 vocabulary questions on one or two sentences. Passages are chosen at the student's level band, preferring the student's interests from the Compass profile, never one already read until the band's passages run out.
 2. Questions are chosen so the skills due back come first, formats are mixed, and they follow the order of the text.
-3. A format the student has not met gets a worked example first (about a minute: a tiny text, the solved answer, three steps, and the four-step routine used for every question). The first session teaches the two pick-one formats; after that at most one new format per session. A format missed last session gets its example again.
+3. A format the student has not met gets a short worked example first (one line on how it works, a tiny text and its solved answer). The first session teaches the two pick-one formats; after that at most one new format per session. A format missed last session gets its example again.
 4. The end screen ("Done. That's it for test prep today.") is the Compass done signal. Compass then opens the reading app.
 
 If a session is interrupted, it resumes where it stopped the same day; it is saved after every question. A session from an earlier day is dropped, so missed days never pile up.

@@ -6635,7 +6635,7 @@ var READING_BANK = {
  ],
  "examples": {
   "single": {
-   "lead": "Every question works the same way. Here's one solved, so you can see how.",
+   "lead": "Find the answer in the text.",
    "text": [
     "Rosa set her alarm for 5:30. She packed her bag the night before and laid her running shoes by the door."
    ],
@@ -6648,7 +6648,7 @@ var READING_BANK = {
    ]
   },
   "vocab": {
-   "lead": "Some questions ask what a word means. The words around it are your clues.",
+   "lead": "The words around it are your clues.",
    "text": [
     "The puppy was so timid that it hid under the bed whenever a visitor came in."
    ],
@@ -6661,7 +6661,7 @@ var READING_BANK = {
    ]
   },
   "sentence": {
-   "lead": "Some questions ask you to tap a sentence in the passage. This is how to find the right one.",
+   "lead": "Tap the sentence in the passage that proves it.",
    "text": [
     "The library opened at nine.",
     "By 9:05, every computer was taken.",
@@ -6676,7 +6676,7 @@ var READING_BANK = {
    ]
   },
   "multi": {
-   "lead": "Some questions say pick two. Two answers are right, so don't stop at the first one you find.",
+   "lead": "Two answers are right. Pick both.",
    "text": [
     "Bees carry pollen from flower to flower, which helps plants make seeds. They also make honey that people and animals eat."
    ],
@@ -6689,7 +6689,7 @@ var READING_BANK = {
    ]
   },
   "two-part": {
-   "lead": "Some questions come in two parts. Part B asks for the proof for your answer to Part A.",
+   "lead": "Part B asks for the proof of your answer to Part A.",
    "text": [
     "Mia looked at the gray sky, grabbed her umbrella, and then went back for her rain boots too."
    ],
@@ -6702,7 +6702,7 @@ var READING_BANK = {
    ]
   },
   "order": {
-   "lead": "Some questions ask you to put events in order. Drag them, or use the arrows.",
+   "lead": "Use the arrows to put them in order.",
    "text": [
     "After school, Jay fed the dog. Before that, he had finished his homework on the bus. Last of all, he called his grandma."
    ],
