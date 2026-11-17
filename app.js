@@ -44,15 +44,6 @@
     return e;
   }
 
-  /** What the student's test is called: its name when Compass has a score from it. */
-  function testName() {
-    var scores = (profile && profile.testScores) || [];
-    for (var i = 0; i < scores.length; i++) {
-      if (scores[i].subject === "reading" && /map/i.test(scores[i].source || "")) return "MAP";
-    }
-    return null;
-  }
-
   // ---------- today's session ----------
 
   // A later major version of the contract: show the end screen, report nothing.
@@ -95,19 +86,17 @@
   // ---------- intro ----------
 
   function intro() {
-    var name = testName();
     var total = session.steps.length;
     var first = record.n === 0 && session.at === 0;
-    $("intro-title").textContent = first ? "Why we're doing this" : session.at ? "Pick up where you left off" : "Test prep";
+    $("intro-title").textContent = first ? "Reading Test Practice" : session.at ? "Pick up where you left off" : "Test prep";
+    // The first screen's title already names the app, so the small label above it goes.
+    $("intro").querySelector(".eyebrow").classList.toggle("hidden", first);
     var box = $("intro-text");
     box.textContent = "";
     if (first) {
-      var test = name === "MAP" ? "a reading test called MAP" : "a reading test";
       [
-        "A few times a year you take " + test + ". It shows how much your reading has grown.",
-        "The test asks questions in its own ways: pick two answers, find the sentence that proves it, answer in two parts. A question that looks strange can cost points even when you understood the reading.",
-        "This practice is so the questions never trip you up, and your score shows how well you really read.",
-        total + " questions. There's no timer. Going back to the text is how you get them right.",
+        "A few times a year you take a reading test. This practice is so the questions never trip you up, and your score shows your reading comprehension skills.",
+        total + " questions. There's no timer.",
       ].forEach(function (t) { box.append(el("p", { text: t })); });
     } else {
       var left = total - session.at;
