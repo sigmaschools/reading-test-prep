@@ -16,6 +16,16 @@
   var $ = function (id) { return document.getElementById(id); };
   var LETTERS = "ABCDEFGH";
 
+  // Continue on the end screen: only inside Compass, which acts on it. The
+  // click itself does nothing but say what is coming, so it is harmless on a
+  // shell too old to act on it (that shell moves on by itself).
+  var inCompass = new URLSearchParams(location.search).has("compass_contract");
+  $("continue").classList.toggle("hidden", !inCompass);
+  $("continue").addEventListener("click", function () {
+    $("continue").disabled = true;
+    $("continue").textContent = "Opening the next step…";
+  });
+
   function show(id) {
     var all = document.querySelectorAll("body > section");
     for (var i = 0; i < all.length; i++) all[i].classList.toggle("hidden", all[i].id !== id);
