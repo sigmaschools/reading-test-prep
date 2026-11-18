@@ -37,6 +37,7 @@ If a session is interrupted, it resumes where it stopped the same day; it is sav
 - Six level bands on the approximate Lexile scale. The start band comes from the reading level the reading app reports in the Compass profile, else from grade.
 - After each session the band moves up at 95% or more right first time and down below 60%, aiming at about 80 to 85% first-try.
 - A missed skill comes back next session, then a week later, then three weeks later; a miss starts it over.
+- The staging Test Learner, and no one else, gets a small Level switch (Easier, Middle, Harder: the bands that have passages) in the bottom corner of every screen but the end screen, and no once-a-day limit. A tap drops the unfinished session and starts a fresh one at that level, which stays the learner's level. This lets the owner judge each level's difficulty in one sitting; a real student's level moves only by results. The check is the learner id in the Compass profile (`Prep.canPickLevel`).
 
 ## What Compass gets
 

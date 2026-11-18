@@ -155,3 +155,35 @@ test("a session falls into parts: each passage, then the word questions", () => 
   assert.strictEqual(parts[parts.length - 1].passage, null);
   assert.ok(parts[0].passage && parts[1].passage && parts[0].passage !== parts[1].passage);
 });
+
+test("only the Test Learner may pick a level", () => {
+  assert.strictEqual(P.canPickLevel({ id: "bb41aac7-6d24-4dcf-aae0-30203739a8fe" }), true);
+  assert.strictEqual(P.canPickLevel({ id: "someone-else" }), false);
+  assert.strictEqual(P.canPickLevel(null), false);
+  assert.strictEqual(P.canPickLevel({}), false);
+});
+
+// The sample bank's passages copied to an easier and a harder band, so there are three levels.
+const B3 = Object.assign({}, B, {
+  passages: B.passages.concat(
+    B.passages.map((p) => Object.assign({}, p, { id: p.id + "-e", band: "b3" })),
+    B.passages.map((p) => Object.assign({}, p, { id: p.id + "-h", band: "b5" }))
+  ),
+});
+
+test("the levels on offer are the bands with passages, easiest first", () => {
+  assert.deepStrictEqual(P.levels(B3), [
+    { band: "b3", label: "Easier" },
+    { band: "b4", label: "Middle" },
+    { band: "b5", label: "Harder" },
+  ]);
+});
+
+test("picking a level drops today's unfinished session and plans a fresh one at that level", () => {
+  const r = Object.assign(P.newRecord(), { b: "b4", d: day, t: { day, steps: [] } });
+  const s = P.pickLevel(r, B3, null, day, "b3");
+  assert.strictEqual(s.band, "b3");
+  assert.strictEqual(r.b, "b3");
+  assert.strictEqual(r.t, null);
+  assert.strictEqual(s.at, 0);
+});

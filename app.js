@@ -7,7 +7,7 @@
 (function () {
   "use strict";
 
-  var VERSION = "0.1.0";
+  var VERSION = "0.2.0";
   var compass = CompassApp.launch({ appVersion: VERSION });
   var bank = READING_BANK;
   var today = compass.today;
@@ -15,6 +15,8 @@
   var record = Prep.readRecord(compass.state);
   var $ = function (id) { return document.getElementById(id); };
   var LETTERS = "ABCDEFGH";
+  // The Test Learner gets a level switch and no once-a-day limit (prep.js says why).
+  var picker = Prep.canPickLevel(profile);
 
   // Continue on the end screen: only inside Compass, which acts on it. The
   // click itself does nothing but say what is coming, so it is harmless on a
@@ -29,6 +31,7 @@
   function show(id) {
     var all = document.querySelectorAll("body > section");
     for (var i = 0; i < all.length; i++) all[i].classList.toggle("hidden", all[i].id !== id);
+    $("levels").classList.toggle("hidden", !picker || id === "finished" || !session);
     window.scrollTo(0, 0);
   }
 
@@ -54,7 +57,7 @@
   }
 
   // Already done today: the end screen again, so Compass moves on.
-  if (record.d === today) {
+  if (record.d === today && !picker) {
     $("finished-note").textContent = "Your next practice is on another day.";
     show("finished");
     return;
@@ -494,7 +497,8 @@
     // time to read the right answer and why when it was shown.
     var wait = q.reveal ? REVEAL_MS : RIGHT_MS;
     var at = session.at;
-    setTimeout(function () { if (session.at === at) nextStep(); }, wait);
+    var was = session;
+    setTimeout(function () { if (session === was && session.at === at) nextStep(); }, wait);
   }
 
   var RIGHT_MS = 1200;
@@ -563,5 +567,40 @@
     document.body.append(s);
   }
 
+  // ---------- the level switch (Test Learner only) ----------
+
+  function drawLevels() {
+    var box = $("levels");
+    box.textContent = "";
+    box.append(el("span", { text: "Level" }));
+    Prep.levels(bank).forEach(function (l) {
+      var on = l.band === session.band;
+      box.append(el("button", {
+        type: "button",
+        cls: on ? "on" : "",
+        "aria-pressed": on ? "true" : "false",
+        text: l.label,
+        onclick: function () { pickLevel(l.band); },
+      }));
+    });
+  }
+
+  function pickLevel(band) {
+    var next = Prep.pickLevel(record, bank, profile, today, band);
+    if (!next) return;
+    session = next;
+    session.secs = 0;
+    session.seen = [];
+    parts = Prep.parts(session);
+    visitStart = Date.now();
+    save();
+    drawLevels();
+    intro();
+  }
+
+  if (picker) {
+    document.body.classList.add("picking");
+    drawLevels();
+  }
   intro();
 })();
