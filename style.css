@@ -51,7 +51,7 @@ button.primary { background: var(--teal); border-color: var(--teal); color: #fff
 button:disabled { opacity: .45; cursor: default; }
 button:focus-visible, [tabindex]:focus-visible { outline: 3px solid var(--teal); outline-offset: 2px; }
 
-/* Cards: intro, worked examples, the end. */
+/* Cards: intro, part cards, the end. */
 .card-screen { min-height: 100%; display: flex; align-items: center; justify-content: center; padding: 32px 24px; }
 .card { background: var(--sheet); border: 1px solid var(--line); border-radius: 14px; padding: 36px 40px; max-width: 620px; width: 100%; }
 .card.wide { max-width: 720px; }
@@ -62,10 +62,6 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid var(--teal);
 .why-list li { margin-bottom: 6px; }
 
 .text { font-family: var(--serif); font-size: 21px; line-height: 1.65; }
-.ex-text { background: var(--paper); border-radius: 10px; padding: 14px 18px; margin: 8px 0 14px; }
-.ex-text p { margin: 0; }
-.ex-q { font-weight: 600; }
-.ex-answer { background: var(--teal-soft); border-radius: 10px; padding: 10px 14px; display: flex; gap: 12px; align-items: baseline; margin-bottom: 14px; }
 .tag { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; font-weight: 700; color: var(--teal); }
 
 /* A question: passage left, question right; stacked on a narrow screen. */
