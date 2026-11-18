@@ -178,6 +178,35 @@
     return null;
   }
 
+  /**
+   * Learners who may pick their level by hand: the staging Test Learner only,
+   * so the owner can try each level for difficulty. A real student never sees
+   * the picker; their level moves only by their results.
+   */
+  var LEVEL_PICKERS = ["bb41aac7-6d24-4dcf-aae0-30203739a8fe"];
+
+  function canPickLevel(profile) {
+    return !!(profile && profile.id && LEVEL_PICKERS.indexOf(profile.id) >= 0);
+  }
+
+  /** The bands with passages, easiest first, named Easier, Middle and Harder. */
+  function levels(bank) {
+    var out = bank.bands.filter(function (b) {
+      return bank.passages.some(function (p) { return p.band === b.id; });
+    });
+    return out.map(function (b, i) {
+      var label = i === 0 && out.length > 1 ? "Easier" : i === out.length - 1 && out.length > 1 ? "Harder" : "Middle";
+      return { band: b.id, label: label };
+    });
+  }
+
+  /** Move to `band` at once: today's unfinished session goes, a fresh one starts there. */
+  function pickLevel(record, bank, profile, today, band) {
+    record.b = nearestBand(bank, band);
+    record.t = null;
+    return plan(record, bank, profile, today);
+  }
+
   /** Whether a saved session still matches the bank (a new bank can drop questions). */
   function sessionValid(bank, session) {
     if (!session || !session.steps || !session.steps.length) return false;
@@ -421,6 +450,9 @@
     findPassage: findPassage,
     sentences: sentences,
     nearestBand: nearestBand,
+    canPickLevel: canPickLevel,
+    levels: levels,
+    pickLevel: pickLevel,
     sessionValid: sessionValid,
     check: check,
     minSeconds: minSeconds,

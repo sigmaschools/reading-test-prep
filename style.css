@@ -123,6 +123,13 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid var(--teal);
 .fb.do { background: var(--teal-soft); }
 .actions { margin-top: auto; padding-top: 22px; display: flex; gap: 12px; }
 
+/* The Test Learner's level switch: small, out of the way, at the bottom. */
+.levels { position: fixed; right: 12px; bottom: 12px; z-index: 5; display: flex; align-items: center; gap: 6px; padding: 6px 8px; border: 1px solid var(--line); border-radius: 10px; background: var(--sheet); font-size: 14px; color: var(--muted); box-shadow: 0 2px 8px rgba(0, 0, 0, .08); }
+.levels span { padding: 0 4px; font-weight: 600; }
+.levels button { font-size: 14px; padding: 5px 10px; border-radius: 7px; }
+body.picking { padding-bottom: 64px; }
+.levels button.on { background: var(--teal); border-color: var(--teal); color: #fff; }
+
 @media (max-width: 760px) {
   #question { grid-template-columns: 1fr; height: auto; }
   .passage { border-right: 0; border-bottom: 1px solid var(--line); padding: 24px 22px; }
