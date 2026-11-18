@@ -4,7 +4,7 @@ Short practice with the kinds of questions a standardized reading test asks (pic
 
 - **8 questions, about 8 minutes**, on a story or poem, a nonfiction passage and two word questions. No timer, no score shown to the student.
 - **Every miss is corrected and acted on**: the trap is named, the student taps the sentence that proves the right answer, then answers again. Only first tries count toward the record.
-- **A worked example the first time** each kind of question comes up, at most one new kind per session.
+- **New kinds of question come in slowly**, at most one per session, with a one-line how-to on the question itself.
 - **Difficulty** starts at the student's reading level and moves toward about 80 to 85% right first time; missed skills come back after one session, a week and three weeks.
 
 The design: [docs/DESIGN.md](docs/DESIGN.md). The question bank: [docs/ITEM-BANK.md](docs/ITEM-BANK.md).

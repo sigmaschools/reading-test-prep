@@ -70,7 +70,6 @@
     return;
   }
   session.secs = session.secs || 0;
-  session.shown = session.shown || [];
   session.seen = session.seen || []; // parts whose opening card was shown
   var parts = Prep.parts(session);
 
@@ -104,22 +103,6 @@
     show("intro");
   }
   $("start").addEventListener("click", function () { nextStep(); });
-
-  // ---------- worked examples ----------
-
-  function example(format, then) {
-    var ex = bank.examples[format];
-    if (session.shown.indexOf(format) < 0) session.shown.push(format);
-    $("ex-kind").textContent = "New: " + Prep.FORMAT_NAMES[format];
-    $("ex-lead").textContent = ex.lead;
-    var t = $("ex-text");
-    t.textContent = "";
-    t.append(el("p", { text: ex.text.join(" ") }));
-    $("ex-prompt").textContent = ex.prompt;
-    $("ex-answer").textContent = ex.answer;
-    $("ex-go").onclick = then;
-    show("example");
-  }
 
   // ---------- parts and progress ----------
 
@@ -172,9 +155,6 @@
     var part = partAt(session.at);
     if (part.from === session.at && session.seen.indexOf(part.n) < 0) return partCard(part, nextStep);
     var item = Prep.findItem(bank, step.item);
-    if (session.teach.indexOf(item.format) >= 0 && session.shown.indexOf(item.format) < 0) {
-      return example(item.format, nextStep);
-    }
     ask(step, item);
   }
 
