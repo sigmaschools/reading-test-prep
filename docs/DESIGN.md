@@ -17,7 +17,7 @@ Short, honest practice with the kinds of questions a standardized reading test a
 1. Two passages, one literary (story, fable or poem) and one informational, 3 questions each, then 2 vocabulary questions on one or two sentences. Passages are chosen at the student's level band, preferring the student's interests from the Compass profile, never one already read until the band's passages run out.
 2. Questions are chosen so the skills due back come first, formats are mixed, and they follow the order of the text.
 3. New formats come in slowly: the first session uses only the two pick-one formats, and after that at most one new format joins per session. There is no worked-example screen (the owner cut it, 18 Nov): the student goes straight to the question, and a format that needs a word of how-to carries one short line on the question itself ("Pick 2.", "Tap a sentence in the passage.", "Use the arrows…").
-4. The end screen ("Done. That's it for test prep today.") is the Compass done signal. Compass then opens the reading app.
+4. The end screen ("Done. That's it for today.") is the Compass done signal. Compass then opens the reading app.
 
 If a session is interrupted, it resumes where it stopped the same day; it is saved after every question. A session from an earlier day is dropped, so missed days never pile up.
 
