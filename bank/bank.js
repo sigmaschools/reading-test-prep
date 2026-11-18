@@ -12,7 +12,7 @@
 // carries `why`: the one plain line a student reads after picking it.
 
 var READING_BANK = {
- "version": "2026-11-17-26p40v",
+ "version": "2026-11-18-52p80v",
  "routine": [
   "Read the question.",
   "Go back to the text.",
@@ -5349,6 +5349,4952 @@ var READING_BANK = {
     }
    ],
    "level": 1000
+  },
+  {
+   "id": "b5-i01",
+   "type": "informational",
+   "genre": "article",
+   "title": "A Battery Made of Water",
+   "band": "b5",
+   "topics": [
+    "renewable-energy",
+    "energy",
+    "physics",
+    "science"
+   ],
+   "paragraphs": [
+    [
+     "Solar panels make the most electricity at midday, and wind turbines spin fastest when the weather is stormy.",
+     "People, however, want electricity at dinnertime, on calm nights, and on cold mornings before sunrise.",
+     "This mismatch is one of the biggest puzzles in using renewable energy, and one old solution is surprisingly simple: a giant battery made of water."
+    ],
+    [
+     "A water battery, which engineers call pumped storage, needs two lakes, one high on a hill and one far below.",
+     "When power plants make more electricity than people are using, the extra power runs pumps that push water up into the high lake.",
+     "Later, when homes and factories need more power, gates open and the water rushes back down through large pipes.",
+     "On its way, the falling water spins turbines, which turn the stored energy back into electricity."
+    ],
+    [
+     "Pumped storage is not perfect, because some energy is lost each time the water is lifted and released.",
+     "It also needs the right land, with steep hills and plenty of water, so it cannot be built everywhere.",
+     "Still, it has been used for more than a hundred years, and it holds a large share of the energy that power grids save for later."
+    ]
+   ],
+   "items": [
+    {
+     "id": "b5-i01-1",
+     "order": 1,
+     "format": "single",
+     "area": "informational-key-ideas",
+     "skill": "main-idea",
+     "prompt": "What is this passage mostly about?",
+     "key": 2,
+     "evidence": [
+      2
+     ],
+     "options": [
+      {
+       "text": "Why renewable energy works best near oceans, and where it is built",
+       "trap": "not-in-text",
+       "why": "Oceans are not in the passage. What do the lakes and pumps do?"
+      },
+      {
+       "text": "Why renewable energy needs longer power lines, and how they work",
+       "trap": "not-in-text",
+       "why": "Power lines are not in the passage. Look at the puzzle named in the first paragraph."
+      },
+      {
+       "text": "Why renewable energy needs a way to save power, and one old way"
+      },
+      {
+       "text": "Why renewable energy costs less each year, and what that means",
+       "trap": "not-in-text",
+       "why": "Cost is never discussed. Look at the puzzle named in the first paragraph."
+      }
+     ]
+    },
+    {
+     "id": "b5-i01-2",
+     "order": 2,
+     "format": "single",
+     "area": "informational-key-ideas",
+     "skill": "cause-effect",
+     "prompt": "According to the passage, what happens when power plants make more electricity than people are using?",
+     "key": 2,
+     "evidence": [
+      4
+     ],
+     "options": [
+      {
+       "text": "The extra power goes to home batteries.",
+       "trap": "not-in-text",
+       "why": "Home batteries are not in the passage. Read the second paragraph again."
+      },
+      {
+       "text": "Gates open and water rushes down pipes.",
+       "trap": "opposite",
+       "why": "That happens later, when people need more power. Find the sentence about extra electricity."
+      },
+      {
+       "text": "Pumps push water up into the high lake."
+      },
+      {
+       "text": "The power plants shut down for a while.",
+       "trap": "not-in-text",
+       "why": "The passage never says the plants shut down. Look at what the extra power is used for."
+      }
+     ]
+    },
+    {
+     "id": "b5-i01-3",
+     "order": 3,
+     "format": "single",
+     "area": "informational-craft",
+     "skill": "text-structure",
+     "prompt": "How is the last paragraph organized?",
+     "key": 1,
+     "evidence": [
+      7,
+      9
+     ],
+     "options": [
+      {
+       "text": "It gives a cause and then two of its effects.",
+       "trap": "not-in-text",
+       "why": "Look at the word still. It turns from problems to a strength."
+      },
+      {
+       "text": "It gives two drawbacks and then a strength."
+      },
+      {
+       "text": "It gives two strengths and then a drawback.",
+       "trap": "opposite",
+       "why": "The first two sentences are problems. The word still begins the good news."
+      },
+      {
+       "text": "It gives the steps of a process in order.",
+       "trap": "true-but",
+       "why": "The second paragraph does that. The last paragraph weighs problems against a strength."
+      }
+     ]
+    },
+    {
+     "id": "b5-i01-4",
+     "order": 4,
+     "format": "multi",
+     "area": "informational-craft",
+     "skill": "evidence",
+     "prompt": "According to the passage, which two details show that sun and wind do not always make power when people want it? Pick two.",
+     "keys": [
+      0,
+      1
+     ],
+     "evidence": [
+      0
+     ],
+     "options": [
+      {
+       "text": "Solar panels make the most power at midday."
+      },
+      {
+       "text": "Wind turbines spin fastest in stormy weather."
+      },
+      {
+       "text": "Solar panels work poorly when they are dusty.",
+       "trap": "not-in-text",
+       "why": "Dust is not in the passage. Look at the first sentence and when people want power."
+      },
+      {
+       "text": "Solar panels make less power as they get old.",
+       "trap": "not-in-text",
+       "why": "Age is not mentioned. Look at when the sun and wind make the most power."
+      },
+      {
+       "text": "Wind turbines must stop in very strong winds.",
+       "trap": "not-in-text",
+       "why": "The passage never says this. Compare the first two sentences."
+      }
+     ]
+    },
+    {
+     "id": "b5-i01-5",
+     "order": 5,
+     "format": "sentence",
+     "area": "informational-key-ideas",
+     "skill": "sequence",
+     "prompt": "Tap the sentence that tells the last step, when the stored energy becomes electricity again.",
+     "keys": [
+      6
+     ],
+     "why": "Look near the end of the paragraph that explains the steps."
+    }
+   ],
+   "level": 1140
+  },
+  {
+   "id": "b5-i03",
+   "type": "informational",
+   "genre": "biography",
+   "title": "The Drummer Called Baby",
+   "band": "b5",
+   "topics": [
+    "drums",
+    "music",
+    "arts-entertainment"
+   ],
+   "paragraphs": [
+    [
+     "Warren Dodds was born in New Orleans in 1898, and his family called him Baby because he was the youngest.",
+     "His older brother Johnny became a well-known clarinet player, but Baby wanted an instrument that was louder.",
+     "He saved money from odd jobs to buy his first drum and practiced on almost anything that would make a sound."
+    ],
+    [
+     "As a young man, he played in bands on riverboats that carried passengers up and down the Mississippi River.",
+     "The band leader was strict, and the musicians had to read music and keep perfect time for the dancers every night.",
+     "That hard work made Baby one of the steadiest drummers in jazz."
+    ],
+    [
+     "In the early 1920s he joined a famous band in Chicago and helped make some of the first jazz records.",
+     "The recording machines of that time could not handle the boom of a bass drum, so he often had to tap on woodblocks instead.",
+     "Even so, people who heard him play in person said he never played a song the same way twice, changing his rhythm to fit each soloist."
+    ]
+   ],
+   "items": [
+    {
+     "id": "b5-i03-1",
+     "order": 1,
+     "format": "single",
+     "area": "informational-key-ideas",
+     "skill": "main-idea",
+     "prompt": "What is this passage mostly about?",
+     "key": 1,
+     "evidence": [
+      5
+     ],
+     "options": [
+      {
+       "text": "How Baby Dodds played beside famous trumpet players",
+       "trap": "not-in-text",
+       "why": "No trumpet players are named. Look at what the second paragraph says made him steady."
+      },
+      {
+       "text": "How Baby Dodds became a steady drummer through hard work"
+      },
+      {
+       "text": "How Baby Dodds taught his style to younger drummers",
+       "trap": "not-in-text",
+       "why": "Teaching is never mentioned. Follow his life from paragraph to paragraph."
+      },
+      {
+       "text": "How Baby Dodds helped make drum solos a part of jazz",
+       "trap": "not-in-text",
+       "why": "Drum solos are not in the passage. Look at what each paragraph tells about him."
+      }
+     ]
+    },
+    {
+     "id": "b5-i03-2",
+     "order": 2,
+     "format": "single",
+     "area": "informational-key-ideas",
+     "skill": "key-details",
+     "prompt": "According to the passage, how did Baby get his first drum?",
+     "key": 3,
+     "evidence": [
+      2
+     ],
+     "options": [
+      {
+       "text": "His older brother gave him one as a gift.",
+       "trap": "not-in-text",
+       "why": "His brother played clarinet. The passage says how Baby got the drum himself."
+      },
+      {
+       "text": "He built one himself from an old barrel.",
+       "trap": "not-in-text",
+       "why": "He practiced on anything that made a sound, but he did not build a drum. Read the first paragraph."
+      },
+      {
+       "text": "He traded his brother’s clarinet for one.",
+       "trap": "not-in-text",
+       "why": "There is no trade in the passage. Look for the words first drum."
+      },
+      {
+       "text": "He saved money from odd jobs to buy it."
+      }
+     ]
+    },
+    {
+     "id": "b5-i03-3",
+     "order": 3,
+     "format": "single",
+     "area": "informational-craft",
+     "skill": "author-purpose",
+     "prompt": "Why does the author tell about the recording machines in the last paragraph?",
+     "key": 3,
+     "evidence": [
+      7,
+      8
+     ],
+     "options": [
+      {
+       "text": "To explain how records helped jazz spread across the country",
+       "trap": "not-in-text",
+       "why": "The passage does not say this. Think about what the machines could not record."
+      },
+      {
+       "text": "To show that jazz sounded different in Chicago than at home",
+       "trap": "not-in-text",
+       "why": "The passage does not compare the two cities' music. Read the sentence that begins Even so."
+      },
+      {
+       "text": "To show how much Baby enjoyed trying out brand new sounds",
+       "trap": "word-lift",
+       "why": "He used woodblocks because he had to, not because he enjoyed it."
+      },
+      {
+       "text": "To explain why his records do not match how he played live"
+      }
+     ]
+    },
+    {
+     "id": "b5-i03-4",
+     "order": 4,
+     "format": "sentence",
+     "area": "informational-key-ideas",
+     "skill": "cause-effect",
+     "prompt": "Tap the sentence that tells what Baby’s work on the riverboats led to.",
+     "keys": [
+      5
+     ],
+     "why": "Look at the end of the paragraph about the riverboats."
+    },
+    {
+     "id": "b5-i03-5",
+     "order": 5,
+     "format": "multi",
+     "area": "informational-craft",
+     "skill": "text-structure",
+     "prompt": "Which two statements tell what the last paragraph is about? Pick two.",
+     "keys": [
+      0,
+      1
+     ],
+     "evidence": [
+      7,
+      8
+     ],
+     "options": [
+      {
+       "text": "What listeners said about his live playing"
+      },
+      {
+       "text": "A problem Baby faced when making records"
+      },
+      {
+       "text": "How Baby learned to read music on the river",
+       "trap": "true-but",
+       "why": "Reading music comes up in the second paragraph, not the last one."
+      },
+      {
+       "text": "Baby’s childhood and first drum in New Orleans",
+       "trap": "true-but",
+       "why": "That is in the first paragraph, not the last one."
+      },
+      {
+       "text": "Why Baby stopped playing drums in his last years",
+       "trap": "not-in-text",
+       "why": "The passage never says he stopped. Read the last paragraph again."
+      }
+     ]
+    }
+   ],
+   "level": 1050
+  },
+  {
+   "id": "b5-i06",
+   "type": "informational",
+   "genre": "history",
+   "title": "The Tongue Nobody Watched",
+   "band": "b5",
+   "topics": [
+    "hummingbirds",
+    "birds",
+    "animals"
+   ],
+   "paragraphs": [
+    [
+     "For about two hundred years, scientists believed that a hummingbird drank the way a person sips through a straw.",
+     "The bird’s tongue has two thin grooves, and experts reasoned that nectar must creep up those tiny tubes on its own, the way water climbs into a paper towel.",
+     "The idea seemed so sensible that few people thought to test it."
+    ],
+    [
+     "Then, in the early 2010s, a team of researchers built clear plastic flowers and filmed hummingbirds drinking from them with very fast cameras.",
+     "When they slowed the videos down, they saw something nobody had expected.",
+     "The tip of the tongue split in two, and each half unrolled and spread out fringes, like a tiny mop, the moment it touched nectar.",
+     "As the bird pulled its tongue back, the fringes curled up and trapped the liquid inside."
+    ],
+    [
+     "Later films showed that the grooves also spring open as the tongue leaves the beak, pulling nectar in like a squeezed sponge.",
+     "A hummingbird can do all of this about fifteen to twenty times every second.",
+     "The discovery reminded scientists that even a widely accepted idea is only a guess until someone looks closely."
+    ]
+   ],
+   "items": [
+    {
+     "id": "b5-i06-1",
+     "order": 1,
+     "format": "single",
+     "area": "informational-key-ideas",
+     "skill": "main-idea",
+     "prompt": "What is this passage mostly about?",
+     "key": 3,
+     "evidence": [
+      4
+     ],
+     "options": [
+      {
+       "text": "How filming hummingbirds changed an idea about their nests",
+       "trap": "not-in-text",
+       "why": "Nests are not in the passage. Look at what the old idea was about."
+      },
+      {
+       "text": "How filming hummingbirds changed an idea about their hearts",
+       "trap": "not-in-text",
+       "why": "Hearts are not mentioned. Look at the first paragraph."
+      },
+      {
+       "text": "How filming hummingbirds changed an idea about their wings",
+       "trap": "not-in-text",
+       "why": "Wings are never mentioned. Look at what the researchers filmed up close."
+      },
+      {
+       "text": "How filming hummingbirds changed an idea about their tongues"
+      }
+     ]
+    },
+    {
+     "id": "b5-i06-2",
+     "order": 2,
+     "format": "single",
+     "area": "informational-craft",
+     "skill": "evidence",
+     "prompt": "Which detail best shows that the old idea was wrong?",
+     "key": 3,
+     "evidence": [
+      5
+     ],
+     "options": [
+      {
+       "text": "Nectar creeps up tubes like water in a towel.",
+       "trap": "opposite",
+       "why": "That is the old idea itself. Look at what the videos showed."
+      },
+      {
+       "text": "The tongue has two thin grooves along it.",
+       "trap": "true-but",
+       "why": "That is true, but it is part of the old idea, not proof against it."
+      },
+      {
+       "text": "A bird drinks fifteen to twenty times a second.",
+       "trap": "true-but",
+       "why": "That is true, but it does not show the straw idea was wrong."
+      },
+      {
+       "text": "The tongue tip split and spread out fringes."
+      }
+     ]
+    },
+    {
+     "id": "b5-i06-3",
+     "order": 3,
+     "format": "single",
+     "area": "informational-key-ideas",
+     "skill": "key-details",
+     "prompt": "According to the passage, what did the researchers use to watch the tongue?",
+     "key": 2,
+     "evidence": [
+      3
+     ],
+     "options": [
+      {
+       "text": "X-ray machines and birds that were asleep",
+       "trap": "not-in-text",
+       "why": "X-rays are not in the passage. Read the second paragraph."
+      },
+      {
+       "text": "Microscopes and thin slices of a tongue",
+       "trap": "not-in-text",
+       "why": "Microscopes are not mentioned. Read the first sentence of the second paragraph."
+      },
+      {
+       "text": "Clear plastic flowers and very fast cameras"
+      },
+      {
+       "text": "Colored nectar and small glass feeders",
+       "trap": "not-in-text",
+       "why": "The passage does not mention colored nectar. Read the second paragraph."
+      }
+     ]
+    },
+    {
+     "id": "b5-i06-4",
+     "order": 4,
+     "format": "sentence",
+     "area": "informational-craft",
+     "skill": "author-purpose",
+     "prompt": "Tap the sentence that tells the lesson the author wants readers to take from the discovery.",
+     "keys": [
+      9
+     ],
+     "why": "Look at how the passage ends."
+    },
+    {
+     "id": "b5-i06-5",
+     "order": 5,
+     "format": "order",
+     "area": "informational-key-ideas",
+     "skill": "sequence",
+     "prompt": "Put these events in the order they happened.",
+     "why": "Look for time words like For about two hundred years, Then and Later.",
+     "steps": [
+      "Scientists believe nectar creeps up the grooves.",
+      "Researchers build clear plastic flowers.",
+      "Videos show the tongue tip splitting.",
+      "Later films show the grooves spring open."
+     ]
+    }
+   ],
+   "level": 1120
+  },
+  {
+   "id": "b5-i07",
+   "type": "informational",
+   "genre": "article",
+   "title": "The Shrinking Storm",
+   "band": "b5",
+   "topics": [
+    "jupiter",
+    "planets",
+    "space"
+   ],
+   "paragraphs": [
+    [
+     "Through a telescope, Jupiter looks like a striped marble with one odd freckle: a reddish oval called the Great Red Spot.",
+     "The spot is a storm, a spinning mass of clouds wider than the whole Earth, with winds faster than any hurricane on our planet.",
+     "People have watched it for well over a hundred years, which makes it the longest-lasting storm anyone has ever observed."
+    ],
+    [
+     "Yet the spot is not the size it used to be.",
+     "Drawings and photos from the late 1800s show an oval long enough to hold about three Earths side by side.",
+     "Today it could hold only one, with a little room to spare, and it has become rounder, more like a circle than a stretched egg."
+    ],
+    [
+     "Scientists are not sure why the storm is shrinking or what will happen next.",
+     "Some think it may keep getting smaller until it fades away, while others point out that it seems to have grown taller even as it has narrowed.",
+     "For now, astronomers keep measuring it, adding new pictures to a record that stretches back to the days of hand-drawn sketches."
+    ]
+   ],
+   "items": [
+    {
+     "id": "b5-i07-1",
+     "order": 1,
+     "format": "single",
+     "area": "informational-key-ideas",
+     "skill": "main-idea",
+     "prompt": "What is this passage mostly about?",
+     "key": 2,
+     "evidence": [
+      3
+     ],
+     "options": [
+      {
+       "text": "How a giant storm on Jupiter got its red color",
+       "trap": "not-in-text",
+       "why": "The passage never explains the color. Look at what the second and third paragraphs are about."
+      },
+      {
+       "text": "How a giant storm on Jupiter was first found",
+       "trap": "not-in-text",
+       "why": "The passage does not tell who found it. Look at what has happened to it over time."
+      },
+      {
+       "text": "How a giant storm on Jupiter has slowly changed"
+      },
+      {
+       "text": "How a giant storm on Jupiter is like Earth’s storms",
+       "trap": "detail",
+       "why": "Hurricanes are mentioned once. Most of the passage is about something else."
+      }
+     ]
+    },
+    {
+     "id": "b5-i07-2",
+     "order": 2,
+     "format": "single",
+     "area": "informational-craft",
+     "skill": "text-structure",
+     "prompt": "How is the second paragraph organized?",
+     "key": 1,
+     "evidence": [
+      4,
+      5
+     ],
+     "options": [
+      {
+       "text": "It tells a problem and how scientists solved it.",
+       "trap": "opposite",
+       "why": "The scientists have not solved anything yet. Look at the words late 1800s and today."
+      },
+      {
+       "text": "It compares the storm in the past with the storm today."
+      },
+      {
+       "text": "It lists the possible causes of the storm, one by one.",
+       "trap": "not-in-text",
+       "why": "Causes are not listed. Look at the words late 1800s and today."
+      },
+      {
+       "text": "It describes how the storm forms, step by step.",
+       "trap": "not-in-text",
+       "why": "The paragraph does not explain how storms form. Look at the words late 1800s and today."
+      }
+     ]
+    },
+    {
+     "id": "b5-i07-3",
+     "order": 3,
+     "format": "single",
+     "area": "informational-craft",
+     "skill": "evidence",
+     "prompt": "Which detail from the passage shows that the storm has changed?",
+     "key": 3,
+     "evidence": [
+      5
+     ],
+     "options": [
+      {
+       "text": "It has turned from deep red to pale orange.",
+       "trap": "not-in-text",
+       "why": "The passage does not mention a color change. Read the second paragraph."
+      },
+      {
+       "text": "It has split into two smaller oval storms.",
+       "trap": "not-in-text",
+       "why": "The passage never says it split. Read the second paragraph."
+      },
+      {
+       "text": "It has drifted closer to Jupiter’s middle.",
+       "trap": "not-in-text",
+       "why": "Its position is not mentioned. Read the second paragraph."
+      },
+      {
+       "text": "It has become rounder, more like a circle."
+      }
+     ]
+    },
+    {
+     "id": "b5-i07-4",
+     "order": 4,
+     "format": "multi",
+     "area": "informational-key-ideas",
+     "skill": "key-details",
+     "prompt": "Which two details from the passage tell how large the storm is or was? Pick two.",
+     "keys": [
+      0,
+      3
+     ],
+     "evidence": [
+      1,
+      4
+     ],
+     "options": [
+      {
+       "text": "It is wider than the whole Earth."
+      },
+      {
+       "text": "It is larger than Jupiter’s biggest moon.",
+       "trap": "not-in-text",
+       "why": "Jupiter's moons are not mentioned. Look for sizes compared with Earth."
+      },
+      {
+       "text": "It covers about half of Jupiter’s face.",
+       "trap": "not-in-text",
+       "why": "The passage calls it a freckle. Look for sizes compared with Earth."
+      },
+      {
+       "text": "It once could hold about three Earths."
+      },
+      {
+       "text": "It is deeper than any ocean on Earth.",
+       "trap": "not-in-text",
+       "why": "Depth is not in the passage. Look for sizes compared with Earth."
+      }
+     ]
+    },
+    {
+     "id": "b5-i07-5",
+     "order": 5,
+     "format": "sentence",
+     "area": "informational-craft",
+     "skill": "author-purpose",
+     "prompt": "Tap the sentence that explains why the author calls the storm record-breaking.",
+     "keys": [
+      2
+     ],
+     "why": "Look in the first paragraph for a word ending in -est."
+    }
+   ],
+   "level": 1070
+  },
+  {
+   "id": "b5-i09",
+   "type": "informational",
+   "genre": "article",
+   "title": "Point and Call",
+   "band": "b5",
+   "topics": [
+    "japan",
+    "countries-cultures",
+    "people-places"
+   ],
+   "paragraphs": [
+    [
+     "On train platforms in Japan, travelers often notice workers doing something that looks a little like a dance.",
+     "A conductor points sharply at a signal light and says its color out loud, then turns, points down the platform, and calls out that it is clear.",
+     "Visitors sometimes giggle, but the habit, known as pointing and calling, is a serious safety method that Japanese railways have used for about a hundred years."
+    ],
+    [
+     "The idea is that eyes alone can be lazy.",
+     "When a worker has checked the same signal thousands of times, the mind can drift, and a quick glance may see what it expects instead of what is really there.",
+     "Pointing makes the hand join the eyes, and speaking makes the ears join too, so the brain has to pay attention."
+    ],
+    [
+     "Studies have found that workers who point and call make far fewer mistakes than workers who only look.",
+     "Even so, the method has spread slowly outside Japan, partly because some workers feel embarrassed to talk to signals in public.",
+     "A few train systems in other countries now use a simpler version, such as pointing without calling."
+    ]
+   ],
+   "items": [
+    {
+     "id": "b5-i09-1",
+     "order": 1,
+     "format": "single",
+     "area": "informational-key-ideas",
+     "skill": "main-idea",
+     "prompt": "What is this passage mostly about?",
+     "key": 2,
+     "evidence": [
+      2
+     ],
+     "options": [
+      {
+       "text": "A railway habit and the person who began it",
+       "trap": "not-in-text",
+       "why": "No single person is named. Look at what the second paragraph explains."
+      },
+      {
+       "text": "A railway habit and the trouble it causes",
+       "trap": "opposite",
+       "why": "The habit prevents trouble. Look at what the second paragraph explains."
+      },
+      {
+       "text": "A railway habit and the reason it works"
+      },
+      {
+       "text": "A railway habit and the money it saves",
+       "trap": "not-in-text",
+       "why": "Money is not mentioned. Look at what the second paragraph explains."
+      }
+     ]
+    },
+    {
+     "id": "b5-i09-2",
+     "order": 2,
+     "format": "single",
+     "area": "informational-craft",
+     "skill": "author-purpose",
+     "prompt": "Why does the author say the workers look like they are doing a dance?",
+     "key": 3,
+     "evidence": [
+      0
+     ],
+     "options": [
+      {
+       "text": "To show that the workers move in time to a beat",
+       "trap": "not-in-text",
+       "why": "There is no beat or music. Think about how the habit looks to visitors."
+      },
+      {
+       "text": "To show that the moves are graceful and well practiced",
+       "trap": "not-in-text",
+       "why": "Practice is not mentioned. Think about how the habit looks to visitors."
+      },
+      {
+       "text": "To hint that the habit first began at a festival",
+       "trap": "not-in-text",
+       "why": "The passage does not say where the habit began. Think about how it looks to visitors."
+      },
+      {
+       "text": "To help readers picture how unusual the habit looks"
+      }
+     ]
+    },
+    {
+     "id": "b5-i09-3",
+     "order": 3,
+     "format": "single",
+     "area": "informational-key-ideas",
+     "skill": "cause-effect",
+     "prompt": "According to the passage, why has pointing and calling spread slowly outside Japan?",
+     "key": 0,
+     "evidence": [
+      7
+     ],
+     "options": [
+      {
+       "text": "Some workers feel embarrassed to do it in public."
+      },
+      {
+       "text": "Some workers say it is too hard to remember.",
+       "trap": "not-in-text",
+       "why": "Remembering is not the reason given. Find the sentence with the word partly."
+      },
+      {
+       "text": "Some signals in other countries look different.",
+       "trap": "not-in-text",
+       "why": "Signals elsewhere are not described. Find the sentence with the word partly."
+      },
+      {
+       "text": "Some workers think it slows down their work.",
+       "trap": "not-in-text",
+       "why": "Speed is not mentioned. Find the sentence with the word partly."
+      }
+     ]
+    },
+    {
+     "id": "b5-i09-4",
+     "order": 4,
+     "format": "sentence",
+     "area": "informational-craft",
+     "skill": "text-structure",
+     "prompt": "Tap the sentence where the author begins to explain why the method works.",
+     "keys": [
+      3
+     ],
+     "why": "Look at the start of the second paragraph."
+    },
+    {
+     "id": "b5-i09-5",
+     "order": 5,
+     "format": "multi",
+     "area": "informational-craft",
+     "skill": "evidence",
+     "prompt": "According to the passage, which two details support the idea that pointing and calling helps workers pay attention? Pick two.",
+     "keys": [
+      3,
+      4
+     ],
+     "evidence": [
+      5,
+      6
+     ],
+     "options": [
+      {
+       "text": "Workers who do it blink less often.",
+       "trap": "not-in-text",
+       "why": "Blinking is not mentioned. Look in the second and third paragraphs."
+      },
+      {
+       "text": "Workers rest after every train leaves.",
+       "trap": "not-in-text",
+       "why": "Rest breaks are not in the passage. Look in the second and third paragraphs."
+      },
+      {
+       "text": "Workers practice the moves in classes.",
+       "trap": "not-in-text",
+       "why": "Classes are not in the passage. Look in the second and third paragraphs."
+      },
+      {
+       "text": "The hand and the ears join the eyes."
+      },
+      {
+       "text": "Workers who do it make fewer mistakes."
+      }
+     ]
+    }
+   ],
+   "level": 1090
+  },
+  {
+   "id": "b5-i10",
+   "type": "informational",
+   "genre": "biography",
+   "title": "The Runner from the Village",
+   "band": "b5",
+   "topics": [
+    "olympic-history",
+    "olympics",
+    "sports"
+   ],
+   "paragraphs": [
+    [
+     "When the first modern Olympic Games opened in Athens in 1896, Greek fans had high hopes, but no Greek athlete had won a running race.",
+     "The last chance was a brand-new race of about forty kilometers, run from the town of Marathon to the stadium in Athens."
+    ],
+    [
+     "Among the runners was Spyridon Louis, a young man from a village near Athens who helped his father deliver water.",
+     "He was not famous, and many spectators had never heard his name until that day.",
+     "Early in the race, several foreign runners sped ahead, but one by one they slowed in the heat and the hills.",
+     "Louis kept a steady pace, and with a few kilometers left, he moved into first place."
+    ],
+    [
+     "When he entered the stadium, the huge crowd roared, and two princes ran beside him for the final stretch.",
+     "Afterward Louis went home to his village and rarely raced again.",
+     "Still, his name became so beloved in Greece that people there use it in a saying about someone who runs off very fast."
+    ]
+   ],
+   "items": [
+    {
+     "id": "b5-i10-1",
+     "order": 1,
+     "format": "single",
+     "area": "informational-key-ideas",
+     "skill": "main-idea",
+     "prompt": "What is this passage mostly about?",
+     "key": 3,
+     "evidence": [
+      5
+     ],
+     "options": [
+      {
+       "text": "How an unknown runner won a race in his bare feet",
+       "trap": "not-in-text",
+       "why": "Shoes are not mentioned. Look at the first paragraph and the race."
+      },
+      {
+       "text": "How an unknown runner won a race after nearly quitting",
+       "trap": "not-in-text",
+       "why": "He never nearly quits in the passage. Look at how he ran the race."
+      },
+      {
+       "text": "How an unknown runner won a race by a single step",
+       "trap": "not-in-text",
+       "why": "The finish is not that close in the passage. Look at how he took the lead."
+      },
+      {
+       "text": "How an unknown runner won his country’s last chance"
+      }
+     ]
+    },
+    {
+     "id": "b5-i10-2",
+     "order": 2,
+     "format": "single",
+     "area": "informational-key-ideas",
+     "skill": "key-details",
+     "prompt": "According to the passage, what work did Louis do before the race?",
+     "key": 1,
+     "evidence": [
+      2
+     ],
+     "options": [
+      {
+       "text": "He helped his brother herd goats on a hill.",
+       "trap": "not-in-text",
+       "why": "Goats are not mentioned. Read the sentence that first names Louis."
+      },
+      {
+       "text": "He helped his father deliver water."
+      },
+      {
+       "text": "He carried messages for a shop in the city.",
+       "trap": "not-in-text",
+       "why": "Messages are not mentioned. Read the sentence that first names Louis."
+      },
+      {
+       "text": "He helped his uncle sell olives at a market.",
+       "trap": "not-in-text",
+       "why": "Olives are not mentioned. Read the sentence that first names Louis."
+      }
+     ]
+    },
+    {
+     "id": "b5-i10-3",
+     "order": 3,
+     "format": "single",
+     "area": "informational-craft",
+     "skill": "author-purpose",
+     "prompt": "Why does the author end the passage the way it does?",
+     "key": 1,
+     "evidence": [
+      8
+     ],
+     "options": [
+      {
+       "text": "To tell how Greeks still sing about him",
+       "trap": "not-in-text",
+       "why": "Songs are not mentioned. Read the last sentence."
+      },
+      {
+       "text": "To tell how Greeks still use his name"
+      },
+      {
+       "text": "To tell how Greeks still visit his grave",
+       "trap": "not-in-text",
+       "why": "His grave is not mentioned. Read the last sentence."
+      },
+      {
+       "text": "To tell how Greeks still run his route",
+       "trap": "not-in-text",
+       "why": "The passage does not say this. Read the last sentence."
+      }
+     ]
+    },
+    {
+     "id": "b5-i10-4",
+     "order": 4,
+     "format": "two-part",
+     "area": "informational-key-ideas",
+     "skill": "cause-effect",
+     "evidence": [
+      4,
+      5
+     ],
+     "a": {
+      "prompt": "Part A: According to the passage, how did Louis get into first place?",
+      "key": 2,
+      "options": [
+       {
+        "text": "By sprinting hard in the last stretch",
+        "trap": "not-in-text",
+        "why": "No sprint is described. Read about his steady pace."
+       },
+       {
+        "text": "By racing ahead early and holding on",
+        "trap": "opposite",
+        "why": "The foreign runners raced ahead early and slowed. Read about Louis."
+       },
+       {
+        "text": "By keeping an even speed the whole way"
+       },
+       {
+        "text": "By running close behind the leaders",
+        "trap": "not-in-text",
+        "why": "The passage does not say this. Read about his steady pace."
+       }
+      ]
+     },
+     "b": {
+      "prompt": "Part B: Which sentence from the passage best supports your answer to Part A?",
+      "key": 1,
+      "options": [
+       {
+        "text": "“He was not famous, and many spectators had never heard his name until that day.”",
+        "trap": "true-but",
+        "why": "This tells he was unknown, not how he took the lead."
+       },
+       {
+        "text": "“Early in the race, several foreign runners sped ahead, but one by one they slowed in the heat and the hills.”"
+       },
+       {
+        "text": "“When he entered the stadium, the huge crowd roared, and two princes ran beside him for the final stretch.”",
+        "trap": "true-but",
+        "why": "This happens after he is already in first place."
+       },
+       {
+        "text": "“The last chance was a brand-new race of about forty kilometers, run from the town of Marathon to the stadium in Athens.”",
+        "trap": "true-but",
+        "why": "This describes the race, not how he took the lead."
+       }
+      ]
+     }
+    },
+    {
+     "id": "b5-i10-5",
+     "order": 5,
+     "format": "order",
+     "area": "informational-key-ideas",
+     "skill": "sequence",
+     "prompt": "Put these events in the order they happened.",
+     "why": "Follow the race from the start, to the stadium, to afterward.",
+     "steps": [
+      "Foreign runners speed ahead.",
+      "Louis moves into first place.",
+      "Two princes run beside him.",
+      "Louis goes home to his village."
+     ]
+    }
+   ],
+   "level": 1080
+  },
+  {
+   "id": "b5-i11",
+   "type": "informational",
+   "genre": "article",
+   "title": "A Wall Held Together with Rice",
+   "band": "b5",
+   "topics": [
+    "great-wall-of-china",
+    "ancient-china",
+    "ancient-world",
+    "history"
+   ],
+   "paragraphs": [
+    [
+     "Parts of the Great Wall of China have stood for more than five hundred years, through earthquakes, storms, and many freezing winters.",
+     "Builders back then had no modern cement.",
+     "So what held the bricks together?",
+     "Part of the answer, scientists found, was something many people eat for dinner."
+    ],
+    [
+     "Workers boiled sticky rice into a thin soup.",
+     "They stirred it into lime, a building paste made from burned limestone and water.",
+     "The rice holds a starch that forms a fine net inside the lime as it dries.",
+     "That net packs the lime’s tiny crystals tightly together, making the paste stronger and better at keeping water out."
+    ],
+    [
+     "The rice paste cost a lot, since rice was also food, so builders saved it mostly for important places such as city walls, tombs, and parts of the Great Wall.",
+     "Today, some workers who repair old buildings in China mix rice paste again, because it matches the old material better than modern cement does."
+    ]
+   ],
+   "items": [
+    {
+     "id": "b5-i11-1",
+     "order": 1,
+     "format": "single",
+     "area": "informational-key-ideas",
+     "skill": "main-idea",
+     "prompt": "What is this passage mostly about?",
+     "key": 2,
+     "evidence": [
+      3
+     ],
+     "options": [
+      {
+       "text": "Who really built the oldest wall sections",
+       "trap": "not-in-text",
+       "why": "The builders are not named. Look at the question in the first paragraph."
+      },
+      {
+       "text": "Why really the wall was built so long",
+       "trap": "not-in-text",
+       "why": "The wall's length is not discussed. Look at the question in the first paragraph."
+      },
+      {
+       "text": "What really held the old bricks together"
+      },
+      {
+       "text": "Where really the wall’s stones came from",
+       "trap": "not-in-text",
+       "why": "Where stones came from is not discussed. Look at the question in the first paragraph."
+      }
+     ]
+    },
+    {
+     "id": "b5-i11-2",
+     "order": 2,
+     "format": "single",
+     "area": "informational-key-ideas",
+     "skill": "key-details",
+     "prompt": "According to the passage, what does the starch in rice form inside the lime?",
+     "key": 0,
+     "evidence": [
+      6
+     ],
+     "options": [
+      {
+       "text": "A fine net"
+      },
+      {
+       "text": "A smooth outer shell",
+       "trap": "not-in-text",
+       "why": "A shell is not mentioned. Read the second sentence of the second paragraph."
+      },
+      {
+       "text": "Hard glassy beads",
+       "trap": "not-in-text",
+       "why": "Beads are not mentioned. Read the second sentence of the second paragraph."
+      },
+      {
+       "text": "Tiny air bubbles",
+       "trap": "not-in-text",
+       "why": "Bubbles are not mentioned. Read the second sentence of the second paragraph."
+      }
+     ]
+    },
+    {
+     "id": "b5-i11-3",
+     "order": 3,
+     "format": "single",
+     "area": "informational-craft",
+     "skill": "author-purpose",
+     "prompt": "Why does the author mention that rice was also food?",
+     "key": 2,
+     "evidence": [
+      8
+     ],
+     "options": [
+      {
+       "text": "To explain why the rice had to be boiled into soup first",
+       "trap": "not-in-text",
+       "why": "Boiling is in another paragraph. Read the rest of the sentence about food."
+      },
+      {
+       "text": "To explain why builders later stopped using the paste",
+       "trap": "not-in-text",
+       "why": "The passage says some workers use it again today. Read the sentence about food."
+      },
+      {
+       "text": "To explain why the paste was saved for important places"
+      },
+      {
+       "text": "To show how hungry the workers on the wall often were",
+       "trap": "not-in-text",
+       "why": "Hunger is never mentioned. Read the rest of the sentence about food."
+      }
+     ]
+    },
+    {
+     "id": "b5-i11-4",
+     "order": 4,
+     "format": "multi",
+     "area": "informational-key-ideas",
+     "skill": "cause-effect",
+     "prompt": "According to the passage, which two effects does the rice have on the mortar? Pick two.",
+     "keys": [
+      0,
+      1
+     ],
+     "evidence": [
+      7
+     ],
+     "options": [
+      {
+       "text": "Paste that keeps out water"
+      },
+      {
+       "text": "Stronger paste"
+      },
+      {
+       "text": "Paste that sets in cold weather",
+       "trap": "not-in-text",
+       "why": "Cold weather is not mentioned. Read the last sentence of the second paragraph."
+      },
+      {
+       "text": "Paste that bends in earthquakes",
+       "trap": "not-in-text",
+       "why": "Bending is not mentioned. Read the last sentence of the second paragraph."
+      },
+      {
+       "text": "Paste that grips wet stone",
+       "trap": "not-in-text",
+       "why": "Wet stone is not mentioned. Read the last sentence of the second paragraph."
+      }
+     ]
+    },
+    {
+     "id": "b5-i11-5",
+     "order": 5,
+     "format": "two-part",
+     "area": "informational-craft",
+     "skill": "text-structure",
+     "evidence": [
+      2
+     ],
+     "a": {
+      "prompt": "Part A: How does the author begin the passage?",
+      "key": 2,
+      "options": [
+       {
+        "text": "With a story about one worker on the wall",
+        "trap": "not-in-text",
+        "why": "No single worker is described. Look for the question mark."
+       },
+       {
+        "text": "With a list of the wall’s oldest parts",
+        "trap": "not-in-text",
+        "why": "No parts are listed. Look for the question mark."
+       },
+       {
+        "text": "With a question that the passage answers"
+       },
+       {
+        "text": "With a description of the wall at sunrise",
+        "trap": "not-in-text",
+        "why": "Sunrise is not described. Look for the question mark."
+       }
+      ]
+     },
+     "b": {
+      "prompt": "Part B: Which sentence from the passage best supports your answer to Part A?",
+      "key": 3,
+      "options": [
+       {
+        "text": "“Parts of the Great Wall of China have stood for more than five hundred years, through earthquakes, storms, and many freezing winters.”",
+        "trap": "true-but",
+        "why": "This describes the wall, but it does not ask anything."
+       },
+       {
+        "text": "“Today, some workers who repair old buildings in China mix rice paste again, because it matches the old material better than modern cement does.”",
+        "trap": "true-but",
+        "why": "This comes at the end, not the beginning."
+       },
+       {
+        "text": "“The rice holds a starch that forms a fine net inside the lime as it dries.”",
+        "trap": "true-but",
+        "why": "This is part of the answer, not the way the passage begins."
+       },
+       {
+        "text": "“So what held the bricks together?”"
+       }
+      ]
+     }
+    }
+   ],
+   "level": 1070
+  },
+  {
+   "id": "b5-i12",
+   "type": "informational",
+   "genre": "history",
+   "title": "The Two Wests",
+   "band": "b5",
+   "topics": [
+    "police",
+    "jobs",
+    "money-careers"
+   ],
+   "paragraphs": [
+    [
+     "In the 1880s, police in Paris had a problem: people who were arrested often gave false names, so officers could not tell whether someone had been caught before.",
+     "A clerk named Alphonse Bertillon came up with a system that used a measuring tape instead of names.",
+     "He recorded eleven measurements of each person, such as the length of the head, the width of the cheeks, and the length of the left foot."
+    ],
+    [
+     "His method spread to police in many countries, and for about twenty years it was the best tool they had.",
+     "It was slow, though, and a careless clerk could misread a number by a few millimeters."
+    ],
+    [
+     "According to a famous story, in 1903 a prison in Kansas received a man named Will West, whose measurements matched those of a prisoner already there, a man named William West.",
+     "The two even looked alike, yet they said they were not related.",
+     "The prison then compared their fingerprints, which were completely different.",
+     "The story helped convince police that fingerprints, which are quicker to take and never change, were a better way to tell people apart."
+    ]
+   ],
+   "items": [
+    {
+     "id": "b5-i12-1",
+     "order": 1,
+     "format": "single",
+     "area": "informational-key-ideas",
+     "skill": "main-idea",
+     "prompt": "What is this passage mostly about?",
+     "key": 3,
+     "evidence": [
+      8
+     ],
+     "options": [
+      {
+       "text": "How police moved from riding horses to driving cars",
+       "trap": "not-in-text",
+       "why": "Horses and cars are not in the passage. Look at how police told people apart."
+      },
+      {
+       "text": "How police moved from using whistles to using radios",
+       "trap": "not-in-text",
+       "why": "Whistles and radios are not in the passage. Look at how police told people apart."
+      },
+      {
+       "text": "How police moved from fingerprints to photographs",
+       "trap": "opposite",
+       "why": "Fingerprints came later, not first. Photographs are not mentioned."
+      },
+      {
+       "text": "How police moved from measuring bodies to fingerprints"
+      }
+     ]
+    },
+    {
+     "id": "b5-i12-2",
+     "order": 2,
+     "format": "single",
+     "area": "informational-key-ideas",
+     "skill": "key-details",
+     "prompt": "According to the passage, which of these did Bertillon measure?",
+     "key": 0,
+     "evidence": [
+      2
+     ],
+     "options": [
+      {
+       "text": "The length of the left foot"
+      },
+      {
+       "text": "The length of the little finger",
+       "trap": "not-in-text",
+       "why": "Fingers are not named there. Read the last sentence of the first paragraph."
+      },
+      {
+       "text": "The width of the right hand",
+       "trap": "not-in-text",
+       "why": "The passage names the head, cheeks and left foot. Read the last sentence of the first paragraph."
+      },
+      {
+       "text": "The distance between the eyes",
+       "trap": "not-in-text",
+       "why": "Eyes are not named. Read the last sentence of the first paragraph."
+      }
+     ]
+    },
+    {
+     "id": "b5-i12-3",
+     "order": 3,
+     "format": "single",
+     "area": "informational-craft",
+     "skill": "author-purpose",
+     "prompt": "Why does the author tell the story of the two men named West?",
+     "key": 1,
+     "evidence": [
+      5,
+      7
+     ],
+     "options": [
+      {
+       "text": "To show a case that photographs finally solved",
+       "trap": "not-in-text",
+       "why": "Photographs are not in the passage. Look at what the prison compared."
+      },
+      {
+       "text": "To show a case the old method could not solve"
+      },
+      {
+       "text": "To show a case that led to a very long trial",
+       "trap": "not-in-text",
+       "why": "No trial is mentioned. Look at what the prison compared."
+      },
+      {
+       "text": "To show a case that made the old method famous",
+       "trap": "opposite",
+       "why": "The story shows the old method failing. Read the last sentence."
+      }
+     ]
+    },
+    {
+     "id": "b5-i12-4",
+     "order": 4,
+     "format": "sentence",
+     "area": "informational-key-ideas",
+     "skill": "cause-effect",
+     "prompt": "Tap the sentence that tells why police in Paris needed a new system.",
+     "keys": [
+      0
+     ],
+     "why": "Look for the word problem."
+    },
+    {
+     "id": "b5-i12-5",
+     "order": 5,
+     "format": "order",
+     "area": "informational-key-ideas",
+     "skill": "sequence",
+     "prompt": "Put these events in the order they happened.",
+     "why": "Look for time words like In the 1880s, for about twenty years, and 1903.",
+     "steps": [
+      "Bertillon records eleven measurements.",
+      "His method spreads to many countries.",
+      "Will West arrives at a prison in Kansas.",
+      "The prison compares the two men’s fingerprints."
+     ]
+    }
+   ],
+   "level": 1060
+  },
+  {
+   "id": "b5-i15",
+   "type": "informational",
+   "genre": "article",
+   "title": "The Ship That Did Not Hear",
+   "band": "b5",
+   "topics": [
+    "titanic",
+    "ships",
+    "vehicles-engineering"
+   ],
+   "paragraphs": [
+    [
+     "When the Titanic struck an iceberg in April 1912, another ship, the Californian, was stopped in the ice less than twenty miles away.",
+     "Its crew saw rockets in the distance but did not understand what they meant.",
+     "Its radio operator, the one person who could have heard the Titanic’s calls for help, had switched off his set and gone to bed."
+    ],
+    [
+     "At that time, there was no rule that a ship’s radio had to be watched all night.",
+     "Radio was still new, and many ships carried just one operator, who mostly sent messages for passengers."
+    ],
+    [
+     "After the disaster, nations met and agreed on new safety rules.",
+     "Ships had to keep someone listening to the radio at every hour, carry enough lifeboats for everyone aboard, and hold lifeboat drills.",
+     "An ice patrol was also set up to warn ships about icebergs in the North Atlantic, and it still does that work today."
+    ]
+   ],
+   "items": [
+    {
+     "id": "b5-i15-1",
+     "order": 1,
+     "format": "single",
+     "area": "informational-key-ideas",
+     "skill": "main-idea",
+     "prompt": "What is this passage mostly about?",
+     "key": 3,
+     "evidence": [
+      5
+     ],
+     "options": [
+      {
+       "text": "How one night at sea led to the end of ocean travel",
+       "trap": "not-in-text",
+       "why": "Ocean travel did not end. Look at what nations agreed on afterward."
+      },
+      {
+       "text": "How one night at sea led to the search for a wreck",
+       "trap": "not-in-text",
+       "why": "No search is described. Look at what nations agreed on afterward."
+      },
+      {
+       "text": "How one night at sea led to faster passenger ships",
+       "trap": "not-in-text",
+       "why": "Speed is not discussed. Look at what nations agreed on afterward."
+      },
+      {
+       "text": "How one night at sea led to new rules for ships"
+      }
+     ]
+    },
+    {
+     "id": "b5-i15-2",
+     "order": 2,
+     "format": "single",
+     "area": "informational-key-ideas",
+     "skill": "cause-effect",
+     "prompt": "According to the passage, why could the Californian’s crew not hear the Titanic’s calls?",
+     "key": 1,
+     "evidence": [
+      2
+     ],
+     "options": [
+      {
+       "text": "Their ship was hidden behind a large iceberg.",
+       "trap": "not-in-text",
+       "why": "Nothing was hiding the ship. Read the last sentence of the first paragraph."
+      },
+      {
+       "text": "Their only radio operator had gone to bed."
+      },
+      {
+       "text": "Their radio was too weak to reach that far.",
+       "trap": "not-in-text",
+       "why": "The passage does not say the radio was weak. Read the last sentence of the first paragraph."
+      },
+      {
+       "text": "Their operator was busy with other messages.",
+       "trap": "word-lift",
+       "why": "Operators often sent passengers' messages, but this one was asleep."
+      }
+     ]
+    },
+    {
+     "id": "b5-i15-3",
+     "order": 3,
+     "format": "single",
+     "area": "informational-craft",
+     "skill": "text-structure",
+     "prompt": "How is the passage organized?",
+     "key": 3,
+     "evidence": [
+      3,
+      5
+     ],
+     "options": [
+      {
+       "text": "An event, why the ship sank, and who survived it",
+       "trap": "not-in-text",
+       "why": "The passage does not explain the sinking or name survivors. Look at what each paragraph covers."
+      },
+      {
+       "text": "An event, how the wreck was found, and what it showed",
+       "trap": "not-in-text",
+       "why": "The wreck is not in the passage. Look at what each paragraph covers."
+      },
+      {
+       "text": "An event, how it was reported, and what people thought",
+       "trap": "not-in-text",
+       "why": "News reports are not in the passage. Look at what each paragraph covers."
+      },
+      {
+       "text": "An event, why help did not come, and what changed after"
+      }
+     ]
+    },
+    {
+     "id": "b5-i15-4",
+     "order": 4,
+     "format": "sentence",
+     "area": "informational-craft",
+     "skill": "evidence",
+     "prompt": "Tap the sentence that shows the radio rules of 1912 were weak.",
+     "keys": [
+      3
+     ],
+     "why": "Look at the start of the second paragraph."
+    },
+    {
+     "id": "b5-i15-5",
+     "order": 5,
+     "format": "multi",
+     "area": "informational-key-ideas",
+     "skill": "key-details",
+     "prompt": "According to the passage, which two things did the new rules require? Pick two.",
+     "keys": [
+      0,
+      4
+     ],
+     "evidence": [
+      6
+     ],
+     "options": [
+      {
+       "text": "Holding lifeboat drills"
+      },
+      {
+       "text": "Shining searchlights on the water",
+       "trap": "not-in-text",
+       "why": "Searchlights are not named. Read the second sentence of the last paragraph."
+      },
+      {
+       "text": "Posting lookouts with binoculars",
+       "trap": "not-in-text",
+       "why": "Lookouts are not named. Read the second sentence of the last paragraph."
+      },
+      {
+       "text": "Slowing down in icy water at night",
+       "trap": "not-in-text",
+       "why": "Speed rules are not named. Read the second sentence of the last paragraph."
+      },
+      {
+       "text": "Listening to the radio at every hour"
+      }
+     ]
+    }
+   ],
+   "level": 1040
+  },
+  {
+   "id": "b5-i17",
+   "type": "informational",
+   "genre": "article",
+   "title": "Why Some Cards Are Rare",
+   "band": "b5",
+   "topics": [
+    "trading-cards",
+    "collecting",
+    "games-hobbies"
+   ],
+   "paragraphs": [
+    [
+     "Trading cards are not printed one at a time.",
+     "A factory prints them on huge sheets of thick paper, with more than a hundred cards side by side, and then a machine cuts the sheets apart."
+    ],
+    [
+     "The way a sheet is arranged can decide which cards become rare.",
+     "If most cards appear twice on a sheet but one card appears only once, that card will turn up half as often in packs.",
+     "Collectors call such cards short prints, and some companies make them on purpose to give buyers a reason to keep opening packs."
+    ],
+    [
+     "Other rare cards are accidents.",
+     "A smudged name, a missing color, or a photo printed upside down may be caught and fixed partway through printing, leaving only a few cards with the mistake.",
+     "Because so few exist, those error cards can be worth far more than the corrected version, even though they are, in a sense, broken."
+    ]
+   ],
+   "items": [
+    {
+     "id": "b5-i17-1",
+     "order": 1,
+     "format": "single",
+     "area": "informational-key-ideas",
+     "skill": "main-idea",
+     "prompt": "What is this passage mostly about?",
+     "key": 3,
+     "evidence": [
+      2,
+      5
+     ],
+     "options": [
+      {
+       "text": "Card shows, collectors, and rare cards",
+       "trap": "not-in-text",
+       "why": "Card shows are not in the passage. Look at what each paragraph explains."
+      },
+      {
+       "text": "Card games, rules, and rare cards",
+       "trap": "not-in-text",
+       "why": "Games are not in the passage. Look at what each paragraph explains."
+      },
+      {
+       "text": "Card shops, prices, and rare cards",
+       "trap": "not-in-text",
+       "why": "Shops are not in the passage. Look at what each paragraph explains."
+      },
+      {
+       "text": "Printing sheets, mistakes, and rare cards"
+      }
+     ]
+    },
+    {
+     "id": "b5-i17-2",
+     "order": 2,
+     "format": "single",
+     "area": "informational-key-ideas",
+     "skill": "key-details",
+     "prompt": "According to the passage, how many cards fit on one printing sheet?",
+     "key": 2,
+     "evidence": [
+      1
+     ],
+     "options": [
+      {
+       "text": "More than a thousand",
+       "trap": "not-in-text",
+       "why": "The passage gives a smaller number. Read the second sentence."
+      },
+      {
+       "text": "About ten or twelve",
+       "trap": "not-in-text",
+       "why": "The passage gives a bigger number. Read the second sentence."
+      },
+      {
+       "text": "More than a hundred"
+      },
+      {
+       "text": "Around fifty",
+       "trap": "not-in-text",
+       "why": "The passage gives a bigger number. Read the second sentence."
+      }
+     ]
+    },
+    {
+     "id": "b5-i17-3",
+     "order": 3,
+     "format": "single",
+     "area": "informational-craft",
+     "skill": "author-purpose",
+     "prompt": "Why does the author say that error cards are, in a sense, broken?",
+     "key": 3,
+     "evidence": [
+      7
+     ],
+     "options": [
+      {
+       "text": "To point out that a mistake can ruin a whole sheet",
+       "trap": "not-in-text",
+       "why": "Only a few cards have the mistake. Read the whole last sentence."
+      },
+      {
+       "text": "To point out that a mistake can make a card illegal",
+       "trap": "not-in-text",
+       "why": "Nothing is said about laws. Read the whole last sentence."
+      },
+      {
+       "text": "To point out that a mistake can be fixed by owners",
+       "trap": "not-in-text",
+       "why": "Owners do not fix cards. Read the whole last sentence."
+      },
+      {
+       "text": "To point out that a mistake can make a card valuable"
+      }
+     ]
+    },
+    {
+     "id": "b5-i17-4",
+     "order": 4,
+     "format": "multi",
+     "area": "informational-key-ideas",
+     "skill": "cause-effect",
+     "prompt": "According to the passage, which two things can make a card rare? Pick two.",
+     "keys": [
+      1,
+      4
+     ],
+     "evidence": [
+      3,
+      6
+     ],
+     "options": [
+      {
+       "text": "It was printed many years ago.",
+       "trap": "not-in-text",
+       "why": "Age is not mentioned. Read the second and third paragraphs."
+      },
+      {
+       "text": "It appears fewer times on each sheet."
+      },
+      {
+       "text": "It shows a very famous player.",
+       "trap": "not-in-text",
+       "why": "Players are not mentioned. Read the second and third paragraphs."
+      },
+      {
+       "text": "It came in a special gift box.",
+       "trap": "not-in-text",
+       "why": "Boxes are not mentioned. Read the second and third paragraphs."
+      },
+      {
+       "text": "It has a mistake that was later fixed."
+      }
+     ]
+    },
+    {
+     "id": "b5-i17-5",
+     "order": 5,
+     "format": "two-part",
+     "area": "informational-craft",
+     "skill": "text-structure",
+     "evidence": [
+      2,
+      5
+     ],
+     "a": {
+      "prompt": "Part A: How are the second and third paragraphs organized?",
+      "key": 0,
+      "options": [
+       {
+        "text": "Each gives one cause of rare cards."
+       },
+       {
+        "text": "Each gives one way to sell rare cards.",
+        "trap": "not-in-text",
+        "why": "Neither paragraph is about selling cards. Read the first sentence of the second and third paragraphs."
+       },
+       {
+        "text": "Each gives one place to find rare cards.",
+        "trap": "not-in-text",
+        "why": "Neither paragraph says where to find cards. Read the first sentence of the second and third paragraphs."
+       },
+       {
+        "text": "Each gives one way to protect rare cards.",
+        "trap": "not-in-text",
+        "why": "Neither paragraph is about protecting cards. Read the first sentence of the second and third paragraphs."
+       }
+      ]
+     },
+     "b": {
+      "prompt": "Part B: Which sentence from the passage best supports your answer to Part A?",
+      "key": 0,
+      "options": [
+       {
+        "text": "“Other rare cards are accidents.”"
+       },
+       {
+        "text": "“Because so few exist, those error cards can be worth far more than the corrected version, even though they are, in a sense, broken.”",
+        "trap": "true-but",
+        "why": "This is about value. Look for the sentence that starts a new reason."
+       },
+       {
+        "text": "“A factory prints them on huge sheets of thick paper, with more than a hundred cards side by side, and then a machine cuts the sheets apart.”",
+        "trap": "true-but",
+        "why": "This explains printing, not a reason for rarity."
+       },
+       {
+        "text": "“Trading cards are not printed one at a time.”",
+        "trap": "true-but",
+        "why": "This begins the first paragraph, about printing."
+       }
+      ]
+     }
+    }
+   ],
+   "level": 1090
+  },
+  {
+   "id": "b5-l01",
+   "type": "literary",
+   "genre": "story",
+   "title": "The Small Gray Screen",
+   "band": "b5",
+   "topics": [
+    "neil-armstrong",
+    "astronauts",
+    "space"
+   ],
+   "paragraphs": [
+    [
+     "Priya had expected her grandfather’s cluttered attic to smell of dust, but instead it smelled faintly of cedar and brittle paper.",
+     "He dragged a battered cardboard box from beneath the window and lifted out a small black-and-white television with a crooked antenna.",
+     "“I watched the first moon landing on this,” he said, tapping the curved glass as if it might still turn on."
+    ],
+    [
+     "Priya frowned, because she had watched that landing a dozen times on her tablet, in sharp color, whenever she liked.",
+     "“The picture was so fuzzy that we argued about whether we were seeing a man or a shadow,” Grandpa said.",
+     "“Forty people crowded into our tiny living room, and nobody spoke when the astronaut climbed down the ladder.”"
+    ],
+    [
+     "Priya tried to imagine forty people perfectly silent in one room, all waiting anxiously for a flickering gray shape to move.",
+     "Her own videos never made anyone hold their breath, because she could pause them, skip ahead, or abandon them for something else entirely.",
+     "“Weren’t you bored, waiting so long for such a blurry picture?” she asked."
+    ],
+    [
+     "Grandpa laughed, and his laugh was a small earthquake that shook the box in his lap.",
+     "“Bored?” he said. “We were sharing the biggest moment any of us had ever seen, and we were sharing it together.”",
+     "That evening Priya carried the old television downstairs, set it by the window, and asked her whole family to sit with her while Grandpa told the story again."
+    ]
+   ],
+   "items": [
+    {
+     "id": "b5-l01-1",
+     "order": 1,
+     "format": "single",
+     "area": "literary-key-ideas",
+     "skill": "theme",
+     "prompt": "Which lesson does the story show?",
+     "key": 2,
+     "evidence": [
+      10
+     ],
+     "options": [
+      {
+       "text": "Waiting patiently for something makes it worth more in the end.",
+       "trap": "detail",
+       "why": "The people did wait, but Grandpa says what mattered was sharing the moment together."
+      },
+      {
+       "text": "New ways of doing things are not always better than old ways.",
+       "trap": "not-in-text",
+       "why": "The story never says the old television is better. Look at what Grandpa says mattered most."
+      },
+      {
+       "text": "An event can mean more when people experience it together."
+      },
+      {
+       "text": "Being curious about the past helps people understand each other.",
+       "trap": "too-broad",
+       "why": "Priya is curious, but the story's lesson is about what Grandpa says at the end."
+      }
+     ]
+    },
+    {
+     "id": "b5-l01-2",
+     "order": 2,
+     "format": "single",
+     "area": "literary-key-ideas",
+     "skill": "character",
+     "prompt": "Why does Priya frown when Grandpa mentions the moon landing?",
+     "key": 3,
+     "evidence": [
+      3
+     ],
+     "options": [
+      {
+       "text": "She does not believe that the landing really happened.",
+       "trap": "not-in-text",
+       "why": "The story never says she doubts it. Read the sentence that tells why she frowns."
+      },
+      {
+       "text": "She is upset that the old television no longer works.",
+       "trap": "not-in-text",
+       "why": "The story does not say she is upset about the television. Check the reason given with her frown."
+      },
+      {
+       "text": "She thinks the attic is too dusty and uncomfortable.",
+       "trap": "opposite",
+       "why": "The attic smelled like cedar, not dust. Look at the sentence that says why she frowned."
+      },
+      {
+       "text": "She has seen it many times and does not think it is special."
+      }
+     ]
+    },
+    {
+     "id": "b5-l01-3",
+     "order": 3,
+     "format": "single",
+     "area": "literary-craft",
+     "skill": "point-of-view",
+     "prompt": "How does Priya see the moon landing at the start of the story?",
+     "key": 3,
+     "evidence": [
+      3
+     ],
+     "options": [
+      {
+       "text": "As something she has never seen or heard about",
+       "trap": "opposite",
+       "why": "She has watched it a dozen times. Read the sentence that begins Priya frowned."
+      },
+      {
+       "text": "As her favorite thing to watch with her family",
+       "trap": "not-in-text",
+       "why": "The story never says this. Look at why she frowns."
+      },
+      {
+       "text": "As too blurry and gray to be worth watching",
+       "trap": "word-lift",
+       "why": "Grandpa's old picture was blurry. Priya watched it in sharp color."
+      },
+      {
+       "text": "As an old video she can watch any time she wants"
+      }
+     ]
+    },
+    {
+     "id": "b5-l01-4",
+     "order": 4,
+     "format": "sentence",
+     "area": "literary-key-ideas",
+     "skill": "setting",
+     "prompt": "Tap the sentence that tells about the room where Grandpa watched the landing.",
+     "keys": [
+      5
+     ],
+     "why": "Look at what Grandpa says about his home on the night of the landing."
+    },
+    {
+     "id": "b5-l01-5",
+     "order": 5,
+     "format": "two-part",
+     "area": "literary-craft",
+     "skill": "figurative-language",
+     "evidence": [
+      9
+     ],
+     "a": {
+      "prompt": "Part A: What does the phrase “a small earthquake” tell about Grandpa’s laugh?",
+      "key": 2,
+      "options": [
+       {
+        "text": "It was quiet and hard for her to hear.",
+        "trap": "opposite",
+        "why": "An earthquake is strong, not quiet. Look at what the laugh did to the box."
+       },
+       {
+        "text": "It was short and ended very quickly.",
+        "trap": "not-in-text",
+        "why": "The story does not say how long it lasted. Think about what an earthquake does."
+       },
+       {
+        "text": "It was deep enough to make things move."
+       },
+       {
+        "text": "It was loud enough to frighten Priya.",
+        "trap": "not-in-text",
+        "why": "Priya is not frightened in the story. Look at what the laugh shook."
+       }
+      ]
+     },
+     "b": {
+      "prompt": "Part B: Which sentence from the passage best supports your answer to Part A?",
+      "key": 2,
+      "options": [
+       {
+        "text": "“Weren’t you bored, waiting so long for such a blurry picture?” she asked.",
+        "trap": "true-but",
+        "why": "This is the question that made him laugh, but it does not describe the laugh."
+       },
+       {
+        "text": "“Priya tried to imagine forty people perfectly silent in one room, all waiting anxiously for a flickering gray shape to move.”",
+        "trap": "true-but",
+        "why": "This sentence is about the crowd, not about Grandpa's laugh."
+       },
+       {
+        "text": "“Grandpa laughed, and his laugh was a small earthquake that shook the box in his lap.”"
+       },
+       {
+        "text": "“Priya frowned, because she had watched that landing a dozen times on her tablet, in sharp color, whenever she liked.”",
+        "trap": "true-but",
+        "why": "This sentence is about Priya, not about Grandpa's laugh."
+       }
+      ]
+     }
+    }
+   ],
+   "level": 1000
+  },
+  {
+   "id": "b5-l02",
+   "type": "literary",
+   "genre": "story",
+   "title": "The Plain Scoop",
+   "band": "b5",
+   "topics": [
+    "robot-competitions",
+    "robots",
+    "technology"
+   ],
+   "paragraphs": [
+    [
+     "Mateo had built the robot’s lifting arm by himself, and he would not let anyone else on the team touch it.",
+     "It had six motors, three sensors, and a claw that could pick up a pencil from across the table.",
+     "At practice on Thursday, the claw grabbed a plastic ring, twisted sideways, and snapped off with a crack that made everyone flinch."
+    ],
+    [
+     "The competition was on Saturday, so Mateo spent Thursday night trying to rebuild the claw exactly as it had been.",
+     "By Friday afternoon it still kept slipping, and his fingers were sore from tightening the same tiny screws.",
+     "Ruth, the youngest member of the team, held up a scoop she had bent from a sheet of plastic.",
+     "“What if it doesn’t need to grab at all?” she asked."
+    ],
+    [
+     "Mateo wanted to say no, because a scoop seemed far too plain for a robot he had worked on for months.",
+     "Instead he watched her slide it under a ring and lift it on the first try, then on the second, then on the tenth.",
+     "On Saturday the robot with the plain scoop finished third out of twenty teams, and when the judges asked who had designed the arm, Mateo pointed to Ruth before he said anything else."
+    ]
+   ],
+   "items": [
+    {
+     "id": "b5-l02-1",
+     "order": 1,
+     "format": "single",
+     "area": "literary-key-ideas",
+     "skill": "theme",
+     "prompt": "Which lesson does the story show?",
+     "key": 0,
+     "evidence": [
+      9
+     ],
+     "options": [
+      {
+       "text": "A simple solution can work better than a complicated one."
+      },
+      {
+       "text": "Hard work pays off when a team refuses to give up.",
+       "trap": "opposite",
+       "why": "Mateo's night of hard work did not fix the claw. Think about what did."
+      },
+      {
+       "text": "Winning matters less than having fun with your friends.",
+       "trap": "not-in-text",
+       "why": "The story never says this. Compare the claw with the scoop."
+      },
+      {
+       "text": "Practice helps people stay calm when things go wrong.",
+       "trap": "not-in-text",
+       "why": "Nobody's calm comes from practice in this story. Look at what solved the problem."
+      }
+     ]
+    },
+    {
+     "id": "b5-l02-2",
+     "order": 2,
+     "format": "single",
+     "area": "literary-craft",
+     "skill": "structure",
+     "prompt": "How does the first paragraph prepare for the end of the story?",
+     "key": 2,
+     "evidence": [
+      0
+     ],
+     "options": [
+      {
+       "text": "It shows the team arguing, which the end settles with a vote.",
+       "trap": "not-in-text",
+       "why": "There is no argument or vote. Look at the first sentence about Mateo."
+      },
+      {
+       "text": "It shows Ruth’s doubts, which the end answers with a prize.",
+       "trap": "not-in-text",
+       "why": "Ruth is not in the first paragraph. Look at how Mateo treats the arm."
+      },
+      {
+       "text": "It shows Mateo keeping the arm to himself, which the end reverses."
+      },
+      {
+       "text": "It shows how well the claw works, which the contest proves again.",
+       "trap": "opposite",
+       "why": "The claw breaks before the contest. Look at what Mateo does at the very end."
+      }
+     ]
+    },
+    {
+     "id": "b5-l02-3",
+     "order": 3,
+     "format": "single",
+     "area": "literary-key-ideas",
+     "skill": "character",
+     "prompt": "Why does Mateo want to say no to Ruth’s idea at first?",
+     "key": 1,
+     "evidence": [
+      7
+     ],
+     "options": [
+      {
+       "text": "He thinks the judges will not allow plastic parts.",
+       "trap": "not-in-text",
+       "why": "Nothing in the story is about rules for plastic. Look for the word because."
+      },
+      {
+       "text": "He thinks a scoop is too plain for his robot."
+      },
+      {
+       "text": "He thinks Ruth is too young to help the team.",
+       "trap": "not-in-text",
+       "why": "Ruth is the youngest, but that is not his reason. Find the sentence that says why."
+      },
+      {
+       "text": "He thinks the scoop will break the robot’s motors.",
+       "trap": "not-in-text",
+       "why": "The story never says this. Read the sentence that begins Mateo wanted to say no."
+      }
+     ]
+    },
+    {
+     "id": "b5-l02-4",
+     "order": 4,
+     "format": "order",
+     "area": "literary-key-ideas",
+     "skill": "plot",
+     "prompt": "Put these events in the order they happen in the story.",
+     "why": "Follow the days: Thursday, Friday afternoon, and then what Mateo watched Ruth do.",
+     "steps": [
+      "The claw twists sideways and snaps.",
+      "Mateo’s fingers get sore from tiny screws.",
+      "Mateo wants to say no to the scoop.",
+      "Ruth lifts a ring ten times in a row."
+     ]
+    },
+    {
+     "id": "b5-l02-5",
+     "order": 5,
+     "format": "multi",
+     "area": "literary-craft",
+     "skill": "point-of-view",
+     "prompt": "Which two statements tell how Mateo sees the arm before Ruth’s idea? Pick two.",
+     "keys": [
+      0,
+      3
+     ],
+     "evidence": [
+      0,
+      3
+     ],
+     "options": [
+      {
+       "text": "He does not want teammates to touch it."
+      },
+      {
+       "text": "He wants Ruth to design a new one for him.",
+       "trap": "opposite",
+       "why": "He wants to say no to Ruth's idea at first. Look at the first two paragraphs."
+      },
+      {
+       "text": "He thinks it is too heavy for the robot.",
+       "trap": "not-in-text",
+       "why": "The story never mentions its weight. Look at what Mateo does with the arm."
+      },
+      {
+       "text": "He wants to rebuild it exactly as before."
+      },
+      {
+       "text": "He thinks the team should give up on it.",
+       "trap": "opposite",
+       "why": "He works all night to fix it, so he is not giving up."
+      }
+     ]
+    }
+   ],
+   "level": 1030
+  },
+  {
+   "id": "b5-l03",
+   "type": "literary",
+   "genre": "fable",
+   "title": "The Gull Who Spoke First",
+   "band": "b5",
+   "topics": [
+    "united-kingdom",
+    "countries-cultures",
+    "people-places"
+   ],
+   "paragraphs": [
+    [
+     "On a rocky island off the coast of Scotland, the seabirds met each evening to decide where to fish the next day.",
+     "Gale the gull always spoke first and longest, and the other birds usually followed her because her voice carried over the wind.",
+     "Morag the cormorant spent those meetings at the edge of the rocks, watching the color of the water change."
+    ],
+    [
+     "One evening Gale announced that the whole flock would fish in the north bay, where the herring had been thick all week.",
+     "Morag cleared her throat and said quietly that the water there had turned cloudy, which meant a storm was stirring up the sand.",
+     "Gale laughed so loudly that no one else heard the rest of Morag’s words."
+    ],
+    [
+     "The next morning the flock flew north and found the bay brown and empty, with waves too rough for diving.",
+     "Hungry and wet, they turned back and saw Morag drying her wings on a sheltered rock, beside the silver fish she had caught in the calm south cove.",
+     "That evening, when Gale began to speak, the youngest puffin asked if they might hear from Morag first."
+    ]
+   ],
+   "items": [
+    {
+     "id": "b5-l03-1",
+     "order": 1,
+     "format": "single",
+     "area": "literary-key-ideas",
+     "skill": "theme",
+     "prompt": "Which lesson does the fable show?",
+     "key": 0,
+     "evidence": [
+      8
+     ],
+     "options": [
+      {
+       "text": "Quiet watchers may notice what loud talkers miss."
+      },
+      {
+       "text": "A good plan is worth more than a fast start.",
+       "trap": "not-in-text",
+       "why": "The fable is not about speed. Compare how Gale and Morag act at the meetings."
+      },
+      {
+       "text": "Hard work brings a better reward than luck does.",
+       "trap": "not-in-text",
+       "why": "Luck is not part of this fable. Think about who knew about the storm."
+      },
+      {
+       "text": "Friends who stay together are safer than those alone.",
+       "trap": "opposite",
+       "why": "Morag fished alone and did better than the flock. Look at the end."
+      }
+     ]
+    },
+    {
+     "id": "b5-l03-2",
+     "order": 2,
+     "format": "single",
+     "area": "literary-key-ideas",
+     "skill": "plot",
+     "prompt": "Why is the north bay empty when the flock arrives?",
+     "key": 1,
+     "evidence": [
+      4
+     ],
+     "options": [
+      {
+       "text": "Morag has scared the fish away from it.",
+       "trap": "not-in-text",
+       "why": "Morag fished somewhere else. Read what she said the cloudy water meant."
+      },
+      {
+       "text": "A storm has stirred up the water there."
+      },
+      {
+       "text": "The tide has carried the herring out to sea.",
+       "trap": "not-in-text",
+       "why": "The tide is not mentioned. Look at the warning Morag gave."
+      },
+      {
+       "text": "Gale has already caught all the herring.",
+       "trap": "not-in-text",
+       "why": "Gale does not fish there first. Look at what Morag noticed about the water."
+      }
+     ]
+    },
+    {
+     "id": "b5-l03-3",
+     "order": 3,
+     "format": "single",
+     "area": "literary-craft",
+     "skill": "structure",
+     "prompt": "How are the first and last paragraphs connected?",
+     "key": 2,
+     "evidence": [
+      1,
+      8
+     ],
+     "options": [
+      {
+       "text": "Both describe Morag, but she speaks loudly only in the last one.",
+       "trap": "not-in-text",
+       "why": "Morag never speaks loudly. Look at who the puffin wants to hear from."
+      },
+      {
+       "text": "Both describe the weather, but it is calm only in the first one.",
+       "trap": "not-in-text",
+       "why": "The first paragraph does not describe the weather. Look at what happens at the meetings."
+      },
+      {
+       "text": "Both show a meeting, but the birds act differently in the last one."
+      },
+      {
+       "text": "Both show Gale fishing, but she catches more in the last one.",
+       "trap": "not-in-text",
+       "why": "Gale is not shown fishing in either one. Compare who speaks at each meeting."
+      }
+     ]
+    },
+    {
+     "id": "b5-l03-4",
+     "order": 4,
+     "format": "two-part",
+     "area": "literary-key-ideas",
+     "skill": "character",
+     "evidence": [
+      2,
+      4
+     ],
+     "a": {
+      "prompt": "Part A: What is Morag like?",
+      "key": 2,
+      "options": [
+       {
+        "text": "She is cheerful and quick to make others laugh.",
+        "trap": "word-lift",
+        "why": "Gale is the one who laughs, at Morag. Look at what Morag watches."
+       },
+       {
+        "text": "She is brave when the other birds are afraid.",
+        "trap": "not-in-text",
+        "why": "No bird is afraid in the fable. Look at what Morag does during meetings."
+       },
+       {
+        "text": "She notices small changes that others miss."
+       },
+       {
+        "text": "She is generous and shares what she catches.",
+        "trap": "not-in-text",
+        "why": "Morag does not share her fish in the fable. Look at the first paragraph."
+       }
+      ]
+     },
+     "b": {
+      "prompt": "Part B: Which sentence from the passage best supports your answer to Part A?",
+      "key": 0,
+      "options": [
+       {
+        "text": "“Morag the cormorant spent those meetings at the edge of the rocks, watching the color of the water change.”"
+       },
+       {
+        "text": "“That evening, when Gale began to speak, the youngest puffin asked if they might hear from Morag first.”",
+        "trap": "true-but",
+        "why": "This shows how the puffin feels, not what Morag is like."
+       },
+       {
+        "text": "“Gale laughed so loudly that no one else heard the rest of Morag’s words.”",
+        "trap": "true-but",
+        "why": "This sentence shows what Gale is like, not Morag."
+       },
+       {
+        "text": "“Gale the gull always spoke first and longest, and the other birds usually followed her because her voice carried over the wind.”",
+        "trap": "true-but",
+        "why": "This sentence describes Gale, not Morag."
+       }
+      ]
+     }
+    },
+    {
+     "id": "b5-l03-5",
+     "order": 5,
+     "format": "sentence",
+     "area": "literary-craft",
+     "skill": "point-of-view",
+     "prompt": "Tap the sentence that shows the other birds now see Morag differently.",
+     "keys": [
+      8
+     ],
+     "why": "Look at what happens at the next meeting."
+    }
+   ],
+   "level": 1150
+  },
+  {
+   "id": "b5-l04",
+   "type": "literary",
+   "genre": "story",
+   "title": "Going Fishing",
+   "band": "b5",
+   "topics": [
+    "rugby",
+    "sports"
+   ],
+   "paragraphs": [
+    [
+     "Ana had played soccer for six years, so rugby’s strangest rule still felt wrong to her: you could pass the ball only backward.",
+     "In soccer, the whole point was to move the ball toward the goal, and throwing it behind you felt like surrendering ground you had fought to win."
+    ],
+    [
+     "In the last minutes of Saturday’s game, with her team behind by three points, Ana caught the ball and saw open grass ahead.",
+     "She tucked it under her arm and charged, ignoring her teammates’ shouts, until two defenders wrapped her up and she landed with a thud.",
+     "From the sideline, Coach Bell cupped his hands and called, “Ana, stop going fishing!”"
+    ],
+    [
+     "During the water break a light rain began, and Ana sat on the bench replaying what had happened.",
+     "Every time she had run alone, the defenders had simply waited for her, like cats crouched outside a mouse hole.",
+     "Every time her teammates passed the ball back and forth, the defenders had to guess."
+    ],
+    [
+     "On the next play, Ana caught the ball, took three quick steps to pull two defenders toward her, and flicked it backward to Lily.",
+     "Lily raced untouched along the slippery sideline and dove across the line as the whistle blew.",
+     "Ana reached her first, laughing, her muddy jersey proof that she had given away the ball and gained the game."
+    ]
+   ],
+   "items": [
+    {
+     "id": "b5-l04-1",
+     "order": 1,
+     "format": "single",
+     "area": "literary-key-ideas",
+     "skill": "theme",
+     "prompt": "Which lesson does the story show?",
+     "key": 0,
+     "evidence": [
+      10
+     ],
+     "options": [
+      {
+       "text": "Sharing a chance with others can lead to a bigger success."
+      },
+      {
+       "text": "Being brave means trying even when you might fail.",
+       "trap": "not-in-text",
+       "why": "Ana is not afraid in the story. Think about what she does differently on the last play."
+      },
+      {
+       "text": "Following the rules matters more than winning.",
+       "trap": "not-in-text",
+       "why": "Ana follows the rules both times. What changes is whether she keeps the ball."
+      },
+      {
+       "text": "Practice turns a hard skill into an easy one.",
+       "trap": "not-in-text",
+       "why": "The story does not show her practicing. Look at what she learns on the bench."
+      }
+     ]
+    },
+    {
+     "id": "b5-l04-2",
+     "order": 2,
+     "format": "single",
+     "area": "literary-craft",
+     "skill": "figurative-language",
+     "prompt": "What does the comparison to “cats crouched outside a mouse hole” show about the defenders?",
+     "key": 3,
+     "evidence": [
+      6
+     ],
+     "options": [
+      {
+       "text": "They were sneaky and hid where Ana could not see.",
+       "trap": "not-in-text",
+       "why": "The defenders were not hiding. Look at the word waited."
+      },
+      {
+       "text": "They were quick and fierce whenever they tackled.",
+       "trap": "not-in-text",
+       "why": "The comparison is about waiting, not about tackling. Read the whole sentence."
+      },
+      {
+       "text": "They were tired and resting until play started.",
+       "trap": "not-in-text",
+       "why": "Cats outside a mouse hole are alert, not resting. Look at the word waited."
+      },
+      {
+       "text": "They waited calmly, sure of where Ana would come."
+      }
+     ]
+    },
+    {
+     "id": "b5-l04-3",
+     "order": 3,
+     "format": "single",
+     "area": "literary-craft",
+     "skill": "structure",
+     "prompt": "What is the purpose of the third paragraph, during the water break?",
+     "key": 0,
+     "evidence": [
+      5,
+      7
+     ],
+     "options": [
+      {
+       "text": "It shows Ana working out why her first run failed."
+      },
+      {
+       "text": "It shows Ana deciding to go back to playing soccer.",
+       "trap": "word-lift",
+       "why": "Soccer is mentioned at the start, but not on the bench."
+      },
+      {
+       "text": "It shows Ana resting because the tackle hurt her.",
+       "trap": "not-in-text",
+       "why": "The story never says she was hurt. Look at what she is replaying."
+      },
+      {
+       "text": "It shows Ana getting advice from Lily about passing.",
+       "trap": "not-in-text",
+       "why": "Lily does not talk to Ana there. Ana thinks it through on her own."
+      }
+     ]
+    },
+    {
+     "id": "b5-l04-4",
+     "order": 4,
+     "format": "multi",
+     "area": "literary-key-ideas",
+     "skill": "character",
+     "prompt": "Which two statements describe Ana at the start of the story? Pick two.",
+     "keys": [
+      0,
+      4
+     ],
+     "evidence": [
+      0,
+      3
+     ],
+     "options": [
+      {
+       "text": "She wants to carry the ball herself."
+      },
+      {
+       "text": "She does not know the rules of rugby.",
+       "trap": "opposite",
+       "why": "She knows the rule about passing backward. She just does not like it."
+      },
+      {
+       "text": "She is afraid of being tackled hard.",
+       "trap": "not-in-text",
+       "why": "Ana charges right at the defenders. Nothing shows she is afraid."
+      },
+      {
+       "text": "She wishes she still played soccer.",
+       "trap": "word-lift",
+       "why": "Soccer is mentioned, but she never says she wants to go back to it."
+      },
+      {
+       "text": "She thinks passing backward is wrong."
+      }
+     ]
+    },
+    {
+     "id": "b5-l04-5",
+     "order": 5,
+     "format": "order",
+     "area": "literary-key-ideas",
+     "skill": "plot",
+     "prompt": "Put these events in the order they happen in the story.",
+     "why": "Follow the game from the last minutes, to the water break, to the next play.",
+     "steps": [
+      "Ana charges ahead and is tackled.",
+      "A light rain begins during the water break.",
+      "Ana pulls two defenders toward her.",
+      "Lily dives across the line."
+     ]
+    }
+   ],
+   "level": 1150
+  },
+  {
+   "id": "b5-l05",
+   "type": "literary",
+   "genre": "poem",
+   "title": "One Stone",
+   "band": "b5",
+   "topics": [
+    "pyramids-of-giza",
+    "ancient-egypt",
+    "ancient-world",
+    "history"
+   ],
+   "paragraphs": [
+    [
+     "I was cut from a cliff by the river,",
+     "dragged on a sled across the sand,",
+     "and lifted by hands I never saw",
+     "to a place I would never leave."
+    ],
+    [
+     "Above me, other stones were stacked;",
+     "below me, others held me high.",
+     "No traveler has ever looked at me,",
+     "and no traveler ever will."
+    ],
+    [
+     "The sun has crossed the desert",
+     "more times than anyone can count,",
+     "and the wind has worn my neighbors smooth",
+     "while I stayed hidden, holding on."
+    ],
+    [
+     "When children stand below and gasp",
+     "to see the point still meet the sky,",
+     "they do not know my name or shape,",
+     "but they are seeing what I do."
+    ]
+   ],
+   "items": [
+    {
+     "id": "b5-l05-1",
+     "order": 1,
+     "format": "single",
+     "area": "literary-key-ideas",
+     "skill": "theme",
+     "prompt": "Which idea does the poem show?",
+     "key": 3,
+     "evidence": [
+      14,
+      15
+     ],
+     "options": [
+      {
+       "text": "Travelers should learn the history of places.",
+       "trap": "not-in-text",
+       "why": "The poem does not give advice to travelers. Think about what the stone does."
+      },
+      {
+       "text": "It is better to be noticed than to be hidden.",
+       "trap": "opposite",
+       "why": "The stone is hidden and still matters. Read the last two lines."
+      },
+      {
+       "text": "Nature slowly wears away what people build.",
+       "trap": "detail",
+       "why": "The wind wears the outer stones, but the poem's big idea is about the hidden stone."
+      },
+      {
+       "text": "Even unseen parts help make something great."
+      }
+     ]
+    },
+    {
+     "id": "b5-l05-2",
+     "order": 2,
+     "format": "single",
+     "area": "literary-key-ideas",
+     "skill": "character",
+     "prompt": "What does the speaker say about travelers?",
+     "key": 3,
+     "evidence": [
+      6
+     ],
+     "options": [
+      {
+       "text": "They come to touch its warm sides.",
+       "trap": "not-in-text",
+       "why": "The speaker is hidden. Read the second stanza."
+      },
+      {
+       "text": "They rest in its shade in the afternoon.",
+       "trap": "not-in-text",
+       "why": "Shade is not mentioned. Read the second stanza."
+      },
+      {
+       "text": "They carve their names into its face.",
+       "trap": "not-in-text",
+       "why": "No names are carved in the poem. Read the second stanza."
+      },
+      {
+       "text": "None of them has ever looked at it."
+      }
+     ]
+    },
+    {
+     "id": "b5-l05-3",
+     "order": 3,
+     "format": "single",
+     "area": "literary-craft",
+     "skill": "figurative-language",
+     "prompt": "What does the speaker mean by “they are seeing what I do”?",
+     "key": 2,
+     "evidence": [
+      15
+     ],
+     "options": [
+      {
+       "text": "They see the hands that once lifted the stone.",
+       "trap": "not-in-text",
+       "why": "The speaker never saw those hands. Think about what the stone does all day."
+      },
+      {
+       "text": "They see the cliff where the stone was cut.",
+       "trap": "not-in-text",
+       "why": "The cliff is far away in the first stanza. Think about the point meeting the sky."
+      },
+      {
+       "text": "The stone’s holding is part of what they admire."
+      },
+      {
+       "text": "They see how long the stone has waited there.",
+       "trap": "not-in-text",
+       "why": "The last line is about what the stone does, not how long it waited."
+      }
+     ]
+    },
+    {
+     "id": "b5-l05-4",
+     "order": 4,
+     "format": "multi",
+     "area": "literary-craft",
+     "skill": "structure",
+     "prompt": "Which two statements describe how the poem is organized? Pick two.",
+     "keys": [
+      0,
+      4
+     ],
+     "evidence": [
+      0,
+      12
+     ],
+     "options": [
+      {
+       "text": "The last stanza turns from the stone to the visitors."
+      },
+      {
+       "text": "Each stanza begins with a question for the reader.",
+       "trap": "not-in-text",
+       "why": "There are no questions in the poem. Look at how the first and last stanzas begin."
+      },
+      {
+       "text": "The last stanza goes back to the cliff by the river.",
+       "trap": "opposite",
+       "why": "The cliff is in the first stanza. The last stanza is about children."
+      },
+      {
+       "text": "The first stanza describes the pyramid from far away.",
+       "trap": "not-in-text",
+       "why": "The first stanza follows the stone from the cliff to its place."
+      },
+      {
+       "text": "The first stanza tells how the stone got to its place."
+      }
+     ]
+    },
+    {
+     "id": "b5-l05-5",
+     "order": 5,
+     "format": "sentence",
+     "area": "literary-craft",
+     "skill": "point-of-view",
+     "prompt": "Tap the line that shows the speaker never saw who moved it.",
+     "keys": [
+      2
+     ],
+     "why": "Look in the first stanza, where the stone is moved."
+    }
+   ],
+   "level": 1030
+  },
+  {
+   "id": "b5-l06",
+   "type": "literary",
+   "genre": "story",
+   "title": "Just Me in Here",
+   "band": "b5",
+   "topics": [
+    "firefighters",
+    "jobs",
+    "money-careers"
+   ],
+   "paragraphs": [
+    [
+     "The fire station’s garage was so tall that every sound bounced off the ceiling and came back twice as loud.",
+     "My little brother Theo held my sleeve the whole time we walked past the red trucks, flinching whenever someone dropped a tool.",
+     "He was four, and to him the station was a metal cave."
+    ],
+    [
+     "Then a firefighter stepped out in full gear, and Theo hid behind my legs so fast that he nearly knocked me over.",
+     "In the heavy coat, helmet, and mask, with air hissing through a tube, she looked less like a person than a robot from a scary movie.",
+     "Theo began to cry, and a few parents glanced over at us."
+    ],
+    [
+     "The firefighter knelt down slowly, so that her face was level with his.",
+     "She pulled off the helmet and held it out, then unhooked the mask, then peeled off one glove, showing an ordinary hand with a bandage on the thumb.",
+     "“It’s just me in here,” she said, “and if there’s ever smoke, this is what I’ll look like when I come to find you.”"
+    ],
+    [
+     "Theo stopped crying and stared at the bandage.",
+     "By the end of the visit he was wearing the helmet himself, which covered his whole face, and he spent the ride home breathing in loud, hissing breaths and saying, “It’s just me in here.”"
+    ]
+   ],
+   "items": [
+    {
+     "id": "b5-l06-1",
+     "order": 1,
+     "format": "single",
+     "area": "literary-key-ideas",
+     "skill": "theme",
+     "prompt": "Which lesson does the story show?",
+     "key": 3,
+     "evidence": [
+      8
+     ],
+     "options": [
+      {
+       "text": "Family members should take care of one another.",
+       "trap": "detail",
+       "why": "The narrator helps Theo, but his fear ends because of what the firefighter shows him."
+      },
+      {
+       "text": "Practicing for emergencies keeps families safe.",
+       "trap": "not-in-text",
+       "why": "Nobody practices for an emergency. Think about what the firefighter shows Theo."
+      },
+      {
+       "text": "Helpers are brave because they face real danger.",
+       "trap": "not-in-text",
+       "why": "No danger happens in the story. Think about why Theo stops crying."
+      },
+      {
+       "text": "Something scary can feel safe once you understand it."
+      }
+     ]
+    },
+    {
+     "id": "b5-l06-2",
+     "order": 2,
+     "format": "single",
+     "area": "literary-craft",
+     "skill": "point-of-view",
+     "prompt": "Who is telling this story?",
+     "key": 1,
+     "evidence": [
+      1
+     ],
+     "options": [
+      {
+       "text": "The firefighter who knelt down",
+       "trap": "not-in-text",
+       "why": "The firefighter is called she. Look at who says my little brother."
+      },
+      {
+       "text": "Theo’s older brother or sister"
+      },
+      {
+       "text": "One of the parents who watched",
+       "trap": "word-lift",
+       "why": "Parents glanced over, but the teller calls Theo my little brother."
+      },
+      {
+       "text": "Theo, looking back years later",
+       "trap": "not-in-text",
+       "why": "The teller says my little brother Theo, so it is not Theo."
+      }
+     ]
+    },
+    {
+     "id": "b5-l06-3",
+     "order": 3,
+     "format": "single",
+     "area": "literary-key-ideas",
+     "skill": "setting",
+     "prompt": "How does the garage add to Theo’s fear?",
+     "key": 2,
+     "evidence": [
+      0
+     ],
+     "options": [
+      {
+       "text": "Its dark corners make it hard for him to see.",
+       "trap": "not-in-text",
+       "why": "The story never says the garage is dark. Read the first sentence."
+      },
+      {
+       "text": "Its crowded floor makes him lose his family.",
+       "trap": "not-in-text",
+       "why": "Theo holds the narrator's sleeve the whole time. Read the first sentence."
+      },
+      {
+       "text": "Its echoes make every small noise sound startling."
+      },
+      {
+       "text": "Its cold air makes him want to go back home.",
+       "trap": "not-in-text",
+       "why": "Cold is not mentioned. Look at what happens to sounds in the garage."
+      }
+     ]
+    },
+    {
+     "id": "b5-l06-4",
+     "order": 4,
+     "format": "two-part",
+     "area": "literary-craft",
+     "skill": "figurative-language",
+     "evidence": [
+      0,
+      2
+     ],
+     "a": {
+      "prompt": "Part A: What does the narrator mean by saying that to Theo the station was “a metal cave”?",
+      "key": 3,
+      "options": [
+       {
+        "text": "It seemed cold and damp to him.",
+        "trap": "literal",
+        "why": "Caves can be cold, but the story is about size and sound."
+       },
+       {
+        "text": "It seemed huge and very dark to him.",
+        "trap": "not-in-text",
+        "why": "The story says it was tall, but never that it was dark. Look at how sounds behaved."
+       },
+       {
+        "text": "It seemed hidden underground to him.",
+        "trap": "literal",
+        "why": "The garage is tall, not underground. Read the first sentence."
+       },
+       {
+        "text": "It seemed huge and full of echoes to him."
+       }
+      ]
+     },
+     "b": {
+      "prompt": "Part B: Which sentence from the passage best supports your answer to Part A?",
+      "key": 2,
+      "options": [
+       {
+        "text": "“Then a firefighter stepped out in full gear, and Theo hid behind my legs so fast that he nearly knocked me over.”",
+        "trap": "true-but",
+        "why": "This shows Theo is scared of the firefighter, not what the station was like."
+       },
+       {
+        "text": "“She pulled off the helmet and held it out, then unhooked the mask, then peeled off one glove, showing an ordinary hand with a bandage on the thumb.”",
+        "trap": "true-but",
+        "why": "This is about the firefighter, not the station."
+       },
+       {
+        "text": "“The fire station’s garage was so tall that every sound bounced off the ceiling and came back twice as loud.”"
+       },
+       {
+        "text": "“In the heavy coat, helmet, and mask, with air hissing through a tube, she looked less like a person than a robot from a scary movie.”",
+        "trap": "true-but",
+        "why": "This describes the firefighter, not the station."
+       }
+      ]
+     }
+    },
+    {
+     "id": "b5-l06-5",
+     "order": 5,
+     "format": "order",
+     "area": "literary-key-ideas",
+     "skill": "plot",
+     "prompt": "Put these events in the order they happen in the story.",
+     "why": "Follow the visit from when Theo starts to cry to the ride home.",
+     "steps": [
+      "A few parents glance over.",
+      "The firefighter unhooks the mask.",
+      "Theo stares at the bandage.",
+      "Theo says, “It’s just me in here.”"
+     ]
+    }
+   ],
+   "level": 1030
+  },
+  {
+   "id": "b5-l08",
+   "type": "literary",
+   "genre": "fable",
+   "title": "Zest and the Jar of Milk",
+   "band": "b5",
+   "topics": [
+    "bacteria",
+    "microbes",
+    "biology",
+    "science"
+   ],
+   "paragraphs": [
+    [
+     "In a glass jar of milk on a sunny windowsill lived more tiny bacteria than anyone could count.",
+     "The youngest, named Zest, announced that she would turn the whole jar into yogurt all by herself, so that every jar in the kitchen would speak her name."
+    ],
+    [
+     "Mote, an old bacterium who had lived through many jars, drifted closer.",
+     "“Milk does not thicken for one of us,” he said gently, “any more than a beach is made of one grain of sand.”",
+     "Zest ignored him and set to work, eating sugar from the milk and splitting into two, then four, then eight."
+    ],
+    [
+     "By noon the sun had warmed the glass, and Zest was exhausted, while the milk around her was as thin as ever.",
+     "Then she noticed that her eight new sisters, and millions of other bacteria all around, had been working the whole time without a single boast.",
+     "Slowly the milk grew thick and tangy, and when a spoon finally dipped into the jar, nobody in the kitchen knew Zest’s name, but everyone enjoyed what the whole jar had made."
+    ]
+   ],
+   "items": [
+    {
+     "id": "b5-l08-1",
+     "order": 1,
+     "format": "single",
+     "area": "literary-key-ideas",
+     "skill": "theme",
+     "prompt": "Which lesson does the fable show?",
+     "key": 1,
+     "evidence": [
+      7
+     ],
+     "options": [
+      {
+       "text": "Hard work matters more than natural talent.",
+       "trap": "not-in-text",
+       "why": "Talent is not part of the fable. Look at who made the yogurt."
+      },
+      {
+       "text": "Big things are made by many small helpers together."
+      },
+      {
+       "text": "Those who share what they have end up with more.",
+       "trap": "not-in-text",
+       "why": "Nobody shares in the fable. Look at the last sentence."
+      },
+      {
+       "text": "A good name is worth more than great riches.",
+       "trap": "opposite",
+       "why": "Nobody knew Zest's name, and that was fine. Look at the last sentence."
+      }
+     ]
+    },
+    {
+     "id": "b5-l08-2",
+     "order": 2,
+     "format": "single",
+     "area": "literary-key-ideas",
+     "skill": "character",
+     "prompt": "What does Zest want at the start of the fable?",
+     "key": 1,
+     "evidence": [
+      1
+     ],
+     "options": [
+      {
+       "text": "To find a warmer place on the windowsill",
+       "trap": "word-lift",
+       "why": "The windowsill is the setting, but Zest wants something else. Read her announcement."
+      },
+      {
+       "text": "To be famous for making the yogurt alone"
+      },
+      {
+       "text": "To grow bigger than every other bacterium",
+       "trap": "not-in-text",
+       "why": "Size is not what Zest wants. Read the end of her announcement."
+      },
+      {
+       "text": "To escape the jar and see the whole kitchen",
+       "trap": "not-in-text",
+       "why": "Zest never wants to leave. Read her announcement in the first paragraph."
+      }
+     ]
+    },
+    {
+     "id": "b5-l08-3",
+     "order": 3,
+     "format": "single",
+     "area": "literary-craft",
+     "skill": "point-of-view",
+     "prompt": "How does Mote see Zest’s plan?",
+     "key": 1,
+     "evidence": [
+      3
+     ],
+     "options": [
+      {
+       "text": "As an exciting plan that is worth trying",
+       "trap": "opposite",
+       "why": "Mote tells her it cannot work. Read what he says about the beach."
+      },
+      {
+       "text": "As something no single one of them could do"
+      },
+      {
+       "text": "As unfair to the older bacteria in the jar",
+       "trap": "not-in-text",
+       "why": "Fairness is not what Mote talks about. Read what he says about one grain of sand."
+      },
+      {
+       "text": "As a danger to everyone living in the jar",
+       "trap": "not-in-text",
+       "why": "Mote never says the plan is dangerous. Read what he says about one grain of sand."
+      }
+     ]
+    },
+    {
+     "id": "b5-l08-4",
+     "order": 4,
+     "format": "order",
+     "area": "literary-key-ideas",
+     "skill": "plot",
+     "prompt": "Put these events in the order they happen in the fable.",
+     "why": "Follow the fable from Mote's warning, to noon, to the end.",
+     "steps": [
+      "Mote compares the milk to a beach.",
+      "The sun warms the glass.",
+      "Zest notices her eight sisters.",
+      "The milk turns thick and tangy."
+     ]
+    },
+    {
+     "id": "b5-l08-5",
+     "order": 5,
+     "format": "multi",
+     "area": "literary-key-ideas",
+     "skill": "setting",
+     "prompt": "Which two details tell where the fable takes place? Pick two.",
+     "keys": [
+      0,
+      4
+     ],
+     "evidence": [
+      0
+     ],
+     "options": [
+      {
+       "text": "On a sunny kitchen windowsill"
+      },
+      {
+       "text": "Inside a cow’s warm stomach",
+       "trap": "not-in-text",
+       "why": "The milk is already in a jar. Read the first sentence."
+      },
+      {
+       "text": "On a busy farmer’s table",
+       "trap": "not-in-text",
+       "why": "No farm is mentioned. Read the first sentence."
+      },
+      {
+       "text": "Inside a cold refrigerator",
+       "trap": "opposite",
+       "why": "The jar is in the sun and gets warm. Read the first sentence."
+      },
+      {
+       "text": "Inside a glass jar of milk"
+      }
+     ]
+    }
+   ],
+   "level": 1180
+  },
+  {
+   "id": "b5-l09",
+   "type": "literary",
+   "genre": "story",
+   "title": "The Favorite Car",
+   "band": "b5",
+   "topics": [
+    "supercars",
+    "cars",
+    "vehicles-engineering"
+   ],
+   "paragraphs": [
+    [
+     "The car show filled the parking lot of the county fairgrounds, and the orange supercar sat at the very center, low and sharp as an arrowhead.",
+     "Dev had begged his sister Mina to bring him, and he had made her park the family’s dented station wagon behind a row of trucks where nobody would see it."
+    ],
+    [
+     "The car’s owner, Mrs. Okafor, wore a faded cap and let Dev peek at the engine, which gleamed like the inside of a watch.",
+     "“I saved for thirty years to buy this,” she said, “but it isn’t my favorite car.”",
+     "Dev stared at her as if she had said the sun was purple."
+    ],
+    [
+     "Her favorite, she explained, was a rusty pickup with a cracked windshield, the truck her father had used to teach her to drive on a gravel road when she was sixteen.",
+     "“This one is fast,” she said, patting the orange hood, “but that one knew where I came from.”"
+    ],
+    [
+     "On the way out, Dev walked past the row of trucks without hurrying.",
+     "He asked Mina to take a picture of him leaning against the station wagon, dent and all, because their mom had driven him home from the hospital in it the day he was born."
+    ]
+   ],
+   "items": [
+    {
+     "id": "b5-l09-1",
+     "order": 1,
+     "format": "single",
+     "area": "literary-key-ideas",
+     "skill": "theme",
+     "prompt": "Which lesson does the story show?",
+     "key": 3,
+     "evidence": [
+      6
+     ],
+     "options": [
+      {
+       "text": "What we share makes us feel closer.",
+       "trap": "not-in-text",
+       "why": "Sharing is not what the story is about. Look at what Mrs. Okafor says."
+      },
+      {
+       "text": "What we notice shows what we value.",
+       "trap": "not-in-text",
+       "why": "The story is about which car means the most. Look at what Mrs. Okafor says."
+      },
+      {
+       "text": "What we save for shows what we want.",
+       "trap": "detail",
+       "why": "Mrs. Okafor saved for the supercar, but she says it is not her favorite."
+      },
+      {
+       "text": "What we love says where we come from."
+      }
+     ]
+    },
+    {
+     "id": "b5-l09-2",
+     "order": 2,
+     "format": "single",
+     "area": "literary-craft",
+     "skill": "structure",
+     "prompt": "How does the setting change from the beginning of the story to the end?",
+     "key": 3,
+     "evidence": [
+      0,
+      8
+     ],
+     "options": [
+      {
+       "text": "It moves from a race track to a quiet garage.",
+       "trap": "not-in-text",
+       "why": "There is no race track or garage. Read the first and last sentences."
+      },
+      {
+       "text": "It moves from the family’s home to the car show.",
+       "trap": "not-in-text",
+       "why": "The story starts at the show, not at home. Read the first sentence."
+      },
+      {
+       "text": "It moves from a gravel road to the fairgrounds.",
+       "trap": "word-lift",
+       "why": "The gravel road is in Mrs. Okafor's memory. The story itself starts at the show."
+      },
+      {
+       "text": "It moves from the center of the show to the family car."
+      }
+     ]
+    },
+    {
+     "id": "b5-l09-3",
+     "order": 3,
+     "format": "single",
+     "area": "literary-key-ideas",
+     "skill": "character",
+     "prompt": "According to the story, which car is Mrs. Okafor’s favorite?",
+     "key": 0,
+     "evidence": [
+      5
+     ],
+     "options": [
+      {
+       "text": "The rusty pickup her father taught her in"
+      },
+      {
+       "text": "The tiny car she drove to her first job",
+       "trap": "not-in-text",
+       "why": "This car is not in the story. Read the sentence that begins Her favorite."
+      },
+      {
+       "text": "The old van she took on a long trip west",
+       "trap": "not-in-text",
+       "why": "No van is in the story. Read the sentence that begins Her favorite."
+      },
+      {
+       "text": "The bright race car she won in a contest",
+       "trap": "not-in-text",
+       "why": "No race car is in the story. Read the sentence that begins Her favorite."
+      }
+     ]
+    },
+    {
+     "id": "b5-l09-4",
+     "order": 4,
+     "format": "two-part",
+     "area": "literary-craft",
+     "skill": "point-of-view",
+     "evidence": [
+      1
+     ],
+     "a": {
+      "prompt": "Part A: Why does Dev make Mina park behind the row of trucks?",
+      "key": 2,
+      "options": [
+       {
+        "text": "So it could not be blocked in later",
+        "trap": "not-in-text",
+        "why": "The story does not say this. Read the end of that sentence."
+       },
+       {
+        "text": "So it would be near the food stands",
+        "trap": "not-in-text",
+        "why": "Food is not mentioned. Read the end of that sentence."
+       },
+       {
+        "text": "So nobody at the show would see it"
+       },
+       {
+        "text": "So it would be in the cool shade",
+        "trap": "not-in-text",
+        "why": "Shade is not mentioned. Read the end of that sentence."
+       }
+      ]
+     },
+     "b": {
+      "prompt": "Part B: Which sentence from the passage best supports your answer to Part A?",
+      "key": 0,
+      "options": [
+       {
+        "text": "“Dev had begged his sister Mina to bring him, and he had made her park the family’s dented station wagon behind a row of trucks where nobody would see it.”"
+       },
+       {
+        "text": "“On the way out, Dev walked past the row of trucks without hurrying.”",
+        "trap": "true-but",
+        "why": "This shows how Dev feels at the end, not at the start."
+       },
+       {
+        "text": "“The car’s owner, Mrs. Okafor, wore a faded cap and let Dev peek at the engine, which gleamed like the inside of a watch.”",
+        "trap": "true-but",
+        "why": "This is about the supercar, not the station wagon."
+       },
+       {
+        "text": "“Dev stared at her as if she had said the sun was purple.”",
+        "trap": "true-but",
+        "why": "This shows Dev's surprise at Mrs. Okafor, not his feelings about the wagon."
+       }
+      ]
+     }
+    },
+    {
+     "id": "b5-l09-5",
+     "order": 5,
+     "format": "sentence",
+     "area": "literary-key-ideas",
+     "skill": "setting",
+     "prompt": "Tap the sentence that tells where the car show was held.",
+     "keys": [
+      0
+     ],
+     "why": "Look at the very beginning of the story."
+    }
+   ],
+   "level": 1110
+  },
+  {
+   "id": "b5-l10",
+   "type": "literary",
+   "genre": "poem",
+   "title": "The Map Inside the Cover",
+   "band": "b5",
+   "topics": [
+    "fantasy-books",
+    "books-writing",
+    "arts-entertainment"
+   ],
+   "paragraphs": [
+    [
+     "There is a map inside the cover,",
+     "drawn in ink the color of rust,",
+     "with mountains shaped like sleeping cats",
+     "and a river no one has crossed."
+    ],
+    [
+     "Each night I trace it with a finger,",
+     "past the forest marked Beware,",
+     "while my brother snores across the room",
+     "and the hall light hums and hums."
+    ],
+    [
+     "I have not read the final chapter.",
+     "I read it slowly, one page a night,",
+     "because the day I reach the ending",
+     "the map will be a map, not a door."
+    ],
+    [
+     "So I stop where the heroes rest",
+     "beside the river no one has crossed,",
+     "and leave them there, still safe, still waiting,",
+     "and close the cover, and turn out the light."
+    ]
+   ],
+   "items": [
+    {
+     "id": "b5-l10-1",
+     "order": 1,
+     "format": "single",
+     "area": "literary-key-ideas",
+     "skill": "theme",
+     "prompt": "Which idea does the poem show?",
+     "key": 2,
+     "evidence": [
+      10,
+      11
+     ],
+     "options": [
+      {
+       "text": "Some fears fade once you face them.",
+       "trap": "not-in-text",
+       "why": "The speaker is not afraid. Think about why the speaker reads slowly."
+      },
+      {
+       "text": "Some friends are found inside books.",
+       "trap": "not-in-text",
+       "why": "The poem does not talk about friends. Read the third stanza."
+      },
+      {
+       "text": "Some endings are worth waiting for."
+      },
+      {
+       "text": "Some places feel safer in the dark.",
+       "trap": "not-in-text",
+       "why": "The poem does not compare dark and light places. Read the third stanza."
+      }
+     ]
+    },
+    {
+     "id": "b5-l10-2",
+     "order": 2,
+     "format": "single",
+     "area": "literary-key-ideas",
+     "skill": "character",
+     "prompt": "According to the poem, what has the speaker not done yet?",
+     "key": 1,
+     "evidence": [
+      8
+     ],
+     "options": [
+      {
+       "text": "Shown the map to the brother",
+       "trap": "not-in-text",
+       "why": "The poem never says this. Read the first line of the third stanza."
+      },
+      {
+       "text": "Read the book’s final chapter"
+      },
+      {
+       "text": "Traced the river to its end",
+       "trap": "not-in-text",
+       "why": "The poem never says this. Read the first line of the third stanza."
+      },
+      {
+       "text": "Learned the heroes’ names",
+       "trap": "not-in-text",
+       "why": "Names are not mentioned. Read the first line of the third stanza."
+      }
+     ]
+    },
+    {
+     "id": "b5-l10-3",
+     "order": 3,
+     "format": "single",
+     "area": "literary-craft",
+     "skill": "figurative-language",
+     "prompt": "What does “mountains shaped like sleeping cats” suggest about the mountains on the map?",
+     "key": 3,
+     "evidence": [
+      2
+     ],
+     "options": [
+      {
+       "text": "They are covered with thick forests like fur.",
+       "trap": "not-in-text",
+       "why": "The forest is marked elsewhere on the map. Think about a sleeping cat's shape."
+      },
+      {
+       "text": "They seem ready to wake up and move around.",
+       "trap": "not-in-text",
+       "why": "The cats are sleeping, so the picture is of stillness and shape. Think about how a sleeping cat looks."
+      },
+      {
+       "text": "They are small and very easy to climb over.",
+       "trap": "not-in-text",
+       "why": "The poem does not say how hard they are to climb. Think about a sleeping cat's shape."
+      },
+      {
+       "text": "They are drawn with soft, curled, rounded tops."
+      }
+     ]
+    },
+    {
+     "id": "b5-l10-4",
+     "order": 4,
+     "format": "sentence",
+     "area": "literary-craft",
+     "skill": "structure",
+     "prompt": "Tap the line in the last stanza that brings back a place from the first stanza.",
+     "keys": [
+      13
+     ],
+     "why": "Compare the last stanza with the first one, line by line."
+    },
+    {
+     "id": "b5-l10-5",
+     "order": 5,
+     "format": "two-part",
+     "area": "literary-craft",
+     "skill": "point-of-view",
+     "evidence": [
+      12
+     ],
+     "a": {
+      "prompt": "Part A: Where does the speaker choose to stop reading?",
+      "key": 3,
+      "options": [
+       {
+        "text": "Where the brother starts to snore",
+        "trap": "word-lift",
+        "why": "The brother snores, but that is not where the speaker stops. Read the last stanza."
+       },
+       {
+        "text": "Where a chapter comes to an end",
+        "trap": "not-in-text",
+        "why": "The poem does not say the speaker stops at a chapter. Read the last stanza."
+       },
+       {
+        "text": "Where the map shows the forest",
+        "trap": "word-lift",
+        "why": "The forest is on the map, but the heroes rest by the river. Read the last stanza."
+       },
+       {
+        "text": "Where the heroes are resting"
+       }
+      ]
+     },
+     "b": {
+      "prompt": "Part B: Which line from the poem best supports your answer to Part A?",
+      "key": 0,
+      "options": [
+       {
+        "text": "“So I stop where the heroes rest”"
+       },
+       {
+        "text": "“past the forest marked Beware,”",
+        "trap": "true-but",
+        "why": "This is where the speaker's finger passes on the map, not where reading stops."
+       },
+       {
+        "text": "“while my brother snores across the room”",
+        "trap": "true-but",
+        "why": "This tells about the brother, not where the speaker stops."
+       },
+       {
+        "text": "“I read it slowly, one page a night,”",
+        "trap": "true-but",
+        "why": "This tells how fast the speaker reads, not where the speaker stops."
+       }
+      ]
+     }
+    }
+   ],
+   "level": 1050
+  },
+  {
+   "id": "b5-l11",
+   "type": "literary",
+   "genre": "story",
+   "title": "The Stone Guard",
+   "band": "b5",
+   "topics": [
+    "tabletop-rpgs",
+    "board-games",
+    "games-hobbies"
+   ],
+   "paragraphs": [
+    [
+     "Lucia had spent a whole week drawing the dungeon: twelve rooms, three secret doors, and a dragon named Cinder waiting at the end.",
+     "She had written every trap and riddle on index cards, and she expected her friends to find them in the right order."
+    ],
+    [
+     "The new boy, Ben, played a gnome called Pebble, and for the first hour he barely spoke.",
+     "Then, in the fourth room, Pebble walked straight past Lucia’s riddle and asked the stone guard what it missed about the sky.",
+     "Lucia froze, flipping through her cards, but none of them said what a lonely stone guard would answer."
+    ],
+    [
+     "Her notes, she realized, had become a cage, and the story was rattling the bars.",
+     "She set the cards down and answered as the guard, slowly, and the whole table leaned in.",
+     "By the end of the night, Pebble had talked Cinder into flying them all home, nobody had found a single secret door, and everyone asked when they could play again."
+    ]
+   ],
+   "items": [
+    {
+     "id": "b5-l11-1",
+     "order": 1,
+     "format": "single",
+     "area": "literary-key-ideas",
+     "skill": "theme",
+     "prompt": "Which lesson does the story show?",
+     "key": 0,
+     "evidence": [
+      6
+     ],
+     "options": [
+      {
+       "text": "A shared story can grow better when everyone shapes it."
+      },
+      {
+       "text": "Courage matters more than strength in a hard fight.",
+       "trap": "not-in-text",
+       "why": "There is no fight in the story. Pebble talks to the dragon."
+      },
+      {
+       "text": "Games are most fun when everyone follows the rules.",
+       "trap": "opposite",
+       "why": "Ben skipped the riddle, and the game got better. Look at the end."
+      },
+      {
+       "text": "Careful planning is the secret to a great adventure.",
+       "trap": "opposite",
+       "why": "The best part came when Lucia set her plans down. Look at the last paragraph."
+      }
+     ]
+    },
+    {
+     "id": "b5-l11-2",
+     "order": 2,
+     "format": "single",
+     "area": "literary-craft",
+     "skill": "figurative-language",
+     "prompt": "What does Lucia mean when she thinks her notes had become “a cage”?",
+     "key": 0,
+     "evidence": [
+      5
+     ],
+     "options": [
+      {
+       "text": "Her plans were keeping the story from growing."
+      },
+      {
+       "text": "Her plans were hiding the best parts from Ben.",
+       "trap": "not-in-text",
+       "why": "Nothing is hidden from Ben. Think about what was rattling the bars."
+      },
+      {
+       "text": "Her plans were too heavy for one person to carry.",
+       "trap": "literal",
+       "why": "The notes are not heavy. Think about the story rattling the bars."
+      },
+      {
+       "text": "Her plans were trapping her inside her worries.",
+       "trap": "not-in-text",
+       "why": "The story does not say Lucia was worried. Think about what was rattling the bars."
+      }
+     ]
+    },
+    {
+     "id": "b5-l11-3",
+     "order": 3,
+     "format": "single",
+     "area": "literary-key-ideas",
+     "skill": "plot",
+     "prompt": "What does Pebble do in the fourth room?",
+     "key": 2,
+     "evidence": [
+      3
+     ],
+     "options": [
+      {
+       "text": "Tells the stone guard a joke about a lost golden key",
+       "trap": "not-in-text",
+       "why": "There is no joke. Read the second paragraph."
+      },
+      {
+       "text": "Asks the stone guard to say Lucia’s riddle once more",
+       "trap": "opposite",
+       "why": "Pebble walks right past the riddle. Read the second paragraph."
+      },
+      {
+       "text": "Asks the stone guard what it misses about the sky"
+      },
+      {
+       "text": "Offers the stone guard a song about the faraway sea",
+       "trap": "not-in-text",
+       "why": "Pebble asks a question; there is no song. Read the second paragraph."
+      }
+     ]
+    },
+    {
+     "id": "b5-l11-4",
+     "order": 4,
+     "format": "sentence",
+     "area": "literary-craft",
+     "skill": "structure",
+     "prompt": "Tap the sentence that shows the turning point, when Lucia changes how she runs the game.",
+     "keys": [
+      6
+     ],
+     "why": "Look for what Lucia does with her cards."
+    },
+    {
+     "id": "b5-l11-5",
+     "order": 5,
+     "format": "multi",
+     "area": "literary-key-ideas",
+     "skill": "character",
+     "prompt": "Which two statements describe Lucia at the start of the story? Pick two.",
+     "keys": [
+      1,
+      2
+     ],
+     "evidence": [
+      0,
+      1
+     ],
+     "options": [
+      {
+       "text": "She wants to play a character too.",
+       "trap": "not-in-text",
+       "why": "The story never says this. Read the first paragraph."
+      },
+      {
+       "text": "She has prepared a great deal."
+      },
+      {
+       "text": "She likes things in a set order."
+      },
+      {
+       "text": "She is nervous about the new boy.",
+       "trap": "not-in-text",
+       "why": "The story never says this. Read the first paragraph."
+      },
+      {
+       "text": "She plans to let the players decide.",
+       "trap": "opposite",
+       "why": "She expects them to follow her cards in order. Read the first paragraph."
+      }
+     ]
+    }
+   ],
+   "level": 1090
+  },
+  {
+   "id": "b5-l12",
+   "type": "literary",
+   "genre": "story",
+   "title": "Feeding the Dragon",
+   "band": "b5",
+   "topics": [
+    "barbecue",
+    "cooking",
+    "food"
+   ],
+   "paragraphs": [
+    [
+     "Grandpa Joe lit the smoker at sunset, because his brisket needed twelve slow hours before the block party at noon.",
+     "Amara had begged to help, so she sat beside him on an overturned bucket while the backyard turned blue and then black."
+    ],
+    [
+     "The fire was a sleepy dragon that needed feeding every hour, and Grandpa showed her how to slide in one split log at a time without letting the heat jump.",
+     "At two in the morning he dozed off in his lawn chair, and Amara fed the dragon by herself, proud and a little scared.",
+     "Near dawn a neighbor’s dog began barking at the smoke, and the sky over the fence turned the color of peaches."
+    ],
+    [
+     "At noon the whole street lined up with paper plates, and the brisket Amara had watched all night disappeared in ten minutes.",
+     "She stared at the empty pan, feeling cheated.",
+     "Grandpa nudged her and asked what she would remember about today, and Amara realized it was not the taste at all, but the dark yard, the crackle of the logs, and the sound of him snoring beside her."
+    ]
+   ],
+   "items": [
+    {
+     "id": "b5-l12-1",
+     "order": 1,
+     "format": "single",
+     "area": "literary-key-ideas",
+     "skill": "theme",
+     "prompt": "Which lesson does the story show?",
+     "key": 3,
+     "evidence": [
+      7
+     ],
+     "options": [
+      {
+       "text": "A brave helper keeps working even when afraid.",
+       "trap": "true-but",
+       "why": "Amara is a little scared, but the ending is about what she will remember."
+      },
+      {
+       "text": "A big party brings the whole street together.",
+       "trap": "detail",
+       "why": "The street does come together, but Amara's lesson is about her night with Grandpa."
+      },
+      {
+       "text": "A good cook never rushes a meal for hungry guests.",
+       "trap": "detail",
+       "why": "Grandpa does cook slowly, but Amara's lesson is about what she will remember."
+      },
+      {
+       "text": "A long night together can mean more than the meal."
+      }
+     ]
+    },
+    {
+     "id": "b5-l12-2",
+     "order": 2,
+     "format": "single",
+     "area": "literary-key-ideas",
+     "skill": "setting",
+     "prompt": "Where does Amara sit while she helps Grandpa through the night?",
+     "key": 2,
+     "evidence": [
+      1
+     ],
+     "options": [
+      {
+       "text": "On a log by the smoker",
+       "trap": "not-in-text",
+       "why": "The logs go into the fire. Read the second sentence."
+      },
+      {
+       "text": "On a folding lawn chair",
+       "trap": "word-lift",
+       "why": "Grandpa sits in the lawn chair. Read the second sentence."
+      },
+      {
+       "text": "On an overturned bucket"
+      },
+      {
+       "text": "On the back porch steps",
+       "trap": "not-in-text",
+       "why": "The porch is not mentioned. Read the second sentence."
+      }
+     ]
+    },
+    {
+     "id": "b5-l12-3",
+     "order": 3,
+     "format": "single",
+     "area": "literary-craft",
+     "skill": "figurative-language",
+     "prompt": "What does the comparison of the fire to “a sleepy dragon that needed feeding every hour” show?",
+     "key": 1,
+     "evidence": [
+      2
+     ],
+     "options": [
+      {
+       "text": "The fire roared so loudly it kept them up.",
+       "trap": "opposite",
+       "why": "Grandpa falls asleep, so the fire was not loud. Think about the word sleepy."
+      },
+      {
+       "text": "The fire burned low and needed wood often."
+      },
+      {
+       "text": "The fire was wild and hard to keep inside.",
+       "trap": "opposite",
+       "why": "The dragon is sleepy, not wild. Read the rest of that sentence."
+      },
+      {
+       "text": "The fire made Amara feel tired and dreamy.",
+       "trap": "literal",
+       "why": "The word sleepy describes the fire, not Amara. Think about the feeding."
+      }
+     ]
+    },
+    {
+     "id": "b5-l12-4",
+     "order": 4,
+     "format": "two-part",
+     "area": "literary-craft",
+     "skill": "structure",
+     "evidence": [
+      0,
+      3
+     ],
+     "a": {
+      "prompt": "Part A: How is the story organized?",
+      "key": 3,
+      "options": [
+       {
+        "text": "From noon, through the party, to bedtime",
+        "trap": "not-in-text",
+        "why": "The story ends at the noon party. Look at the first sentence."
+       },
+       {
+        "text": "From Friday, through the weekend, to Monday",
+        "trap": "not-in-text",
+        "why": "No days are named. Look at the times in the story."
+       },
+       {
+        "text": "From morning, through the day, to sunset",
+        "trap": "opposite",
+        "why": "The story starts at sunset. Look at the times in the story."
+       },
+       {
+        "text": "From sunset, through the night, to noon"
+       }
+      ]
+     },
+     "b": {
+      "prompt": "Part B: Which sentence from the passage best supports your answer to Part A?",
+      "key": 2,
+      "options": [
+       {
+        "text": "“She stared at the empty pan, feeling cheated.”",
+        "trap": "true-but",
+        "why": "This shows a feeling, not how the story's time is organized."
+       },
+       {
+        "text": "“The fire was a sleepy dragon that needed feeding every hour, and Grandpa showed her how to slide in one split log at a time without letting the heat jump.”",
+        "trap": "true-but",
+        "why": "This describes the fire, not when things happen."
+       },
+       {
+        "text": "“At two in the morning he dozed off in his lawn chair, and Amara fed the dragon by herself, proud and a little scared.”"
+       },
+       {
+        "text": "“Grandpa nudged her and asked what she would remember about today, and Amara realized it was not the taste at all, but the dark yard, the crackle of the logs, and the sound of him snoring beside her.”",
+        "trap": "true-but",
+        "why": "This tells what Amara realizes, not how the story's time is organized."
+       }
+      ]
+     }
+    },
+    {
+     "id": "b5-l12-5",
+     "order": 5,
+     "format": "order",
+     "area": "literary-key-ideas",
+     "skill": "plot",
+     "prompt": "Put these events in the order they happen in the story.",
+     "why": "Follow the times: sunset, two in the morning, dawn and noon.",
+     "steps": [
+      "Amara sits on an overturned bucket.",
+      "Grandpa dozes off in his lawn chair.",
+      "A neighbor’s dog barks at the smoke.",
+      "Amara stares at the empty pan."
+     ]
+    }
+   ],
+   "level": 1180
+  },
+  {
+   "id": "b5-l13",
+   "type": "literary",
+   "genre": "story",
+   "title": "Mochi’s Leg",
+   "band": "b5",
+   "topics": [
+    "axolotl",
+    "frogs",
+    "reptiles-amphibians",
+    "animals"
+   ],
+   "paragraphs": [
+    [
+     "Mochi the axolotl lived in a tank beside the pencil sharpener in Room 12, and most days nobody looked at him for long.",
+     "He was pale pink, with feathery gills that waved like tiny flags, and he spent hours not moving at all."
+    ],
+    [
+     "Ivy started watching him the week she came back to school with her arm in a cast.",
+     "She could not hold a pencil properly, so during writing time she sat by the tank and glared at the creature who, she thought, had nothing to do.",
+     "Then Mr. Bosch mentioned that Mochi had lost part of a front leg to a grumpy tankmate last month and was growing it back."
+    ],
+    [
+     "After that, Ivy checked the leg every morning.",
+     "At first it was just a bump, then a small paddle, then, by the time her cast came off, a leg with four tiny toes.",
+     "On her first day of writing again, her letters came out shaky and slow, and instead of tearing up the page, she looked at Mochi and kept going."
+    ]
+   ],
+   "items": [
+    {
+     "id": "b5-l13-1",
+     "order": 1,
+     "format": "single",
+     "area": "literary-key-ideas",
+     "skill": "theme",
+     "prompt": "Which lesson does the story show?",
+     "key": 2,
+     "evidence": [
+      7
+     ],
+     "options": [
+      {
+       "text": "Hard work in class makes writing much easier.",
+       "trap": "not-in-text",
+       "why": "Her writing is still shaky at the end. Think about why she keeps going."
+      },
+      {
+       "text": "Good friends help us feel less alone at school.",
+       "trap": "not-in-text",
+       "why": "Friends are not part of this story. Think about what Ivy learns from Mochi's leg."
+      },
+      {
+       "text": "Getting better can take time and steady patience."
+      },
+      {
+       "text": "Caring for pets teaches people to be gentle.",
+       "trap": "not-in-text",
+       "why": "Ivy does not care for Mochi in the story. Think about what she learns from watching him."
+      }
+     ]
+    },
+    {
+     "id": "b5-l13-2",
+     "order": 2,
+     "format": "single",
+     "area": "literary-craft",
+     "skill": "point-of-view",
+     "prompt": "How does Ivy see Mochi before she learns about his leg?",
+     "key": 3,
+     "evidence": [
+      3
+     ],
+     "options": [
+      {
+       "text": "As a cute creature she wants to hold",
+       "trap": "not-in-text",
+       "why": "Ivy glares at Mochi. Look at what she thought about him."
+      },
+      {
+       "text": "As a sick creature that needs her help",
+       "trap": "not-in-text",
+       "why": "She does not know about his leg yet. Look at what she thought about him."
+      },
+      {
+       "text": "As a scary creature she wants to avoid",
+       "trap": "not-in-text",
+       "why": "Ivy sits right by the tank. Look at what she thought about Mochi."
+      },
+      {
+       "text": "As a lazy creature with nothing to do"
+      }
+     ]
+    },
+    {
+     "id": "b5-l13-3",
+     "order": 3,
+     "format": "single",
+     "area": "literary-key-ideas",
+     "skill": "setting",
+     "prompt": "Where is Mochi’s tank?",
+     "key": 0,
+     "evidence": [
+      0
+     ],
+     "options": [
+      {
+       "text": "Beside the pencil sharpener in Room 12"
+      },
+      {
+       "text": "Under the window by the reading rug",
+       "trap": "not-in-text",
+       "why": "The story names a different spot. Read the first sentence."
+      },
+      {
+       "text": "Beside Mr. Bosch’s desk near the door",
+       "trap": "word-lift",
+       "why": "Mr. Bosch is the teacher, but the tank is somewhere else. Read the first sentence."
+      },
+      {
+       "text": "On the shelf next to the classroom sink",
+       "trap": "not-in-text",
+       "why": "The story names a different spot. Read the first sentence."
+      }
+     ]
+    },
+    {
+     "id": "b5-l13-4",
+     "order": 4,
+     "format": "sentence",
+     "area": "literary-craft",
+     "skill": "figurative-language",
+     "prompt": "Tap the sentence with a comparison that describes Mochi’s gills.",
+     "keys": [
+      1
+     ],
+     "why": "Look for the word like near the beginning of the story."
+    },
+    {
+     "id": "b5-l13-5",
+     "order": 5,
+     "format": "two-part",
+     "area": "literary-key-ideas",
+     "skill": "plot",
+     "evidence": [
+      5
+     ],
+     "a": {
+      "prompt": "Part A: What does Ivy do after Mr. Bosch tells about Mochi’s leg?",
+      "key": 0,
+      "options": [
+       {
+        "text": "Checks Mochi’s leg every morning"
+       },
+       {
+        "text": "Draws Mochi in her writing notebook",
+        "trap": "not-in-text",
+        "why": "She cannot write yet. Read the first sentence of the last paragraph."
+       },
+       {
+        "text": "Feeds Mochi a small worm each day",
+        "trap": "not-in-text",
+        "why": "Feeding is not mentioned. Read the first sentence of the last paragraph."
+       },
+       {
+        "text": "Cleans the glass of Mochi’s tank",
+        "trap": "not-in-text",
+        "why": "Cleaning is not mentioned. Read the first sentence of the last paragraph."
+       }
+      ]
+     },
+     "b": {
+      "prompt": "Part B: Which sentence from the passage best supports your answer to Part A?",
+      "key": 2,
+      "options": [
+       {
+        "text": "“He was pale pink, with feathery gills that waved like tiny flags, and he spent hours not moving at all.”",
+        "trap": "true-but",
+        "why": "This describes Mochi, not what Ivy does."
+       },
+       {
+        "text": "“Ivy started watching him the week she came back to school with her arm in a cast.”",
+        "trap": "true-but",
+        "why": "This happens before Mr. Bosch tells about the leg."
+       },
+       {
+        "text": "“After that, Ivy checked the leg every morning.”"
+       },
+       {
+        "text": "“Mochi the axolotl lived in a tank beside the pencil sharpener in Room 12, and most days nobody looked at him for long.”",
+        "trap": "true-but",
+        "why": "This tells where Mochi lives, not what Ivy does."
+       }
+      ]
+     }
+    }
+   ],
+   "level": 1100
+  },
+  {
+   "id": "b5-l14",
+   "type": "literary",
+   "genre": "poem",
+   "title": "The Sun’s Complaint",
+   "band": "b5",
+   "topics": [
+    "sun",
+    "stars-galaxies",
+    "space"
+   ],
+   "paragraphs": [
+    [
+     "I rise for every farmer’s field,",
+     "I rise for every sleeping town,",
+     "and not one rooster says good morning;",
+     "they only shout that I am late."
+    ],
+    [
+     "I warm the lizard on the wall,",
+     "I wake the leaves on every branch,",
+     "and still the children, playing outside,",
+     "squint and grumble, Too bright, too hot."
+    ],
+    [
+     "I have never seen the moon up close",
+     "or watched a single star come out;",
+     "I only hear about the dark",
+     "from owls who whisper as I leave."
+    ],
+    [
+     "So when you feel the evening cool,",
+     "remember someone kept you warm",
+     "all day without a word of thanks,",
+     "and maybe wave as I go down."
+    ]
+   ],
+   "items": [
+    {
+     "id": "b5-l14-1",
+     "order": 1,
+     "format": "single",
+     "area": "literary-key-ideas",
+     "skill": "theme",
+     "prompt": "Which idea does the poem show?",
+     "key": 1,
+     "evidence": [
+      13,
+      14
+     ],
+     "options": [
+      {
+       "text": "Patience brings good things in time.",
+       "trap": "not-in-text",
+       "why": "Waiting is not the point. Read the last stanza."
+      },
+      {
+       "text": "People often forget to thank those who help them."
+      },
+      {
+       "text": "Hard work is a reward all by itself.",
+       "trap": "opposite",
+       "why": "The speaker wants some thanks. Read the last stanza."
+      },
+      {
+       "text": "Night and day each have their own kind of beauty.",
+       "trap": "not-in-text",
+       "why": "The speaker never sees the night. Read the last stanza."
+      }
+     ]
+    },
+    {
+     "id": "b5-l14-2",
+     "order": 2,
+     "format": "single",
+     "area": "literary-craft",
+     "skill": "point-of-view",
+     "prompt": "Who is speaking in the poem?",
+     "key": 2,
+     "evidence": [
+      0,
+      15
+     ],
+     "options": [
+      {
+       "text": "A rooster",
+       "trap": "word-lift",
+       "why": "The rooster shouts at the speaker. Who rises and goes down?"
+      },
+      {
+       "text": "A farmer",
+       "trap": "word-lift",
+       "why": "The speaker rises for the farmer's field. Who rises and goes down?"
+      },
+      {
+       "text": "The sun"
+      },
+      {
+       "text": "An owl",
+       "trap": "word-lift",
+       "why": "The owls whisper to the speaker. Who rises and goes down?"
+      }
+     ]
+    },
+    {
+     "id": "b5-l14-3",
+     "order": 3,
+     "format": "single",
+     "area": "literary-key-ideas",
+     "skill": "character",
+     "prompt": "How does the speaker learn about the night?",
+     "key": 0,
+     "evidence": [
+      10,
+      11
+     ],
+     "options": [
+      {
+       "text": "From what the owls whisper"
+      },
+      {
+       "text": "From what the farmers say",
+       "trap": "not-in-text",
+       "why": "The farmers do not talk about the night. Read the third stanza."
+      },
+      {
+       "text": "From what the moon tells it",
+       "trap": "opposite",
+       "why": "The speaker has never seen the moon up close. Read the third stanza."
+      },
+      {
+       "text": "From what the stars sing",
+       "trap": "opposite",
+       "why": "The speaker has never watched a star come out. Read the third stanza."
+      }
+     ]
+    },
+    {
+     "id": "b5-l14-4",
+     "order": 4,
+     "format": "multi",
+     "area": "literary-craft",
+     "skill": "figurative-language",
+     "prompt": "Which two lines give a human action to an animal? Pick two.",
+     "keys": [
+      0,
+      4
+     ],
+     "evidence": [
+      2,
+      11
+     ],
+     "options": [
+      {
+       "text": "“and not one rooster says good morning;”"
+      },
+      {
+       "text": "“I warm the lizard on the wall,”",
+       "trap": "literal",
+       "why": "The lizard does nothing like a person here. Look for animals that talk."
+      },
+      {
+       "text": "“squint and grumble, Too bright, too hot.”",
+       "trap": "true-but",
+       "why": "These are children, not animals. Look for animals that talk."
+      },
+      {
+       "text": "“or watched a single star come out;”",
+       "trap": "not-in-text",
+       "why": "A star is not an animal. Look for animals that talk."
+      },
+      {
+       "text": "“from owls who whisper as I leave.”"
+      }
+     ]
+    },
+    {
+     "id": "b5-l14-5",
+     "order": 5,
+     "format": "sentence",
+     "area": "literary-craft",
+     "skill": "structure",
+     "prompt": "Tap the line where the poem begins to speak straight to the reader.",
+     "keys": [
+      12
+     ],
+     "why": "Look for the first time the speaker says you."
+    }
+   ],
+   "level": 1100
+  },
+  {
+   "id": "b5-l15",
+   "type": "literary",
+   "genre": "story",
+   "title": "Cloud Hopper",
+   "band": "b5",
+   "topics": [
+    "video-game-design",
+    "technology"
+   ],
+   "paragraphs": [
+    [
+     "Kai spent forty hours building Cloud Hopper, a game about a frog named Pip who leaped from cloud to cloud toward the moon.",
+     "It was a present for his sister Nia’s sixth birthday, and he had tested every jump until it felt perfect."
+    ],
+    [
+     "After the cake, they sat on the living room floor with his laptop, and Kai explained the controls twice.",
+     "Nia ignored the clouds completely; she pressed the jump button again and again so that Pip bounced in one spot like popcorn in a pan.",
+     "“You’re supposed to go up,” Kai said, reaching for the keyboard, but she shrieked with laughter and pushed his hand away."
+    ],
+    [
+     "Kai watched her for a long minute, and his frustration slowly faded.",
+     "She had made up her own game inside his, and she was having more fun than he had ever had testing it.",
+     "That night he stayed up late adding a new level: a single wide cloud with music, where Pip could dance as long as anyone wanted."
+    ]
+   ],
+   "items": [
+    {
+     "id": "b5-l15-1",
+     "order": 1,
+     "format": "single",
+     "area": "literary-key-ideas",
+     "skill": "theme",
+     "prompt": "Which lesson does the story show?",
+     "key": 0,
+     "evidence": [
+      6
+     ],
+     "options": [
+      {
+       "text": "What we make may be enjoyed in ways we never planned."
+      },
+      {
+       "text": "What we teach others should be explained more than once.",
+       "trap": "word-lift",
+       "why": "Kai explains twice, but Nia plays her own way anyway. Look at the last paragraph."
+      },
+      {
+       "text": "What we make is best when we take our time on it.",
+       "trap": "detail",
+       "why": "Kai did spend forty hours, but the lesson comes from how Nia plays."
+      },
+      {
+       "text": "What we learn from mistakes makes us stronger later.",
+       "trap": "not-in-text",
+       "why": "No one learns from a mistake here. Think about how Nia plays the game."
+      }
+     ]
+    },
+    {
+     "id": "b5-l15-2",
+     "order": 2,
+     "format": "single",
+     "area": "literary-key-ideas",
+     "skill": "character",
+     "prompt": "What does Kai add to the game at the end of the story?",
+     "key": 0,
+     "evidence": [
+      7
+     ],
+     "options": [
+      {
+       "text": "A level where Pip can dance to music"
+      },
+      {
+       "text": "A level where Pip races a timer",
+       "trap": "not-in-text",
+       "why": "No timer is mentioned. Read the last sentence."
+      },
+      {
+       "text": "A level where Pip swims in a pond",
+       "trap": "not-in-text",
+       "why": "No pond is mentioned. Read the last sentence."
+      },
+      {
+       "text": "A level with harder clouds to reach",
+       "trap": "opposite",
+       "why": "The new level has a single wide cloud. Read the last sentence."
+      }
+     ]
+    },
+    {
+     "id": "b5-l15-3",
+     "order": 3,
+     "format": "single",
+     "area": "literary-craft",
+     "skill": "point-of-view",
+     "prompt": "What does Kai think Nia is doing wrong?",
+     "key": 2,
+     "evidence": [
+      4
+     ],
+     "options": [
+      {
+       "text": "Going sideways instead of going up",
+       "trap": "not-in-text",
+       "why": "Pip never moves sideways. Read what Nia does with the jump button in the second paragraph."
+      },
+      {
+       "text": "Running ahead instead of going up",
+       "trap": "not-in-text",
+       "why": "Pip never runs ahead. Read what Nia does with the jump button in the second paragraph."
+      },
+      {
+       "text": "Jumping in place instead of going up"
+      },
+      {
+       "text": "Going down instead of going up",
+       "trap": "not-in-text",
+       "why": "Pip never goes down. Read what Nia does with the jump button in the second paragraph."
+      }
+     ]
+    },
+    {
+     "id": "b5-l15-4",
+     "order": 4,
+     "format": "two-part",
+     "area": "literary-key-ideas",
+     "skill": "setting",
+     "evidence": [
+      2
+     ],
+     "a": {
+      "prompt": "Part A: Where does Nia first play the game?",
+      "key": 2,
+      "options": [
+       {
+        "text": "In the kitchen, after the cake",
+        "trap": "not-in-text",
+        "why": "The story says they sat on the living room floor. Read the start of the second paragraph."
+       },
+       {
+        "text": "In the backyard, after the cake",
+        "trap": "not-in-text",
+        "why": "The story says they sat on the living room floor. Read the start of the second paragraph."
+       },
+       {
+        "text": "In the living room, after the cake"
+       },
+       {
+        "text": "In Kai’s room, after the cake",
+        "trap": "not-in-text",
+        "why": "The story says they sat on the living room floor. Read the start of the second paragraph."
+       }
+      ]
+     },
+     "b": {
+      "prompt": "Part B: Which sentence from the passage best supports your answer to Part A?",
+      "key": 0,
+      "options": [
+       {
+        "text": "“After the cake, they sat on the living room floor with his laptop, and Kai explained the controls twice.”"
+       },
+       {
+        "text": "“Kai watched her for a long minute, and his frustration slowly faded.”",
+        "trap": "true-but",
+        "why": "This tells how Kai felt, not where they were."
+       },
+       {
+        "text": "“It was a present for his sister Nia’s sixth birthday, and he had tested every jump until it felt perfect.”",
+        "trap": "true-but",
+        "why": "This tells why Kai made the game, not where Nia played it."
+       },
+       {
+        "text": "“That night he stayed up late adding a new level: a single wide cloud with music, where Pip could dance as long as anyone wanted.”",
+        "trap": "true-but",
+        "why": "This happens later, when Kai works alone."
+       }
+      ]
+     }
+    },
+    {
+     "id": "b5-l15-5",
+     "order": 5,
+     "format": "sentence",
+     "area": "literary-craft",
+     "skill": "figurative-language",
+     "prompt": "Tap the sentence with a comparison that shows how Pip moved when Nia played.",
+     "keys": [
+      3
+     ],
+     "why": "Look for the word like in the second paragraph."
+    }
+   ],
+   "level": 1130
+  },
+  {
+   "id": "b5-l16",
+   "type": "literary",
+   "genre": "fable",
+   "title": "The Tern and the Sparrow",
+   "band": "b5",
+   "topics": [
+    "continents",
+    "geography",
+    "people-places"
+   ],
+   "paragraphs": [
+    [
+     "Each spring an Arctic tern stopped to rest in a hedge where a sparrow had lived all her life.",
+     "“I have crossed seven seas and seen the coasts of every continent,” the tern announced, “and you have never left this hedge.”"
+    ],
+    [
+     "The sparrow did not argue.",
+     "Instead she asked the tern which berry in the hedge ripened first, where the hawk liked to perch, and which branch stayed dry in a storm.",
+     "The tern opened his beak, then shut it again, for he had never looked closely at any one place long enough to know."
+    ],
+    [
+     "That night a storm swept in from the sea.",
+     "The sparrow led the tern to the one dry branch, deep inside the hedge, and the two birds sat out the wind together.",
+     "In the morning the tern thanked her, and for the first time he asked about her hedge before he told her about the world."
+    ]
+   ],
+   "items": [
+    {
+     "id": "b5-l16-1",
+     "order": 1,
+     "format": "single",
+     "area": "literary-key-ideas",
+     "skill": "theme",
+     "prompt": "Which lesson does the fable show?",
+     "key": 3,
+     "evidence": [
+      4
+     ],
+     "options": [
+      {
+       "text": "Strong wings matter more than sharp eyes.",
+       "trap": "opposite",
+       "why": "The sparrow's close looking is what helps. Read the second paragraph."
+      },
+      {
+       "text": "Traveling far is the surest way to grow wise.",
+       "trap": "opposite",
+       "why": "The tern travels far but cannot answer the sparrow. Read the second paragraph."
+      },
+      {
+       "text": "Storms pass more quickly when friends share them.",
+       "trap": "literal",
+       "why": "They do sit out the storm together, but the lesson is about what each bird knows."
+      },
+      {
+       "text": "Knowing one place well is its own kind of wisdom."
+      }
+     ]
+    },
+    {
+     "id": "b5-l16-2",
+     "order": 2,
+     "format": "single",
+     "area": "literary-craft",
+     "skill": "structure",
+     "prompt": "How is the end of the fable different from the beginning?",
+     "key": 2,
+     "evidence": [
+      1,
+      7
+     ],
+     "options": [
+      {
+       "text": "The storm is far off at the start and overhead at the end.",
+       "trap": "not-in-text",
+       "why": "The storm comes and goes in the middle. Compare what the tern does first and last."
+      },
+      {
+       "text": "The hedge is bare at the start and full of berries at the end.",
+       "trap": "not-in-text",
+       "why": "The hedge does not change. Compare what the tern does first and last."
+      },
+      {
+       "text": "The tern talks first at the start and asks first at the end."
+      },
+      {
+       "text": "The sparrow is alone at the start and has a flock at the end.",
+       "trap": "not-in-text",
+       "why": "No flock appears. Compare what the tern does first and last."
+      }
+     ]
+    },
+    {
+     "id": "b5-l16-3",
+     "order": 3,
+     "format": "single",
+     "area": "literary-key-ideas",
+     "skill": "character",
+     "prompt": "Which of these does the sparrow ask the tern?",
+     "key": 3,
+     "evidence": [
+      3
+     ],
+     "options": [
+      {
+       "text": "Where the seven seas begin",
+       "trap": "word-lift",
+       "why": "The tern talks about seas, but the sparrow asks about her hedge."
+      },
+      {
+       "text": "How far the tern flies each day",
+       "trap": "not-in-text",
+       "why": "She does not ask about his flying. Read the second sentence of the second paragraph."
+      },
+      {
+       "text": "What the far coasts look like",
+       "trap": "word-lift",
+       "why": "The tern talks about coasts, but the sparrow asks about her hedge."
+      },
+      {
+       "text": "Where the hawk likes to perch"
+      }
+     ]
+    },
+    {
+     "id": "b5-l16-4",
+     "order": 4,
+     "format": "multi",
+     "area": "literary-craft",
+     "skill": "point-of-view",
+     "prompt": "Which two statements show how the tern sees the sparrow at first? Pick two.",
+     "keys": [
+      2,
+      3
+     ],
+     "evidence": [
+      1
+     ],
+     "options": [
+      {
+       "text": "He thinks she is too shy to speak.",
+       "trap": "not-in-text",
+       "why": "He never says this. Read what the tern announces."
+      },
+      {
+       "text": "He thinks her hedge is a fine home.",
+       "trap": "opposite",
+       "why": "He talks down about the hedge. Read what the tern announces."
+      },
+      {
+       "text": "He thinks she has seen very little."
+      },
+      {
+       "text": "He thinks his travels make him wiser."
+      },
+      {
+       "text": "He thinks she should fly with him.",
+       "trap": "not-in-text",
+       "why": "He never invites her. Read what the tern announces."
+      }
+     ]
+    },
+    {
+     "id": "b5-l16-5",
+     "order": 5,
+     "format": "order",
+     "area": "literary-key-ideas",
+     "skill": "plot",
+     "prompt": "Put these events in the order they happen in the fable.",
+     "why": "Follow the fable from the tern's arrival, to the storm, to the morning.",
+     "steps": [
+      "The sparrow asks which berry ripens first.",
+      "The tern opens and shuts his beak.",
+      "The two birds sit out the wind.",
+      "The tern asks about the hedge."
+     ]
+    }
+   ],
+   "level": 1030
+  },
+  {
+   "id": "b5-l17",
+   "type": "literary",
+   "genre": "story",
+   "title": "The Board",
+   "band": "b5",
+   "topics": [
+    "taekwondo",
+    "martial-arts",
+    "sports"
+   ],
+   "paragraphs": [
+    [
+     "The pine board was only an inch thick, but to Hana it looked like a wall.",
+     "Her whole yellow-belt test came down to this: one side kick, in front of her family and twenty other students sitting cross-legged on the mat."
+    ],
+    [
+     "Her first kick bounced off with a dull thump, and her heel stung.",
+     "Her second kick was so careful that the board barely shook.",
+     "Master Cho knelt and told her quietly to aim at a spot behind the board, as if the wood were already gone."
+    ],
+    [
+     "On her third try, Hana stared at the wall behind the two holders, took a breath, and kicked.",
+     "The board stayed whole, but this time it jumped so hard that one holder stepped back.",
+     "Master Cho tied the yellow belt around her waist anyway, saying that a test measures how a student keeps going, not only what breaks."
+    ]
+   ],
+   "items": [
+    {
+     "id": "b5-l17-1",
+     "order": 1,
+     "format": "single",
+     "area": "literary-key-ideas",
+     "skill": "theme",
+     "prompt": "Which lesson does the story show?",
+     "key": 1,
+     "evidence": [
+      7
+     ],
+     "options": [
+      {
+       "text": "Being careful is the safest way to try something hard.",
+       "trap": "opposite",
+       "why": "Hana's careful kick barely shook the board. Read what Master Cho says."
+      },
+      {
+       "text": "Keeping on after failing matters more than one result."
+      },
+      {
+       "text": "Listening to a good teacher leads to quick success.",
+       "trap": "opposite",
+       "why": "Hana listens, but the board still does not break. Read the last sentence."
+      },
+      {
+       "text": "Practicing alone is easier than performing for others.",
+       "trap": "not-in-text",
+       "why": "The story never compares the two. Read what Master Cho says."
+      }
+     ]
+    },
+    {
+     "id": "b5-l17-2",
+     "order": 2,
+     "format": "single",
+     "area": "literary-key-ideas",
+     "skill": "plot",
+     "prompt": "What happens on Hana’s third try?",
+     "key": 3,
+     "evidence": [
+      6
+     ],
+     "options": [
+      {
+       "text": "Hana stops herself before she kicks.",
+       "trap": "not-in-text",
+       "why": "Hana does kick. Read the first sentence of the last paragraph."
+      },
+      {
+       "text": "Hana slips and falls onto the mat.",
+       "trap": "not-in-text",
+       "why": "Hana does not fall. Read the second sentence of the last paragraph."
+      },
+      {
+       "text": "The board snaps cleanly into two pieces.",
+       "trap": "opposite",
+       "why": "The board stayed whole. Read the second sentence of the last paragraph."
+      },
+      {
+       "text": "The board jumps hard but does not break."
+      }
+     ]
+    },
+    {
+     "id": "b5-l17-3",
+     "order": 3,
+     "format": "single",
+     "area": "literary-craft",
+     "skill": "structure",
+     "prompt": "How is the story organized?",
+     "key": 0,
+     "evidence": [
+      2,
+      5
+     ],
+     "options": [
+      {
+       "text": "Around three tries at one board"
+      },
+      {
+       "text": "Around three students taking a test",
+       "trap": "not-in-text",
+       "why": "The story follows only Hana. Count Hana’s kicks."
+      },
+      {
+       "text": "Around three belts Hana earns",
+       "trap": "not-in-text",
+       "why": "Hana earns one belt. Count Hana’s kicks."
+      },
+      {
+       "text": "Around three days of practice",
+       "trap": "not-in-text",
+       "why": "The story happens during one test. Count Hana’s kicks."
+      }
+     ]
+    },
+    {
+     "id": "b5-l17-4",
+     "order": 4,
+     "format": "sentence",
+     "area": "literary-key-ideas",
+     "skill": "character",
+     "prompt": "Tap the sentence that shows Hana was holding back on one of her kicks.",
+     "keys": [
+      3
+     ],
+     "why": "Look at the second paragraph."
+    },
+    {
+     "id": "b5-l17-5",
+     "order": 5,
+     "format": "multi",
+     "area": "literary-craft",
+     "skill": "point-of-view",
+     "prompt": "Which two statements tell what Master Cho believes? Pick two.",
+     "keys": [
+      0,
+      1
+     ],
+     "evidence": [
+      4,
+      7
+     ],
+     "options": [
+      {
+       "text": "Aim at a spot behind the board."
+      },
+      {
+       "text": "Keeping going counts in a test."
+      },
+      {
+       "text": "Kick faster than you think you can.",
+       "trap": "not-in-text",
+       "why": "He never talks about speed. Reread what Master Cho tells Hana and says at the end."
+      },
+      {
+       "text": "Staying calm counts in a test.",
+       "trap": "not-in-text",
+       "why": "He says a test measures how a student keeps going. Reread what Master Cho tells Hana and says at the end."
+      },
+      {
+       "text": "Shout as you kick to add power.",
+       "trap": "not-in-text",
+       "why": "He never talks about shouting. Reread what Master Cho tells Hana and says at the end."
+      }
+     ]
+    }
+   ],
+   "level": 1050
   }
  ],
  "vocab": [
@@ -6628,6 +11574,1286 @@ var READING_BANK = {
      "text": "soft and fuzzy like a rug",
      "trap": "word-lift",
      "why": "The rug is where he lay down. The clue is that he moved slowly instead of playing."
+    }
+   ],
+   "order": 40
+  },
+  {
+   "id": "b5-v01",
+   "band": "b5",
+   "format": "vocab",
+   "area": "vocabulary",
+   "skill": "context-clues",
+   "context": "Ravi was meticulous about his model ships. He used tweezers to place each tiny rope and checked every mast with a ruler.",
+   "word": "meticulous",
+   "prompt": "What does meticulous mean in these sentences?",
+   "key": 0,
+   "options": [
+    {
+     "text": "very careful"
+    },
+    {
+     "text": "very small",
+     "trap": "word-lift",
+     "why": "The ropes are tiny, but meticulous describes how Ravi worked, not the size of the ships."
+    },
+    {
+     "text": "very careless",
+     "trap": "opposite",
+     "why": "Using tweezers and checking with a ruler shows great care, not carelessness."
+    },
+    {
+     "text": "very proud",
+     "trap": "not-in-text",
+     "why": "Nothing says Ravi felt proud. The tweezers and ruler show how careful he was."
+    }
+   ],
+   "order": 1
+  },
+  {
+   "id": "b5-v02",
+   "band": "b5",
+   "format": "vocab",
+   "area": "vocabulary",
+   "skill": "context-clues",
+   "context": "Dark clouds piled up over the hills, and the wind went suddenly still. The ominous sky made the hikers hurry back to the cabin.",
+   "word": "ominous",
+   "prompt": "What does ominous mean in these sentences?",
+   "key": 2,
+   "options": [
+    {
+     "text": "bright and colorful",
+     "trap": "not-in-text",
+     "why": "The clouds are dark, not bright. The hikers hurried because the sky looked threatening."
+    },
+    {
+     "text": "high above hills",
+     "trap": "word-lift",
+     "why": "The clouds are over the hills, but ominous tells how the sky felt to the hikers: like trouble was coming."
+    },
+    {
+     "text": "warning of trouble"
+    },
+    {
+     "text": "calm and pleasant",
+     "trap": "opposite",
+     "why": "The hikers hurried back, so the sky seemed to warn of something bad, not something pleasant."
+    }
+   ],
+   "order": 2
+  },
+  {
+   "id": "b5-v03",
+   "band": "b5",
+   "format": "vocab",
+   "area": "vocabulary",
+   "skill": "context-clues",
+   "context": "The little maple was bent flat by the snow all winter. In spring it sprang back up and grew new leaves, as resilient as ever.",
+   "word": "resilient",
+   "prompt": "What does resilient mean in these sentences?",
+   "key": 2,
+   "options": [
+    {
+     "text": "covered in snow",
+     "trap": "word-lift",
+     "why": "The snow bent the tree, but resilient describes how it sprang back in spring."
+    },
+    {
+     "text": "very tall",
+     "trap": "not-in-text",
+     "why": "The tree is called little. Resilient describes how it came back after the snow."
+    },
+    {
+     "text": "able to recover"
+    },
+    {
+     "text": "easily ruined",
+     "trap": "opposite",
+     "why": "The tree sprang back up after being bent all winter, so it was not ruined."
+    }
+   ],
+   "order": 3
+  },
+  {
+   "id": "b5-v04",
+   "band": "b5",
+   "format": "vocab",
+   "area": "vocabulary",
+   "skill": "context-clues",
+   "context": "When Lena asked what he thought of her poem, Sam was candid. He said the ending confused him, though he loved the first verse.",
+   "word": "candid",
+   "prompt": "What does candid mean in these sentences?",
+   "key": 1,
+   "options": [
+    {
+     "text": "jealous",
+     "trap": "not-in-text",
+     "why": "Nothing shows Sam was jealous. He simply told the truth about the poem."
+    },
+    {
+     "text": "honest"
+    },
+    {
+     "text": "secretive",
+     "trap": "opposite",
+     "why": "Sam told Lena exactly what he thought, so he did not hide anything."
+    },
+    {
+     "text": "confused",
+     "trap": "word-lift",
+     "why": "The ending confused Sam, but candid describes how openly he told Lena so."
+    }
+   ],
+   "order": 4
+  },
+  {
+   "id": "b5-v05",
+   "band": "b5",
+   "format": "vocab",
+   "area": "vocabulary",
+   "skill": "context-clues",
+   "context": "When the judges called her name, Priya was elated. She leaped from her seat and hugged everyone in her row.",
+   "word": "elated",
+   "prompt": "What does elated mean in these sentences?",
+   "key": 0,
+   "options": [
+    {
+     "text": "thrilled"
+    },
+    {
+     "text": "seated",
+     "trap": "word-lift",
+     "why": "Priya leaped from her seat. Elated tells how she felt, not where she was."
+    },
+    {
+     "text": "let down",
+     "trap": "opposite",
+     "why": "Leaping up and hugging everyone shows great joy, not disappointment."
+    },
+    {
+     "text": "nervous",
+     "trap": "not-in-text",
+     "why": "Nothing shows Priya was worried. Her leap and hugs show she was overjoyed."
+    }
+   ],
+   "order": 5
+  },
+  {
+   "id": "b5-v06",
+   "band": "b5",
+   "format": "vocab",
+   "area": "vocabulary",
+   "skill": "context-clues",
+   "context": "In a room full of people wearing gray, Owen's orange jacket was conspicuous. Everyone spotted him the moment he walked in.",
+   "word": "conspicuous",
+   "prompt": "What does conspicuous mean in these sentences?",
+   "key": 1,
+   "options": [
+    {
+     "text": "gray in color",
+     "trap": "word-lift",
+     "why": "The other people wore gray. Owen's jacket was orange, which made it stand out."
+    },
+    {
+     "text": "easy to notice"
+    },
+    {
+     "text": "hard to see",
+     "trap": "opposite",
+     "why": "Everyone spotted Owen right away, so his jacket was easy to see."
+    },
+    {
+     "text": "too large",
+     "trap": "not-in-text",
+     "why": "Nothing says the jacket was too big. It stood out because of its color."
+    }
+   ],
+   "order": 6
+  },
+  {
+   "id": "b5-v07",
+   "band": "b5",
+   "format": "vocab",
+   "area": "vocabulary",
+   "skill": "context-clues",
+   "context": "Nobody had painted the old barn in fifty years. Its boards began to deteriorate, cracking and crumbling a little more every winter.",
+   "word": "deteriorate",
+   "prompt": "What does deteriorate mean in these sentences?",
+   "key": 2,
+   "options": [
+    {
+     "text": "get moved",
+     "trap": "not-in-text",
+     "why": "Nothing says the boards were moved. They cracked and crumbled where they were."
+    },
+    {
+     "text": "get stronger",
+     "trap": "opposite",
+     "why": "The boards were cracking and crumbling, so they were getting weaker, not stronger."
+    },
+    {
+     "text": "get worse"
+    },
+    {
+     "text": "get painted",
+     "trap": "word-lift",
+     "why": "The barn had not been painted in fifty years. The boards were falling apart."
+    }
+   ],
+   "order": 7
+  },
+  {
+   "id": "b5-v08",
+   "band": "b5",
+   "format": "vocab",
+   "area": "vocabulary",
+   "skill": "context-clues",
+   "context": "Grandma is frugal. She reuses gift wrap, patches old socks, and never buys anything she can make herself.",
+   "word": "frugal",
+   "prompt": "What does frugal mean in these sentences?",
+   "key": 1,
+   "options": [
+    {
+     "text": "good at sewing",
+     "trap": "word-lift",
+     "why": "Patching socks is one example, but frugal means she saves money in many ways."
+    },
+    {
+     "text": "careful with money"
+    },
+    {
+     "text": "fond of gifts",
+     "trap": "not-in-text",
+     "why": "Gift wrap is reused to save money. Nothing says she is fond of gifts."
+    },
+    {
+     "text": "wasteful with money",
+     "trap": "opposite",
+     "why": "Reusing wrap and patching socks saves money. That is the opposite of wasteful."
+    }
+   ],
+   "order": 8
+  },
+  {
+   "id": "b5-v09",
+   "band": "b5",
+   "format": "vocab",
+   "area": "vocabulary",
+   "skill": "context-clues",
+   "context": "The referee blamed Marcus for a foul he did not commit. Marcus was indignant and argued that he had never even touched the ball.",
+   "word": "indignant",
+   "prompt": "What does indignant mean in these sentences?",
+   "key": 2,
+   "options": [
+    {
+     "text": "pleased with a call",
+     "trap": "opposite",
+     "why": "Marcus argued with the referee, so he was not pleased."
+    },
+    {
+     "text": "unable to touch it",
+     "trap": "word-lift",
+     "why": "Marcus says he never touched the ball, but indignant tells how he felt about the blame."
+    },
+    {
+     "text": "angry at unfairness"
+    },
+    {
+     "text": "afraid of the referee",
+     "trap": "not-in-text",
+     "why": "Marcus argued back, which does not show fear. He was upset at being blamed unfairly."
+    }
+   ],
+   "order": 9
+  },
+  {
+   "id": "b5-v10",
+   "band": "b5",
+   "format": "vocab",
+   "area": "vocabulary",
+   "skill": "context-clues",
+   "context": "After three nights of poor sleep, Jada felt lethargic. She dragged her feet to the bus stop and could barely lift her backpack.",
+   "word": "lethargic",
+   "prompt": "What does lethargic mean in these sentences?",
+   "key": 3,
+   "options": [
+    {
+     "text": "late for school",
+     "trap": "not-in-text",
+     "why": "Nothing says Jada was late. Dragging her feet shows she was worn out."
+    },
+    {
+     "text": "full of energy",
+     "trap": "opposite",
+     "why": "Jada dragged her feet and could barely lift her bag, so she had little energy."
+    },
+    {
+     "text": "carrying a bag",
+     "trap": "word-lift",
+     "why": "She does carry a backpack, but lethargic describes how tired and slow she felt."
+    },
+    {
+     "text": "without energy"
+    }
+   ],
+   "order": 10
+  },
+  {
+   "id": "b5-v11",
+   "band": "b5",
+   "format": "vocab",
+   "area": "vocabulary",
+   "skill": "context-clues",
+   "context": "There was ample food at the picnic. Even after everyone had seconds, three bowls of salad and a whole pie were left.",
+   "word": "ample",
+   "prompt": "What does ample mean in these sentences?",
+   "key": 1,
+   "options": [
+    {
+     "text": "not nearly enough",
+     "trap": "opposite",
+     "why": "Food was left over after seconds, so there was plenty, not too little."
+    },
+    {
+     "text": "more than enough"
+    },
+    {
+     "text": "very tasty",
+     "trap": "not-in-text",
+     "why": "Nothing tells how the food tasted. The leftovers show how much there was."
+    },
+    {
+     "text": "outdoors",
+     "trap": "word-lift",
+     "why": "A picnic is outdoors, but ample describes the amount of food."
+    }
+   ],
+   "order": 11
+  },
+  {
+   "id": "b5-v12",
+   "band": "b5",
+   "format": "vocab",
+   "area": "vocabulary",
+   "skill": "context-clues",
+   "context": "The lifeguard stayed vigilant all afternoon. Her eyes swept the pool again and again, and she never once looked at her phone.",
+   "word": "vigilant",
+   "prompt": "What does vigilant mean in these sentences?",
+   "key": 2,
+   "options": [
+    {
+     "text": "tired",
+     "trap": "not-in-text",
+     "why": "Nothing says the lifeguard was tired. She kept watching closely all afternoon."
+    },
+    {
+     "text": "distracted",
+     "trap": "opposite",
+     "why": "She never looked at her phone and kept scanning the pool, so she was not distracted."
+    },
+    {
+     "text": "watchful"
+    },
+    {
+     "text": "wet",
+     "trap": "word-lift",
+     "why": "She works at a pool, but vigilant describes how closely she watched."
+    }
+   ],
+   "order": 12
+  },
+  {
+   "id": "b5-v13",
+   "band": "b5",
+   "format": "vocab",
+   "area": "vocabulary",
+   "skill": "context-clues",
+   "context": "As a novice at chess, Theo still had to ask how the knight moved. His cousin, who had played for years, explained it patiently.",
+   "word": "novice",
+   "prompt": "What does novice mean in these sentences?",
+   "key": 0,
+   "options": [
+    {
+     "text": "a beginner"
+    },
+    {
+     "text": "an expert",
+     "trap": "opposite",
+     "why": "Theo still had to ask how a piece moved, so he was new to the game."
+    },
+    {
+     "text": "a cousin",
+     "trap": "word-lift",
+     "why": "His cousin explained the moves. Novice describes Theo, who was just starting."
+    },
+    {
+     "text": "a winner",
+     "trap": "not-in-text",
+     "why": "Nothing says Theo won. He was still learning the basic moves."
+    }
+   ],
+   "order": 13
+  },
+  {
+   "id": "b5-v14",
+   "band": "b5",
+   "format": "vocab",
+   "area": "vocabulary",
+   "skill": "context-clues",
+   "context": "The obstinate goat refused to move off the path. We pushed, we pulled, and we offered carrots, but it stood its ground.",
+   "word": "obstinate",
+   "prompt": "What does obstinate mean in these sentences?",
+   "key": 2,
+   "options": [
+    {
+     "text": "frightened",
+     "trap": "not-in-text",
+     "why": "Nothing shows the goat was afraid. It simply would not budge."
+    },
+    {
+     "text": "hungry",
+     "trap": "word-lift",
+     "why": "The goat was offered carrots, but it still would not move. Obstinate means stubborn."
+    },
+    {
+     "text": "stubborn"
+    },
+    {
+     "text": "willing",
+     "trap": "opposite",
+     "why": "The goat refused to move no matter what, so it was not willing."
+    }
+   ],
+   "order": 14
+  },
+  {
+   "id": "b5-v15",
+   "band": "b5",
+   "format": "vocab",
+   "area": "vocabulary",
+   "skill": "context-clues",
+   "context": "Early in the morning the lake was serene. Not a ripple moved across the water, and the only sound was a single bird calling.",
+   "word": "serene",
+   "prompt": "What does serene mean in these sentences?",
+   "key": 0,
+   "options": [
+    {
+     "text": "calm and peaceful"
+    },
+    {
+     "text": "rough and noisy",
+     "trap": "opposite",
+     "why": "No ripples and only one bird calling show the lake was still and quiet."
+    },
+    {
+     "text": "full of birds",
+     "trap": "word-lift",
+     "why": "Only a single bird calls. Serene describes how still and quiet the lake was."
+    },
+    {
+     "text": "cold and icy",
+     "trap": "not-in-text",
+     "why": "Nothing says the lake was cold or frozen. The clues are about stillness and quiet."
+    }
+   ],
+   "order": 15
+  },
+  {
+   "id": "b5-v16",
+   "band": "b5",
+   "format": "vocab",
+   "area": "vocabulary",
+   "skill": "context-clues",
+   "context": "Mia took a tentative step onto the frozen pond. She tested the ice with one foot before she trusted it with her full weight.",
+   "word": "tentative",
+   "prompt": "What does tentative mean in these sentences?",
+   "key": 0,
+   "options": [
+    {
+     "text": "unsure"
+    },
+    {
+     "text": "frozen",
+     "trap": "word-lift",
+     "why": "The pond is frozen, but tentative describes Mia's careful, unsure step."
+    },
+    {
+     "text": "quick",
+     "trap": "not-in-text",
+     "why": "Testing the ice first takes time. Her step was slow and unsure, not quick."
+    },
+    {
+     "text": "confident",
+     "trap": "opposite",
+     "why": "Mia tested the ice before trusting it, so she was not confident."
+    }
+   ],
+   "order": 16
+  },
+  {
+   "id": "b5-v17",
+   "band": "b5",
+   "format": "vocab",
+   "area": "vocabulary",
+   "skill": "context-clues",
+   "context": "The newborn lamb was feeble at first. It wobbled on thin legs and could barely lift its head to drink.",
+   "word": "feeble",
+   "prompt": "What does feeble mean in these sentences?",
+   "key": 2,
+   "options": [
+    {
+     "text": "noisy",
+     "trap": "not-in-text",
+     "why": "Nothing tells about the lamb's sounds. Wobbling shows it was weak."
+    },
+    {
+     "text": "thirsty",
+     "trap": "word-lift",
+     "why": "The lamb tries to drink, but feeble describes how weak it was."
+    },
+    {
+     "text": "weak"
+    },
+    {
+     "text": "strong",
+     "trap": "opposite",
+     "why": "The lamb wobbled and could barely lift its head, so it was weak."
+    }
+   ],
+   "order": 17
+  },
+  {
+   "id": "b5-v19",
+   "band": "b5",
+   "format": "vocab",
+   "area": "vocabulary",
+   "skill": "context-clues",
+   "context": "The judge for the bake-off had to be impartial, so she tasted every pie without knowing who had made it.",
+   "word": "impartial",
+   "prompt": "What does impartial mean in these sentences?",
+   "key": 2,
+   "options": [
+    {
+     "text": "unfair to some",
+     "trap": "opposite",
+     "why": "Tasting without knowing the bakers keeps the judge from favoring anyone."
+    },
+    {
+     "text": "fond of pie",
+     "trap": "word-lift",
+     "why": "She tastes pies, but impartial is about judging fairly."
+    },
+    {
+     "text": "fair to everyone"
+    },
+    {
+     "text": "new to baking",
+     "trap": "not-in-text",
+     "why": "Nothing says the judge was new to baking. The clue is that she did not know the bakers."
+    }
+   ],
+   "order": 18
+  },
+  {
+   "id": "b5-v20",
+   "band": "b5",
+   "format": "vocab",
+   "area": "vocabulary",
+   "skill": "context-clues",
+   "context": "The stray cat was wary of strangers. It watched us from under the porch and darted away whenever we stepped closer.",
+   "word": "wary",
+   "prompt": "What does wary mean in these sentences?",
+   "key": 0,
+   "options": [
+    {
+     "text": "distrustful"
+    },
+    {
+     "text": "hungry",
+     "trap": "not-in-text",
+     "why": "Nothing says the cat was hungry. Darting away shows it did not trust people."
+    },
+    {
+     "text": "friendly",
+     "trap": "opposite",
+     "why": "The cat darted away when people came close, so it was not friendly."
+    },
+    {
+     "text": "hidden",
+     "trap": "word-lift",
+     "why": "The cat sits under the porch, but wary describes how it felt about strangers."
+    }
+   ],
+   "order": 19
+  },
+  {
+   "id": "b5-v21",
+   "band": "b5",
+   "format": "vocab",
+   "area": "vocabulary",
+   "skill": "word-parts",
+   "context": "The note was so smudged by rain that it was illegible. We could not make out a single word.",
+   "word": "illegible",
+   "prompt": "The prefix il- means \"not.\" What does illegible mean in these sentences?",
+   "key": 0,
+   "options": [
+    {
+     "text": "not readable"
+    },
+    {
+     "text": "easy to read",
+     "trap": "opposite",
+     "why": "Il- means not, and no one could make out a word, so it could not be read."
+    },
+    {
+     "text": "not wet",
+     "trap": "word-lift",
+     "why": "The note was smudged by rain. Illegible means it could not be read."
+    },
+    {
+     "text": "not signed",
+     "trap": "not-in-text",
+     "why": "Nothing says the note lacked a name. The problem was that no word could be read."
+    }
+   ],
+   "order": 20
+  },
+  {
+   "id": "b5-v23",
+   "band": "b5",
+   "format": "vocab",
+   "area": "vocabulary",
+   "skill": "word-parts",
+   "context": "After the flood washed away the old bridge, the town worked for a year to reconstruct it in the same spot.",
+   "word": "reconstruct",
+   "prompt": "The prefix re- means \"again.\" What does reconstruct mean in these sentences?",
+   "key": 2,
+   "options": [
+    {
+     "text": "tear down",
+     "trap": "opposite",
+     "why": "The flood already destroyed the bridge. The town worked to put it back."
+    },
+    {
+     "text": "wash away",
+     "trap": "word-lift",
+     "why": "The flood washed the bridge away. Reconstruct is what the town did after."
+    },
+    {
+     "text": "build again"
+    },
+    {
+     "text": "move away",
+     "trap": "not-in-text",
+     "why": "The bridge went back in the same spot, so it was not moved."
+    }
+   ],
+   "order": 21
+  },
+  {
+   "id": "b5-v24",
+   "band": "b5",
+   "format": "vocab",
+   "area": "vocabulary",
+   "skill": "word-parts",
+   "context": "The diver found an old anchor submerged in the harbor, resting on the sandy bottom far below the boats.",
+   "word": "submerged",
+   "prompt": "The prefix sub- means \"under.\" What does submerged mean in these sentences?",
+   "key": 0,
+   "options": [
+    {
+     "text": "under the water"
+    },
+    {
+     "text": "floating on top",
+     "trap": "opposite",
+     "why": "The anchor rested on the bottom far below the boats, not on the surface."
+    },
+    {
+     "text": "tied to a boat",
+     "trap": "word-lift",
+     "why": "Boats are above, but the anchor lay on the sandy bottom under the water."
+    },
+    {
+     "text": "very rusty",
+     "trap": "not-in-text",
+     "why": "Nothing tells how rusty the anchor was. Submerged means it was underwater."
+    }
+   ],
+   "order": 22
+  },
+  {
+   "id": "b5-v25",
+   "band": "b5",
+   "format": "vocab",
+   "area": "vocabulary",
+   "skill": "word-parts",
+   "context": "The first transatlantic phone call linked New York and London in 1927, carrying voices across the ocean by radio.",
+   "word": "transatlantic",
+   "prompt": "The prefix trans- means \"across.\" What does transatlantic mean in these sentences?",
+   "key": 0,
+   "options": [
+    {
+     "text": "across the Atlantic"
+    },
+    {
+     "text": "by telephone",
+     "trap": "word-lift",
+     "why": "It was a phone call, but transatlantic tells where it went: across the ocean."
+    },
+    {
+     "text": "under the sea",
+     "trap": "not-in-text",
+     "why": "The call traveled by radio, not along the sea floor. Trans- means across."
+    },
+    {
+     "text": "inside one city",
+     "trap": "opposite",
+     "why": "The call linked New York and London, cities on different sides of the ocean."
+    }
+   ],
+   "order": 23
+  },
+  {
+   "id": "b5-v26",
+   "band": "b5",
+   "format": "vocab",
+   "area": "vocabulary",
+   "skill": "word-parts",
+   "context": "To make the backpack lighter, Dad took out everything nonessential, like the extra flashlight and the board game, but kept the water and the map.",
+   "word": "nonessential",
+   "prompt": "The prefix non- means \"not.\" What does nonessential mean in these sentences?",
+   "key": 0,
+   "options": [
+    {
+     "text": "not needed"
+    },
+    {
+     "text": "very important",
+     "trap": "opposite",
+     "why": "The important things, water and the map, stayed in. The nonessential things came out."
+    },
+    {
+     "text": "broken",
+     "trap": "not-in-text",
+     "why": "Nothing says the flashlight or game was broken. They were just not needed."
+    },
+    {
+     "text": "too heavy",
+     "trap": "word-lift",
+     "why": "Dad wanted a lighter pack, but nonessential means the items were not needed."
+    }
+   ],
+   "order": 24
+  },
+  {
+   "id": "b5-v27",
+   "band": "b5",
+   "format": "vocab",
+   "area": "vocabulary",
+   "skill": "word-parts",
+   "context": "Don't overestimate how much paint we need. Last time we bought six cans, and four were never opened.",
+   "word": "overestimate",
+   "prompt": "The prefix over- means \"too much.\" What does overestimate mean in these sentences?",
+   "key": 2,
+   "options": [
+    {
+     "text": "paint too much",
+     "trap": "word-lift",
+     "why": "The sentences are about paint, but overestimate is about guessing how much to buy."
+    },
+    {
+     "text": "spend too little",
+     "trap": "not-in-text",
+     "why": "Buying extra cans means spending too much. The problem was guessing too high."
+    },
+    {
+     "text": "guess too high"
+    },
+    {
+     "text": "guess too low",
+     "trap": "opposite",
+     "why": "Four cans went unopened, which shows they guessed too high, not too low."
+    }
+   ],
+   "order": 25
+  },
+  {
+   "id": "b5-v28",
+   "band": "b5",
+   "format": "vocab",
+   "area": "vocabulary",
+   "skill": "word-parts",
+   "context": "The photo album was irreplaceable. It held the only pictures ever taken of Great-Grandpa as a boy.",
+   "word": "irreplaceable",
+   "prompt": "The prefix ir- means \"not,\" and the suffix -able means \"can be.\" What does irreplaceable mean in these sentences?",
+   "key": 2,
+   "options": [
+    {
+     "text": "easy to replace",
+     "trap": "opposite",
+     "why": "The album held the only pictures, so it could not be replaced."
+    },
+    {
+     "text": "very old",
+     "trap": "word-lift",
+     "why": "The pictures are old, but irreplaceable means nothing could take their place."
+    },
+    {
+     "text": "cannot be replaced"
+    },
+    {
+     "text": "very large",
+     "trap": "not-in-text",
+     "why": "Nothing tells the album's size. It mattered because the pictures were the only ones."
+    }
+   ],
+   "order": 26
+  },
+  {
+   "id": "b5-v29",
+   "band": "b5",
+   "format": "vocab",
+   "area": "vocabulary",
+   "skill": "word-parts",
+   "context": "Our school holds a biannual book fair, once in the fall and once in the spring.",
+   "word": "biannual",
+   "prompt": "The prefix bi- means \"two.\" What does biannual mean in these sentences?",
+   "key": 1,
+   "options": [
+    {
+     "text": "about books",
+     "trap": "word-lift",
+     "why": "It is a book fair, but biannual tells how often it happens."
+    },
+    {
+     "text": "twice a year"
+    },
+    {
+     "text": "every two weeks",
+     "trap": "not-in-text",
+     "why": "The sentence names only fall and spring, so it is two times a year."
+    },
+    {
+     "text": "once a year",
+     "trap": "too-narrow",
+     "why": "The fair happens in the fall and in the spring, so it is held two times."
+    }
+   ],
+   "order": 27
+  },
+  {
+   "id": "b5-v30",
+   "band": "b5",
+   "format": "vocab",
+   "area": "vocabulary",
+   "skill": "word-parts",
+   "context": "Leo's text said \"Great job,\" but without a smile emoji, his sister seemed to misinterpret it as a joke and got upset.",
+   "word": "misinterpret",
+   "prompt": "The prefix mis- means \"wrongly.\" What does misinterpret mean in these sentences?",
+   "key": 1,
+   "options": [
+    {
+     "text": "ignore",
+     "trap": "not-in-text",
+     "why": "She did not ignore the text. She got upset because she read it the wrong way."
+    },
+    {
+     "text": "understand wrongly"
+    },
+    {
+     "text": "understand exactly",
+     "trap": "opposite",
+     "why": "Leo meant it kindly, but his sister took it as a joke and got upset."
+    },
+    {
+     "text": "send wrongly",
+     "trap": "word-lift",
+     "why": "The text was sent to the right person. She misread what it meant."
+    }
+   ],
+   "order": 28
+  },
+  {
+   "id": "b5-v31",
+   "band": "b5",
+   "format": "vocab",
+   "area": "vocabulary",
+   "skill": "word-parts",
+   "context": "The interstate highway runs from our town in Ohio all the way into Indiana and Illinois.",
+   "word": "interstate",
+   "prompt": "The prefix inter- means \"between.\" What does interstate mean in these sentences?",
+   "key": 0,
+   "options": [
+    {
+     "text": "between states"
+    },
+    {
+     "text": "inside one town",
+     "trap": "opposite",
+     "why": "The highway goes from Ohio into Indiana and Illinois, so it connects states."
+    },
+    {
+     "text": "a kind of car",
+     "trap": "word-lift",
+     "why": "Interstate describes the highway, not the cars on it."
+    },
+    {
+     "text": "very wide",
+     "trap": "not-in-text",
+     "why": "Nothing tells how wide the road is. Interstate tells where it goes."
+    }
+   ],
+   "order": 29
+  },
+  {
+   "id": "b5-v32",
+   "band": "b5",
+   "format": "vocab",
+   "area": "vocabulary",
+   "skill": "word-parts",
+   "context": "The museum's cave paintings are prehistoric. They were made thousands of years before anyone could write down history.",
+   "word": "prehistoric",
+   "prompt": "The prefix pre- means \"before.\" What does prehistoric mean in these sentences?",
+   "key": 1,
+   "options": [
+    {
+     "text": "painted on cloth",
+     "trap": "not-in-text",
+     "why": "They are cave paintings, on rock. Prehistoric tells when they were made."
+    },
+    {
+     "text": "before written history"
+    },
+    {
+     "text": "in a museum",
+     "trap": "word-lift",
+     "why": "The paintings are in a museum now, but prehistoric tells when they were made."
+    },
+    {
+     "text": "after written history",
+     "trap": "opposite",
+     "why": "The paintings were made before anyone could write, so they come before history."
+    }
+   ],
+   "order": 30
+  },
+  {
+   "id": "b5-v33",
+   "band": "b5",
+   "format": "vocab",
+   "area": "vocabulary",
+   "skill": "multiple-meaning",
+   "context": "At the narrow bridge, drivers going north must yield to cars coming south, waiting until the lane is clear.",
+   "word": "yield",
+   "prompt": "What does yield mean in these sentences?",
+   "key": 1,
+   "options": [
+    {
+     "text": "cross a bridge",
+     "trap": "word-lift",
+     "why": "There is a bridge, but yield means waiting so the other cars can go."
+    },
+    {
+     "text": "let others go first"
+    },
+    {
+     "text": "speed up",
+     "trap": "opposite",
+     "why": "Drivers wait until the lane is clear, so they slow or stop, not speed up."
+    },
+    {
+     "text": "grow crops",
+     "trap": "not-in-text",
+     "why": "A farm can yield crops, but here drivers wait until the lane is clear."
+    }
+   ],
+   "order": 31
+  },
+  {
+   "id": "b5-v34",
+   "band": "b5",
+   "format": "vocab",
+   "area": "vocabulary",
+   "skill": "multiple-meaning",
+   "context": "When Ben's team lost the final game, his coach sat beside him to console him, reminding him how far they had come.",
+   "word": "console",
+   "prompt": "What does console mean in these sentences?",
+   "key": 3,
+   "options": [
+    {
+     "text": "game controller",
+     "trap": "not-in-text",
+     "why": "A console can be a game machine, but here the coach sits beside Ben to make him feel better."
+    },
+    {
+     "text": "scold",
+     "trap": "opposite",
+     "why": "The coach reminds Ben how far they had come, which is kind, not scolding."
+    },
+    {
+     "text": "coach",
+     "trap": "word-lift",
+     "why": "The coach is the person, but console is what he does: comfort Ben."
+    },
+    {
+     "text": "comfort"
+    }
+   ],
+   "order": 32
+  },
+  {
+   "id": "b5-v35",
+   "band": "b5",
+   "format": "vocab",
+   "area": "vocabulary",
+   "skill": "multiple-meaning",
+   "context": "Rice is a staple in many homes around the world. Families eat it nearly every day, often at more than one meal.",
+   "word": "staple",
+   "prompt": "What does staple mean in these sentences?",
+   "key": 2,
+   "options": [
+    {
+     "text": "whole world",
+     "trap": "word-lift",
+     "why": "The sentence mentions the world, but staple describes rice as a main food."
+    },
+    {
+     "text": "metal fastener",
+     "trap": "not-in-text",
+     "why": "A staple can hold paper together, but here rice is eaten nearly every day."
+    },
+    {
+     "text": "basic food"
+    },
+    {
+     "text": "rare treat",
+     "trap": "opposite",
+     "why": "Rice is eaten nearly every day, so it is not a rare treat."
+    }
+   ],
+   "order": 33
+  },
+  {
+   "id": "b5-v36",
+   "band": "b5",
+   "format": "vocab",
+   "area": "vocabulary",
+   "skill": "multiple-meaning",
+   "context": "Even years later, Nora seemed to harbor a grudge against the girl who had laughed at her drawing in second grade.",
+   "word": "harbor",
+   "prompt": "What does harbor mean in these sentences?",
+   "key": 3,
+   "options": [
+    {
+     "text": "laugh at",
+     "trap": "word-lift",
+     "why": "The other girl laughed. Harbor is what Nora does with her hurt feelings."
+    },
+    {
+     "text": "a place for boats",
+     "trap": "not-in-text",
+     "why": "A harbor can be a port, but here Nora keeps a feeling for years."
+    },
+    {
+     "text": "let go of",
+     "trap": "opposite",
+     "why": "Years later she still has the grudge, so she has not let it go."
+    },
+    {
+     "text": "hold on to"
+    }
+   ],
+   "order": 34
+  },
+  {
+   "id": "b5-v37",
+   "band": "b5",
+   "format": "vocab",
+   "area": "vocabulary",
+   "skill": "multiple-meaning",
+   "context": "Under the microscope, the drop of pond water was full of minute creatures, far too small to see with the naked eye.",
+   "word": "minute",
+   "prompt": "What does minute mean in these sentences?",
+   "key": 0,
+   "options": [
+    {
+     "text": "tiny"
+    },
+    {
+     "text": "sixty seconds",
+     "trap": "not-in-text",
+     "why": "A minute can be a unit of time, but here the creatures are too small to see without help."
+    },
+    {
+     "text": "huge",
+     "trap": "opposite",
+     "why": "The creatures are too small to see with the eye alone, so they are not huge."
+    },
+    {
+     "text": "wet",
+     "trap": "word-lift",
+     "why": "The creatures live in pond water, but minute describes their size."
+    }
+   ],
+   "order": 35
+  },
+  {
+   "id": "b5-v38",
+   "band": "b5",
+   "format": "vocab",
+   "area": "vocabulary",
+   "skill": "multiple-meaning",
+   "context": "Without his notes, Jamal began to flounder in the middle of his speech, repeating himself and losing his place.",
+   "word": "flounder",
+   "prompt": "What does flounder mean in these sentences?",
+   "key": 3,
+   "options": [
+    {
+     "text": "a flat fish",
+     "trap": "not-in-text",
+     "why": "A flounder can be a fish, but here Jamal repeats himself and loses his place."
+    },
+    {
+     "text": "do very well",
+     "trap": "opposite",
+     "why": "Repeating himself and losing his place show he was struggling."
+    },
+    {
+     "text": "take notes",
+     "trap": "word-lift",
+     "why": "Jamal had no notes. Flounder describes how his speech went without them."
+    },
+    {
+     "text": "struggle"
+    }
+   ],
+   "order": 36
+  },
+  {
+   "id": "b5-v39",
+   "band": "b5",
+   "format": "vocab",
+   "area": "vocabulary",
+   "skill": "multiple-meaning",
+   "context": "The speedboat left a wide wake behind it, and the waves rocked our little canoe for a full minute.",
+   "word": "wake",
+   "prompt": "What does wake mean in these sentences?",
+   "key": 2,
+   "options": [
+    {
+     "text": "calm water",
+     "trap": "opposite",
+     "why": "The wake rocked the canoe, so the water was not calm."
+    },
+    {
+     "text": "a canoe",
+     "trap": "word-lift",
+     "why": "The canoe is rocked by the wake. The wake is the waves behind the speedboat."
+    },
+    {
+     "text": "trail of waves"
+    },
+    {
+     "text": "stop sleeping",
+     "trap": "not-in-text",
+     "why": "Wake can mean to stop sleeping, but here it is what the boat leaves behind it."
+    }
+   ],
+   "order": 37
+  },
+  {
+   "id": "b5-v40",
+   "band": "b5",
+   "format": "vocab",
+   "area": "vocabulary",
+   "skill": "multiple-meaning",
+   "context": "The doctor's face was grave as she studied the X-ray, and the room fell silent while everyone waited for her to speak.",
+   "word": "grave",
+   "prompt": "What does grave mean in these sentences?",
+   "key": 3,
+   "options": [
+    {
+     "text": "cheerful",
+     "trap": "opposite",
+     "why": "The room fell silent with worry, so her face was not cheerful."
+    },
+    {
+     "text": "a burial place",
+     "trap": "not-in-text",
+     "why": "A grave can be a burial place, but here it describes the doctor's face."
+    },
+    {
+     "text": "silent",
+     "trap": "word-lift",
+     "why": "The room is silent, but grave describes the doctor's serious look."
+    },
+    {
+     "text": "serious"
+    }
+   ],
+   "order": 38
+  },
+  {
+   "id": "b5-v41",
+   "band": "b5",
+   "format": "vocab",
+   "area": "vocabulary",
+   "skill": "word-parts",
+   "context": "Ana stared at the test score in disbelief. She had expected a low mark, but she had earned the top score in the class.",
+   "word": "disbelief",
+   "prompt": "The prefix dis- means \"not.\" What does disbelief mean in these sentences?",
+   "key": 1,
+   "options": [
+    {
+     "text": "sadness",
+     "trap": "not-in-text",
+     "why": "Ana earned the top score, so she was not sad. She could not believe it."
+    },
+    {
+     "text": "not believing"
+    },
+    {
+     "text": "being certain",
+     "trap": "opposite",
+     "why": "Ana had expected a low score, so she could hardly believe it. She was not certain."
+    },
+    {
+     "text": "a test",
+     "trap": "word-lift",
+     "why": "Ana looks at a test score, but disbelief is the feeling of not believing it."
+    }
+   ],
+   "order": 39
+  },
+  {
+   "id": "b5-v42",
+   "band": "b5",
+   "format": "vocab",
+   "area": "vocabulary",
+   "skill": "context-clues",
+   "context": "After being told he could not go to the game, Carlos was sullen all evening. He sat with his arms crossed and answered every question with a single grunt.",
+   "word": "sullen",
+   "prompt": "What does sullen mean in these sentences?",
+   "key": 2,
+   "options": [
+    {
+     "text": "cheerful and chatty",
+     "trap": "opposite",
+     "why": "Crossed arms and one-grunt answers show Carlos was not cheerful or talkative."
+    },
+    {
+     "text": "late for a game",
+     "trap": "word-lift",
+     "why": "Carlos could not go to the game. Sullen describes his grumpy mood."
+    },
+    {
+     "text": "grumpy and silent"
+    },
+    {
+     "text": "sick and feverish",
+     "trap": "not-in-text",
+     "why": "Nothing says Carlos was ill. He was upset about missing the game."
     }
    ],
    "order": 40

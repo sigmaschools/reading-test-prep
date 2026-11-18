@@ -42,6 +42,8 @@ node tools/build.mjs b3 b4 b5    # accepted work becomes bank/bank.js, options s
 node --test test/*.test.js
 ```
 
+Passages can also be written by hand (or by Claude in a working thread) instead of by the writer model, which costs far less. `node tools/add.mjs b5 drafts.json` checks them against the same rules and level measure, and `node tools/check.mjs b5 --cheap` runs the blind and key tests without the review model and its rewrites. A rejected passage is fixed by hand and added again.
+
 Work files (`tools/work/`) are not committed; `bank/bank.js` is. Which passages a band gets (kind, genre, topic and the five questions' formats and skills) is fixed by `tools/lib/plan.mjs`, so a rerun picks up where it stopped. Topics come from the Compass topic map, leaving out brands, franchises, living public figures and subjects that are not neutral for children.
 
 ## After launch

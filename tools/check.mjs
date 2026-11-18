@@ -10,7 +10,12 @@
 //   review      a fresh Claude reviewer reads every question cold
 // A passage that fails gets up to two rewrites by the writer, each checked again.
 //
-//   node tools/check.mjs b4 [--only b4-l01]
+//   node tools/check.mjs b4 [--only b4-l01] [--cheap]
+//
+// --cheap runs only the blind and key tests (about 3 cents a passage), for
+// passages written and reviewed in a working thread (tools/add.mjs): there is
+// no API review and no API rewrite; a failing passage is rejected with its
+// problems, for the thread to fix and add again.
 
 import { readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { createRequire } from "node:module";
@@ -26,6 +31,7 @@ const BANK = { bands: require("../test/fixtures/sample-bank.js").bands };
 
 const args = process.argv.slice(2);
 const band = args[0];
+const cheap = args.includes("--cheap");
 const only = args.includes("--only") ? args[args.indexOf("--only") + 1].split(",") : null;
 const dir = new URL(`./work/${band}/`, import.meta.url);
 const [LO, HI] = BANDS[band];
@@ -36,10 +42,11 @@ const guidance = measure([{ id: "g", target: Math.round((LO + HI) / 2) }])[0].gu
 // hide; every other check must pass for every question.
 const BLIND_LIMIT = 3;
 const BLIND_ALLOWED = 1;
-const REWRITES = 2;
+const REWRITES = cheap ? 0 : 2;
+const NO_REVIEW = { passage_ok: true, passage_problem: null, questions: [] };
 
 async function checkPassage(p) {
-  const [b, k, r] = await Promise.all([blind(p), keyTest(p), review(p)]);
+  const [b, k, r] = await Promise.all([blind(p), keyTest(p), cheap ? NO_REVIEW : review(p)]);
   const fails = [];
   const blindFails = [];
   for (const x of b) if (x.right >= BLIND_LIMIT) blindFails.push(`${x.id}${x.part ? " part " + x.part.toUpperCase() : ""}: a reader who has not seen the passage picked the right answer ${x.right} times in 3. Make it need the passage: wrong options that are just as plausible without reading, or a question about something only this text shows.`);
