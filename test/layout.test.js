@@ -72,7 +72,9 @@ test("the Check button is on screen and uncovered for every question", { skip },
       for (const id of [PICKER, "someone-else"]) {
         for (const band of bands) {
           for (let at = 0; at < 8; at++) {
-            await p.goto(url(recordAt(band, at), id));
+            const rec = recordAt(band, at);
+            const item = P.findItem(BANK, rec.t.steps[at].item);
+            await p.goto(url(rec, id));
             await p.click("#start");
             await p.waitForSelector("#question:not(.hidden)");
             // On a phone the passage comes first and the page scrolls down to the
@@ -80,7 +82,17 @@ test("the Check button is on screen and uncovered for every question", { skip },
             if (screen.width <= 760) await p.evaluate(() => document.getElementById("ask").scrollIntoView({ block: "start" }));
             const where = await p.textContent(".progress-text");
             const got = await checkIsReachable(p);
-            assert.strictEqual(got, "ok", `${screen.name}, ${id === PICKER ? "with" : "without"} the level switch, ${band}: ${where}`);
+            const what = `${screen.name}, ${id === PICKER ? "with" : "without"} the level switch, ${band}: ${where}`;
+            assert.strictEqual(got, "ok", what);
+            // After a miss the column is at its tallest ("Not quite", then try
+            // again or tap the proof): Check must still be reachable.
+            if (item.format === "single" || item.format === "vocab") {
+              await p.locator("#ask .opt").nth((item.key + 1) % item.options.length).click();
+              await p.click("#check");
+              assert.match(await p.textContent("#feedback"), /Not quite/, what);
+              if (screen.width <= 760) await p.evaluate(() => document.getElementById("ask").scrollIntoView({ block: "start" }));
+              assert.strictEqual(await checkIsReachable(p), "ok", what + ", after a miss");
+            }
           }
         }
       }

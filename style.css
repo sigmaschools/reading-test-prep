@@ -127,6 +127,7 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid var(--teal);
    on the bottom edge while the rest scrolls behind it, so a student who has
    picked an answer can always go on. */
 .actions { margin-top: auto; padding: 22px 0 14px; display: flex; gap: 12px; position: sticky; bottom: 0; z-index: 2; background: var(--paper); }
+.actions:has(#check.hidden) { position: static; padding: 0; }
 @media (max-width: 760px) {
   /* Here the page itself scrolls; stay above the level switch when it shows. */
   body.picking .actions { bottom: 64px; }
@@ -143,5 +144,5 @@ body.picking { padding-bottom: 64px; }
   #question { grid-template-columns: 1fr; height: auto; }
   .passage { border-right: 0; border-bottom: 1px solid var(--line); padding: 24px 22px; }
   /* The page scrolls, not the column, so Check can rest on the screen's bottom edge. */
-  .side { padding: 22px; overflow: visible; }
+  .side, #question.solo .side { padding: 22px; overflow: visible; }
 }
