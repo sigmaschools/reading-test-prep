@@ -19,6 +19,8 @@ Short, honest practice with the kinds of questions a standardized reading test a
 3. New formats come in slowly: the first session uses only the two pick-one formats, and after that at most one new format joins per session. There is no worked-example screen (the owner cut it, 18 Nov): the student goes straight to the question, and a format that needs a word of how-to carries one short line on the question itself ("Pick 2.", "Tap a sentence in the passage.", "Use the arrows…").
 4. The end screen ("Done. That's it for today.") is the Compass done signal. Compass then opens the reading app.
 
+A student who has picked an answer must never have to hunt for the way on. On a wide screen Check is always on screen: when a question is taller than the screen, Check rests on the bottom edge and the rest scrolls behind it. On a phone the passage comes first; once the student scrolls to the question, Check rests on the bottom edge the same way. `test/layout.test.js` checks one session at each level on iPad, iPhone and laptop sizes, before an answer and after a miss.
+
 If a session is interrupted, it resumes where it stopped the same day; it is saved after every question. A session from an earlier day is dropped, so missed days never pile up.
 
 ## Formats

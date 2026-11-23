@@ -7,7 +7,7 @@
 (function () {
   "use strict";
 
-  var VERSION = "0.2.0";
+  var VERSION = "0.2.1";
   var compass = CompassApp.launch({ appVersion: VERSION });
   var bank = READING_BANK;
   var today = compass.today;

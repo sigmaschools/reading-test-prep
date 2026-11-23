@@ -13,4 +13,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      # The layout test drives the page in Chromium; without it, that test skips.
+      - run: npm install --no-save --no-package-lock playwright@1.63.0
+      - run: npx playwright install --with-deps chromium
       - run: node --test test/*.test.js
