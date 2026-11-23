@@ -91,7 +91,9 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid var(--teal);
 /* A word question has no passage: one centred column. */
 #question.solo { grid-template-columns: 1fr; }
 #question.solo .passage { display: none; }
-#question.solo .side { width: 100%; max-width: 760px; margin: 0 auto; padding-top: 48px; }
+/* The column is 760px wide, but the scrolling box is the whole screen, so a
+   finger anywhere scrolls it. */
+#question.solo .side { width: 100%; padding: 48px max(36px, calc((100% - 760px) / 2)) 40px; }
 .prompt { font-size: 21px; font-weight: 600; line-height: 1.4; margin: 0 0 16px; }
 .part { margin-bottom: 18px; }
 .context { font-family: var(--serif); font-size: 21px; line-height: 1.65; background: var(--sheet); border: 1px solid var(--line); border-radius: 10px; padding: 14px 18px; margin: 0 0 16px; }
@@ -121,7 +123,14 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid var(--teal);
 .fb.miss { background: var(--miss-soft); }
 .fb.miss strong { color: var(--miss); }
 .fb.do { background: var(--teal-soft); }
-.actions { margin-top: auto; padding-top: 22px; display: flex; gap: 12px; }
+/* Check stays on screen: when the question is taller than the screen it rests
+   on the bottom edge while the rest scrolls behind it, so a student who has
+   picked an answer can always go on. */
+.actions { margin-top: auto; padding: 22px 0 14px; display: flex; gap: 12px; position: sticky; bottom: 0; z-index: 2; background: var(--paper); }
+@media (max-width: 760px) {
+  /* Here the page itself scrolls; stay above the level switch when it shows. */
+  body.picking .actions { bottom: 64px; }
+}
 
 /* The Test Learner's level switch: small, out of the way, at the bottom. */
 .levels { position: fixed; right: 12px; bottom: 12px; z-index: 5; display: flex; align-items: center; gap: 6px; padding: 6px 8px; border: 1px solid var(--line); border-radius: 10px; background: var(--sheet); font-size: 14px; color: var(--muted); box-shadow: 0 2px 8px rgba(0, 0, 0, .08); }
@@ -133,5 +142,6 @@ body.picking { padding-bottom: 64px; }
 @media (max-width: 760px) {
   #question { grid-template-columns: 1fr; height: auto; }
   .passage { border-right: 0; border-bottom: 1px solid var(--line); padding: 24px 22px; }
-  .side { padding: 22px; }
+  /* The page scrolls, not the column, so Check can rest on the screen's bottom edge. */
+  .side { padding: 22px; overflow: visible; }
 }
