@@ -39,7 +39,12 @@
 }
 
 * { box-sizing: border-box; }
-html, body { margin: 0; height: 100%; }
+/* Only the page scrolls, never a box inside it: inside the Compass shell on an
+   iPad a box that scrolls on its own did not move under a finger, and a
+   student was stuck below the bottom of the screen. */
+html { height: 100%; }
+body { margin: 0; min-height: 100%; display: flex; flex-direction: column; }
+.screen { flex: 1 0 auto; }
 body { background: var(--paper); color: var(--ink); font: 19px/1.5 var(--sans); }
 .hidden { display: none !important; }
 .muted { color: var(--muted); }
@@ -52,7 +57,7 @@ button:disabled { opacity: .45; cursor: default; }
 button:focus-visible, [tabindex]:focus-visible { outline: 3px solid var(--teal); outline-offset: 2px; }
 
 /* Cards: intro, part cards, the end. */
-.card-screen { min-height: 100%; display: flex; align-items: center; justify-content: center; padding: 32px 24px; }
+.card-screen { display: flex; align-items: center; justify-content: center; padding: 32px 24px; }
 .card { background: var(--sheet); border: 1px solid var(--line); border-radius: 14px; padding: 36px 40px; max-width: 620px; width: 100%; }
 .card.wide { max-width: 720px; }
 .card p { margin: 0 0 14px; }
@@ -65,8 +70,8 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid var(--teal);
 .tag { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; font-weight: 700; color: var(--teal); }
 
 /* A question: passage left, question right; stacked on a narrow screen. */
-#question { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); height: 100%; }
-.passage { overflow-y: auto; padding: 34px 40px 60px; background: var(--sheet); border-right: 1px solid var(--line); }
+#question { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); align-items: start; }
+.passage { align-self: stretch; padding: 34px 40px 60px; background: var(--sheet); border-right: 1px solid var(--line); }
 .passage h2 { font-family: var(--serif); font-size: 26px; margin: 0 0 16px; font-weight: 700; }
 .passage p { margin: 0 0 16px; }
 .poem .s { display: block; }
@@ -76,7 +81,9 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid var(--teal);
 .tapping .s:hover { background: var(--teal-soft); }
 .s.picked { background: var(--mark); }
 .s.good { background: var(--right-soft); box-shadow: 0 0 0 2px var(--right-soft); }
-.side { overflow-y: auto; padding: 30px 36px 40px; display: flex; flex-direction: column; }
+.side { padding: 30px 36px 40px; display: flex; flex-direction: column; }
+/* While the question fits on the screen it stays put as the passage scrolls (app.js pinSide). */
+.side.pin { position: sticky; top: 0; }
 .progress { margin: 0 0 14px; }
 .progress-text { font-size: 15px; color: var(--muted); margin: 8px 0 0; font-weight: 600; }
 /* Progress: one mark per question, a gap between parts. */
@@ -126,23 +133,19 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid var(--teal);
 /* Check stays on screen: when the question is taller than the screen it rests
    on the bottom edge while the rest scrolls behind it, so a student who has
    picked an answer can always go on. */
-.actions { margin-top: auto; padding: 22px 0 14px; display: flex; gap: 12px; position: sticky; bottom: 0; z-index: 2; background: var(--paper); }
-.actions:has(#check.hidden) { position: static; padding: 0; }
-@media (max-width: 760px) {
-  /* Here the page itself scrolls; stay above the level switch when it shows. */
-  body.picking .actions { bottom: 64px; }
-}
+/* Check sits right under the answers and covers nothing; once an answer is
+   picked, app.js scrolls the page so Check is on screen. */
+.actions { padding-top: 22px; display: flex; gap: 12px; }
 
-/* The Test Learner's level switch: small, out of the way, at the bottom. */
-.levels { position: fixed; right: 12px; bottom: 12px; z-index: 5; display: flex; align-items: center; gap: 6px; padding: 6px 8px; border: 1px solid var(--line); border-radius: 10px; background: var(--sheet); font-size: 14px; color: var(--muted); box-shadow: 0 2px 8px rgba(0, 0, 0, .08); }
+/* The Test Learner's level switch: a slim row at the top, over nothing. */
+.levels { display: flex; justify-content: flex-end; align-items: center; gap: 6px; padding: 8px 12px 0; font-size: 14px; color: var(--muted); }
 .levels span { padding: 0 4px; font-weight: 600; }
 .levels button { font-size: 14px; padding: 5px 10px; border-radius: 7px; }
-body.picking { padding-bottom: 64px; }
 .levels button.on { background: var(--teal); border-color: var(--teal); color: #fff; }
 
 @media (max-width: 760px) {
   #question { grid-template-columns: 1fr; height: auto; }
   .passage { border-right: 0; border-bottom: 1px solid var(--line); padding: 24px 22px; }
   /* The page scrolls, not the column, so Check can rest on the screen's bottom edge. */
-  .side, #question.solo .side { padding: 22px; overflow: visible; }
+  .side, #question.solo .side { padding: 22px; }
 }

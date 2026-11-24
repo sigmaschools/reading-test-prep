@@ -7,7 +7,7 @@
 (function () {
   "use strict";
 
-  var VERSION = "0.2.1";
+  var VERSION = "0.3.0";
   var compass = CompassApp.launch({ appVersion: VERSION });
   var bank = READING_BANK;
   var today = compass.today;
@@ -203,8 +203,7 @@
     $("check").classList.remove("hidden");
     updateCheck();
     show("question");
-    $("side").scrollTop = 0;
-    $("passage").scrollTop = 0;
+    pinSide();
   }
 
   function initialChoice(item) {
@@ -341,6 +340,32 @@
     drawAsk();
     if (q.item.format === "sentence") markSentences();
     updateCheck();
+    pinSide();
+    if (!$("check").disabled) showCheck();
+  }
+
+  // The question column stays put while the passage scrolls, but only while
+  // it fits on the screen; otherwise it scrolls with the page like the rest.
+  function pinSide() {
+    var side = $("side");
+    side.classList.remove("pin");
+    side.classList.toggle("pin", window.innerWidth > 760 && side.offsetHeight <= window.innerHeight);
+  }
+  window.addEventListener("resize", function () { if (q && !$("question").classList.contains("hidden")) pinSide(); });
+
+  // What Check said is on screen: scroll the page just enough to show it
+  // (its first lines, if it is taller than the screen).
+  function showFeedback() {
+    var r = $("feedback").getBoundingClientRect();
+    var bottom = Math.min(r.bottom, r.top + window.innerHeight - 48);
+    if (bottom > window.innerHeight - 12) window.scrollBy(0, bottom - window.innerHeight + 24);
+    else if (r.top < 0) window.scrollBy(0, r.top - 24);
+  }
+
+  // Once an answer is ready, Check is on screen: scroll the page just enough.
+  function showCheck() {
+    var r = $("check").getBoundingClientRect();
+    if (r.bottom > window.innerHeight - 12) window.scrollBy(0, r.bottom - window.innerHeight + 24);
   }
 
   function markSentences() {
@@ -365,6 +390,7 @@
     var box = $("feedback");
     box.textContent = "";
     if (html) box.append(el("div", { cls: "fb " + cls }, html));
+    pinSide();
   }
 
   function tapSentence(i) {
@@ -413,7 +439,8 @@
       q.phase = "done";
       q.final = true;
       feedback("right", "Right.");
-      return done();
+      done();
+      return showFeedback();
     }
     if (q.tries === 1) {
       strikeWrong();
@@ -430,6 +457,7 @@
       }
       resetChoice();
       redraw();
+      showFeedback();
       return;
     }
     // A second miss: show the right answer and why, then move on.
@@ -442,6 +470,7 @@
     feedback("miss", b2);
     redraw();
     done();
+    showFeedback();
   });
 
   function strikeWrong() {

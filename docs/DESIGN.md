@@ -19,7 +19,12 @@ Short, honest practice with the kinds of questions a standardized reading test a
 3. New formats come in slowly: the first session uses only the two pick-one formats, and after that at most one new format joins per session. There is no worked-example screen (the owner cut it, 18 Nov): the student goes straight to the question, and a format that needs a word of how-to carries one short line on the question itself ("Pick 2.", "Tap a sentence in the passage.", "Use the arrows…").
 4. The end screen ("Done. That's it for today.") is the Compass done signal. Compass then opens the reading app.
 
-A student who has picked an answer must never have to hunt for the way on. On a wide screen Check is always on screen: when a question is taller than the screen, Check rests on the bottom edge and the rest scrolls behind it. On a phone the passage comes first; once the student scrolls to the question, Check rests on the bottom edge the same way. `test/layout.test.js` checks one session at each level on iPad, iPhone and laptop sizes, before an answer and after a miss.
+A student who has picked an answer must never have to hunt for the way on, and nothing may cover what they read or tap.
+
+- Only the page scrolls, never a box inside it. Inside the Compass shell on an iPad, a box that scrolled on its own did not move under a finger, and a student was stuck with Check below the bottom of the screen.
+- Check sits right under the answers and covers nothing. Once an answer is ready, the page scrolls just enough to show Check; after Check, it scrolls just enough to show what Check said.
+- On a wide screen the question column stays put while the passage scrolls, as long as the question fits on the screen.
+- `test/layout.test.js` checks one session at each level at iPad (inside Compass, and full screen), iPhone and laptop sizes: nothing scrolls inside the page, nothing tappable is covered, Check is on screen once an answer is picked, and the message after Check is on screen. `SHOTS=dir` saves the iPad screenshots to look at. `test/session.test.js` plays whole sessions: right, right after a miss, wrong twice, leaving and coming back, and exactly one session report.
 
 If a session is interrupted, it resumes where it stopped the same day; it is saved after every question. A session from an earlier day is dropped, so missed days never pile up.
 
@@ -39,7 +44,7 @@ If a session is interrupted, it resumes where it stopped the same day; it is sav
 - Six level bands on the approximate Lexile scale. The start band comes from the reading level the reading app reports in the Compass profile, else from grade.
 - After each session the band moves up at 95% or more right first time and down below 60%, aiming at about 80 to 85% first-try.
 - A missed skill comes back next session, then a week later, then three weeks later; a miss starts it over.
-- The staging Test Learner, and no one else, gets a small Level switch (Easier, Middle, Harder: the bands that have passages) in the bottom corner of every screen but the end screen, and no once-a-day limit. A tap drops the unfinished session and starts a fresh one at that level, which stays the learner's level. This lets the owner judge each level's difficulty in one sitting; a real student's level moves only by results. The check is the learner id in the Compass profile (`Prep.canPickLevel`).
+- The staging Test Learner, and no one else, gets a small Level switch (Easier, Middle, Harder: the bands that have passages) in a slim row at the top of every screen but the end screen, and no once-a-day limit. A tap drops the unfinished session and starts a fresh one at that level, which stays the learner's level. This lets the owner judge each level's difficulty in one sitting; a real student's level moves only by results. The check is the learner id in the Compass profile (`Prep.canPickLevel`).
 
 ## What Compass gets
 
