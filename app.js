@@ -293,20 +293,20 @@
         var part = it[k];
         box.append(el("div", { cls: "part" },
           el("p", { cls: "prompt", text: part.prompt }),
-          optionList(part.options, q.choice[n], function (i) { q.choice[n] = i; redraw(); }, false, k)));
+          optionList(part.options, q.choice[n], function (i) { q.choice[n] = i; redraw(true); }, false, k)));
       });
       return;
     }
     box.append(el("p", { cls: "prompt", text: it.prompt }));
     if (it.format === "single" || it.format === "vocab") {
-      box.append(optionList(it.options, q.choice, function (i) { q.choice = i; redraw(); }));
+      box.append(optionList(it.options, q.choice, function (i) { q.choice = i; redraw(true); }));
     } else if (it.format === "multi") {
       box.append(el("p", { cls: "hint", text: "Pick " + it.keys.length + "." }));
       box.append(optionList(it.options, q.choice, function (i) {
         var at = q.choice.indexOf(i);
         if (at >= 0) q.choice.splice(at, 1);
         else q.choice.push(i);
-        redraw();
+        redraw(true);
       }, true));
     } else if (it.format === "sentence") {
       var picked = q.choice === null ? "Tap a sentence in the passage." : "You picked: “" + Prep.sentences(q.passage)[q.choice] + "”";
@@ -336,37 +336,75 @@
     redraw();
   }
 
-  function redraw() {
+  // `picked`: the student just picked an option in the column. Only then does
+  // the page scroll to show Check; a tap in the passage or on an order arrow
+  // never moves the page under the student's finger.
+  function redraw(picked) {
     drawAsk();
     if (q.item.format === "sentence") markSentences();
     updateCheck();
     pinSide();
-    if (!$("check").disabled) showCheck();
+    if (picked && !$("check").disabled) showCheck();
   }
 
-  // The question column stays put while the passage scrolls, but only while
-  // it fits on the screen; otherwise it scrolls with the page like the rest.
+  // Beside a passage, the question column stays in view while the passage
+  // scrolls. When it is taller than the screen it stops with its bottom on
+  // the screen's bottom edge, so all of it can still be reached.
   function pinSide() {
     var side = $("side");
-    side.classList.remove("pin");
-    side.classList.toggle("pin", window.innerWidth > 760 && side.offsetHeight <= window.innerHeight);
+    side.style.top = Math.min(0, window.innerHeight - side.offsetHeight) + "px";
   }
   window.addEventListener("resize", function () { if (q && !$("question").classList.contains("hidden")) pinSide(); });
 
-  // What Check said is on screen: scroll the page just enough to show it
-  // (its first lines, if it is taller than the screen).
+  // Scroll the page just enough to show a part of it: all of it where it fits,
+  // else its top (or, with `fromBottom`, its bottom). `range` measures the part afresh, since the question column
+  // beside a passage is sticky and moves less than the page does; a few
+  // rounds settle it.
+  function bringIntoView(range, fromBottom) {
+    for (var round = 0; round < 4; round++) {
+      var r = range();
+      var h = window.innerHeight;
+      var by = 0;
+      if (r.bottom - r.top > h - 24) by = fromBottom ? r.bottom - h + 12 : r.top - 12;
+      else if (r.top < 12) by = r.top - 12;
+      else if (r.bottom > h - 12) by = r.bottom - h + 12;
+      if (Math.abs(by) < 1) return;
+      var was = window.scrollY;
+      window.scrollBy(0, by);
+      if (window.scrollY === was) return;
+    }
+  }
+
+  function rangeOf(els) {
+    var top = Infinity, bottom = -Infinity;
+    for (var i = 0; i < els.length; i++) {
+      var r = els[i].getBoundingClientRect();
+      top = Math.min(top, r.top);
+      bottom = Math.max(bottom, r.bottom);
+    }
+    return { top: top, bottom: bottom };
+  }
+
+  // What Check said is on screen (its first lines, if it is taller than the screen).
   function showFeedback() {
-    var r = $("feedback").getBoundingClientRect();
-    var bottom = Math.min(r.bottom, r.top + window.innerHeight - 48);
-    if (bottom > window.innerHeight - 12) window.scrollBy(0, bottom - window.innerHeight + 24);
-    else if (r.top < 0) window.scrollBy(0, r.top - 24);
+    bringIntoView(function () { return rangeOf([$("feedback")]); });
+  }
+
+  // After a second miss: the right answer and why, together on screen where
+  // they fit. Where they don't, the why (at the bottom) comes first, with as
+  // much of the marked answer above it as fits.
+  function showReveal() {
+    var sel = q.item.format === "sentence" ? "#passage .s.good, #feedback" : "#question .is-right, #feedback";
+    var fb = $("feedback").getBoundingClientRect();
+    var fromBottom = fb.height < window.innerHeight - 24;
+    bringIntoView(function () { return rangeOf(document.querySelectorAll(sel)); }, fromBottom);
   }
 
   // Once an answer is ready, Check is on screen: scroll the page just enough.
   function showCheck() {
-    var r = $("check").getBoundingClientRect();
-    if (r.bottom > window.innerHeight - 12) window.scrollBy(0, r.bottom - window.innerHeight + 24);
+    bringIntoView(function () { return rangeOf([$("check")]); });
   }
+
 
   function markSentences() {
     var all = $("passage").querySelectorAll(".s");
@@ -386,6 +424,13 @@
     $("check").disabled = !(q.phase === "answer" || q.phase === "retry") || !ready();
   }
 
+  function sayDo(text) {
+    var old = $("feedback").querySelectorAll(".fb.do");
+    for (var i = 0; i < old.length; i++) old[i].remove();
+    $("feedback").append(el("div", { cls: "fb do", text: text }));
+    pinSide();
+  }
+
   function feedback(cls, html) {
     var box = $("feedback");
     box.textContent = "";
@@ -396,14 +441,20 @@
   function tapSentence(i) {
     if (q.phase === "evidence") {
       var good = q.item.evidence.indexOf(i) >= 0;
+      // The explanation of the miss stays; only the line saying what to do changes.
       if (good) {
         sentenceEl(i).classList.add("good");
         q.phase = "retry";
         $("passage").classList.remove("tapping");
-        feedback("do", "Yes, that's the one. Now answer again.");
+        sayDo("Yes, that's the one. Now answer again.");
         redraw();
+        showFeedback();
       } else {
-        feedback("do", "Not that one. Look for the sentence that proves the right answer.");
+        sayDo("Not that one. Look for the sentence that proves the right answer.");
+        // An answer where the finger is, since the message may be off screen.
+        var s = sentenceEl(i);
+        s.classList.add("nope");
+        setTimeout(function () { s.classList.remove("nope"); }, 1200);
       }
       return;
     }
@@ -470,7 +521,7 @@
     feedback("miss", b2);
     redraw();
     done();
-    showFeedback();
+    showReveal();
   });
 
   function strikeWrong() {

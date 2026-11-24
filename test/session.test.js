@@ -12,6 +12,7 @@ const assert = require("node:assert");
 const path = require("node:path");
 const P = require("../prep.js");
 const BANK = require("../bank/bank.js");
+const { sessionRecord } = require("./fixtures/sessions.js");
 
 let chromium = null;
 try { chromium = require("playwright").chromium; } catch (e) { /* skipped below */ }
@@ -119,7 +120,7 @@ for (const band of ["b3", "b4", "b5"]) {
       const p = await ctx.newPage();
       await p.clock.install();
       const id = "student-" + band; // not the test account: once a day applies
-      const rec = Object.assign(P.newRecord(), { b: band, f: ["single", "vocab", "sentence", "multi", "two-part", "order"], n: 6 });
+      const rec = sessionRecord(band, today); // every format, an order question included
       await p.goto(url(JSON.stringify(rec), id));
       assert.ok(await visible(p, "intro"));
       await p.click("#start");
@@ -174,6 +175,7 @@ for (const band of ["b3", "b4", "b5"]) {
       assert.strictEqual(parts.length, 1, "one session report");
       const r = parts[0];
       assert.strictEqual(r.items.length, 8);
+      assert.ok(r.items.some((x) => x.format === "order"), "an order question was played");
       assert.deepStrictEqual(r.items.map((x) => x.correct), PLAN.map((v) => v === 0));
       assert.deepStrictEqual(r.items.map((x) => x.rightAfterCorrection), PLAN.map((v) => v === 1));
       assert.strictEqual(r.correct, PLAN.filter((v) => v !== 2).length);

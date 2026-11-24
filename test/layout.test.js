@@ -20,6 +20,7 @@ const fs = require("node:fs");
 const path = require("node:path");
 const P = require("../prep.js");
 const BANK = require("../bank/bank.js");
+const { sessionRecord } = require("./fixtures/sessions.js");
 
 let chromium = null;
 try { chromium = require("playwright").chromium; } catch (e) { /* skipped below */ }
@@ -49,14 +50,11 @@ function url(record, id) {
   return page + "?" + q + "#compass_profile=x." + claims + ".y";
 }
 
-// Today's session with every format, saved as if the student had stopped before question `at`.
+// Today's session with every format (order included), saved as if the student had stopped before question `at`.
 function recordAt(band, at) {
-  const r = Object.assign(P.newRecord(), { b: band, f: ["single", "vocab", "sentence", "multi", "two-part", "order"], n: 6 });
-  const s = P.plan(r, BANK, null, today);
-  s.at = at;
-  s.results = [];
-  s.seen = [1, 2, 3];
-  r.t = s;
+  const r = sessionRecord(band, today);
+  r.t.at = at;
+  r.t.seen = [1, 2, 3];
   return r;
 }
 
@@ -104,6 +102,15 @@ function checkOnScreen(p) {
   });
 }
 
+/** Tap where a thing is on screen now, as a finger does: no scrolling first. */
+async function tapInPlace(p, locator) {
+  await locator.evaluate((e) => { const r = e.getClientRects()[0]; if (r.top < 60 || r.bottom > innerHeight - 60) e.scrollIntoView({ block: "center" }); });
+  const r = await locator.evaluate((e) => { const b = e.getClientRects()[0]; return { x: b.left + Math.min(20, b.width / 2), y: b.top + b.height / 2 }; });
+  const before = await p.evaluate(() => scrollY);
+  await p.mouse.click(r.x, r.y);
+  return (await p.evaluate(() => scrollY)) - before;
+}
+
 /** Make an answer ready to check (wrong where the format allows), as a student would. */
 async function pickAnswer(p, item) {
   if (item.format === "single" || item.format === "vocab") {
@@ -117,10 +124,13 @@ async function pickAnswer(p, item) {
   } else if (item.format === "sentence") {
     const n = await p.locator("#passage .s").count();
     const wrong = [...Array(n).keys()].find((i) => item.keys.indexOf(i) < 0);
-    await p.locator("#passage .s").nth(wrong).click();
+    return tapInPlace(p, p.locator("#passage .s").nth(wrong));
   } else if (item.format === "order") {
-    await p.locator(".order button").first().click();
+    let moved = 0;
+    for (let k = 0; k < 3; k++) moved += Math.abs(await tapInPlace(p, p.locator('.order button[aria-label="Move down"]').first()));
+    return moved;
   }
+  return 0;
 }
 
 test("what a student sees: no inner scrolling, nothing covered, Check on screen after picking", { skip, timeout: 600000 }, async () => {
@@ -149,9 +159,18 @@ test("what a student sees: no inner scrolling, nothing covered, Check on screen 
             if (inner.length) say("scrolls inside " + inner.join(", "));
             for (const c of await covered(p)) say("covered: " + c);
 
-            await pickAnswer(p, item);
-            const after = await checkOnScreen(p);
-            if (after !== "ok") say("after picking, Check " + after);
+            const jump = await pickAnswer(p, item);
+            if (jump) say("the page jumped " + jump + "px under a tap in the passage or on an arrow");
+            // Picking an option brings Check on screen. A tap in the passage or on an
+            // order arrow never moves the page, so there Check need only be reachable.
+            if (item.format !== "sentence" && item.format !== "order") {
+              const after = await checkOnScreen(p);
+              if (after !== "ok") say("after picking, Check " + after);
+            } else {
+              await p.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight));
+              const after = await checkOnScreen(p);
+              if (after !== "ok") say("scrolled to the end, Check " + after);
+            }
             if (SHOTS && screen === IPAD && id === PICKER) await p.screenshot({ path: path.join(SHOTS, `${band}-q${at + 1}-picked.png`) });
 
             await p.click("#check");
@@ -165,9 +184,47 @@ test("what a student sees: no inner scrolling, nothing covered, Check on screen 
             if (!/Not quite|Right/.test(fb)) say("no feedback after Check: " + JSON.stringify(fb));
             if (/Not quite/.test(fb)) {
               if (SHOTS && screen === IPAD && id === PICKER) await p.screenshot({ path: path.join(SHOTS, `${band}-q${at + 1}-miss.png`) });
+              if (/Tap the sentence/.test(fb)) {
+                // A wrong tap answers where the finger is; the explanation stays.
+                const n = await p.locator("#passage .s").count();
+                const wrong = [...Array(n).keys()].find((i) => item.evidence.indexOf(i) < 0);
+                const s = p.locator("#passage .s").nth(wrong);
+                const jump2 = await tapInPlace(p, s);
+                if (jump2) say("the page jumped under a proof tap");
+                if (!(await s.evaluate((e) => e.classList.contains("nope")))) say("a wrong proof tap shows nothing where it was tapped");
+                if (!/Not quite/.test(await p.textContent("#feedback"))) say("a wrong proof tap erased the explanation");
+                await tapInPlace(p, p.locator("#passage .s").nth(item.evidence[0]));
+                const ok = await p.evaluate(() => { const r = document.getElementById("feedback").getBoundingClientRect(); return /Now answer again/.test(document.getElementById("feedback").textContent) && r.top >= 0 && r.top < innerHeight - 40; });
+                if (!ok) say("after the right proof tap, 'Now answer again' is not on screen");
+              }
               for (const c of await covered(p)) say("after a miss, covered: " + c);
               const inner2 = await innerScrollers(p);
               if (inner2.length) say("after a miss, scrolls inside " + inner2.join(", "));
+              // A second miss: the right answer and why, on screen together where they fit.
+              if (item.format === "single" || item.format === "vocab" || item.format === "two-part" || item.format === "multi") {
+                if (item.format === "single" || item.format === "vocab") await p.locator("#ask .opt:not([disabled])").first().evaluate((e, k) => { const all = [...document.querySelectorAll("#ask .opt")]; const pick = all.find((o, i) => !o.disabled && i !== k); pick.click(); }, item.key);
+                if (item.format === "two-part") await p.locator("#ask .part").nth(0).locator(".opt:not([disabled])").evaluateAll((os, k) => { const pick = os.find((o) => [...o.parentNode.parentNode.children].indexOf(o.parentNode) !== k); pick.click(); }, item.a.key);
+                if (item.format === "multi") {
+                  const wrong = item.options.map((_, i) => i).filter((i) => item.keys.indexOf(i) < 0);
+                  await p.evaluate((w) => { const o = document.querySelectorAll("#ask .opt")[w]; if (!o.disabled) o.click(); }, wrong[1]);
+                }
+                if (await p.$eval("#check", (b) => !b.disabled)) {
+                  await p.click("#check");
+                  if (/right answer/.test(await p.textContent("#feedback"))) {
+                    const seen = await p.evaluate(() => {
+                      const els = [...document.querySelectorAll("#question .is-right, #feedback")];
+                      const rs = els.map((e) => e.getBoundingClientRect());
+                      const top = Math.min(...rs.map((r) => r.top)), bottom = Math.max(...rs.map((r) => r.bottom));
+                      const fits = bottom - top <= innerHeight - 24;
+                      // Where they don't fit, the why comes first: the message is on screen.
+                      const f = document.getElementById("feedback").getBoundingClientRect();
+                      return fits ? top >= 0 && bottom <= innerHeight : f.top >= 0 && f.top < innerHeight - 40;
+                    });
+                    if (!seen) say("after two misses, the right answer is not on screen");
+                    if (SHOTS && screen === IPAD && id === PICKER) await p.screenshot({ path: path.join(SHOTS, `${band}-q${at + 1}-reveal.png`) });
+                  }
+                }
+              }
             }
           }
         }

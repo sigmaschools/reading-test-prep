@@ -80,10 +80,11 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid var(--teal);
 .tapping .s { cursor: pointer; background: linear-gradient(transparent 92%, var(--line) 92%); }
 .tapping .s:hover { background: var(--teal-soft); }
 .s.picked { background: var(--mark); }
+.s.nope { background: var(--miss-soft); }
 .s.good { background: var(--right-soft); box-shadow: 0 0 0 2px var(--right-soft); }
 .side { padding: 30px 36px 40px; display: flex; flex-direction: column; }
-/* While the question fits on the screen it stays put as the passage scrolls (app.js pinSide). */
-.side.pin { position: sticky; top: 0; }
+/* Beside a passage it stays in view as the passage scrolls (app.js pinSide sets top). */
+#question:not(.solo) .side { position: sticky; top: 0; }
 .progress { margin: 0 0 14px; }
 .progress-text { font-size: 15px; color: var(--muted); margin: 8px 0 0; font-weight: 600; }
 /* Progress: one mark per question, a gap between parts. */
@@ -148,4 +149,5 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid var(--teal);
   .passage { border-right: 0; border-bottom: 1px solid var(--line); padding: 24px 22px; }
   /* The page scrolls, not the column, so Check can rest on the screen's bottom edge. */
   .side, #question.solo .side { padding: 22px; }
+  #question:not(.solo) .side { position: static; }
 }

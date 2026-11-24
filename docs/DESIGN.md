@@ -22,9 +22,11 @@ Short, honest practice with the kinds of questions a standardized reading test a
 A student who has picked an answer must never have to hunt for the way on, and nothing may cover what they read or tap.
 
 - Only the page scrolls, never a box inside it. Inside the Compass shell on an iPad, a box that scrolled on its own did not move under a finger, and a student was stuck with Check below the bottom of the screen.
-- Check sits right under the answers and covers nothing. Once an answer is ready, the page scrolls just enough to show Check; after Check, it scrolls just enough to show what Check said.
-- On a wide screen the question column stays put while the passage scrolls, as long as the question fits on the screen.
-- `test/layout.test.js` checks one session at each level at iPad (inside Compass, and full screen), iPhone and laptop sizes: nothing scrolls inside the page, nothing tappable is covered, Check is on screen once an answer is picked, and the message after Check is on screen. `SHOTS=dir` saves the iPad screenshots to look at. `test/session.test.js` plays whole sessions: right, right after a miss, wrong twice, leaving and coming back, and exactly one session report.
+- Check sits right under the answers and covers nothing. Picking an option scrolls the page just enough to show Check; after Check, it scrolls just enough to show what Check said. A tap in the passage or on an order arrow never moves the page under the student's finger.
+- After a miss, the explanation stays while the student looks for the proof sentence; a wrong tap marks that sentence briefly where the finger is.
+- After a second miss, the right answer and why are shown together where they fit; where they don't, the why comes first.
+- On a wide screen the question column stays in view as the passage scrolls; when it is taller than the screen, it stops with its bottom on the screen's bottom edge.
+- `test/layout.test.js` checks one session at each level at iPad (inside Compass, and full screen), iPhone and laptop sizes: nothing scrolls inside the page, nothing tappable is covered, taps in the passage and on arrows don't move the page, Check is on screen once an option is picked, and the messages after Check, after a proof tap and after a second miss are on screen. `test/fixtures/sessions.js` puts every format, order included, in the tested session. `SHOTS=dir` saves the iPad screenshots to look at. `test/session.test.js` plays whole sessions: right, right after a miss, wrong twice, leaving and coming back, and exactly one session report.
 
 If a session is interrupted, it resumes where it stopped the same day; it is saved after every question. A session from an earlier day is dropped, so missed days never pile up.
 
