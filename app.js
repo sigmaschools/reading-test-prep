@@ -347,19 +347,22 @@
     if (picked && !$("check").disabled) showCheck();
   }
 
-  // Beside a passage, the question column stays in view while the passage
-  // scrolls. When it is taller than the screen it stops with its bottom on
-  // the screen's bottom edge, so all of it can still be reached.
+  // Beside a passage, the question column stays in view as the passage
+  // scrolls, while it fits on the screen. When it grows past the screen (a
+  // miss adds a message) it scrolls with the page instead, and the page is
+  // moved so the column stays exactly where it was: nothing jumps.
   function pinSide() {
     var side = $("side");
-    side.style.top = Math.min(0, window.innerHeight - side.offsetHeight) + "px";
+    var before = side.getBoundingClientRect().top;
+    side.classList.toggle("pin", !$("question").classList.contains("solo") && window.innerWidth > 760 && side.offsetHeight <= window.innerHeight);
+    var moved = side.getBoundingClientRect().top - before;
+    if (Math.abs(moved) > 1) window.scrollBy(0, moved);
   }
   window.addEventListener("resize", function () { if (q && !$("question").classList.contains("hidden")) pinSide(); });
 
   // Scroll the page just enough to show a part of it: all of it where it fits,
-  // else its top (or, with `fromBottom`, its bottom). `range` measures the part afresh, since the question column
-  // beside a passage is sticky and moves less than the page does; a few
-  // rounds settle it.
+  // else its top (or, with `fromBottom`, its bottom). `range` measures the
+  // part afresh each round, since a pinned column moves less than the page.
   function bringIntoView(range, fromBottom) {
     for (var round = 0; round < 4; round++) {
       var r = range();

@@ -40,6 +40,7 @@ const SCREENS = [
   { name: "iPad portrait in Compass", width: 740, height: 980 },
   { name: "iPad full screen", width: 1194, height: 770 },
   { name: "iPhone landscape", width: 844, height: 340 },
+  { name: "iPhone landscape, short", width: 844, height: 300 },
   { name: "iPhone portrait", width: 390, height: 700 },
   { name: "laptop", width: 1280, height: 720 },
 ];
@@ -167,9 +168,10 @@ test("what a student sees: no inner scrolling, nothing covered, Check on screen 
               const after = await checkOnScreen(p);
               if (after !== "ok") say("after picking, Check " + after);
             } else {
-              await p.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight));
+              // Reachable: scrolling the page (the only thing that scrolls) shows it.
+              await p.evaluate(() => document.getElementById("check").scrollIntoView({ block: "center" }));
               const after = await checkOnScreen(p);
-              if (after !== "ok") say("scrolled to the end, Check " + after);
+              if (after !== "ok") say("scrolling the page to Check, Check " + after);
             }
             if (SHOTS && screen === IPAD && id === PICKER) await p.screenshot({ path: path.join(SHOTS, `${band}-q${at + 1}-picked.png`) });
 
