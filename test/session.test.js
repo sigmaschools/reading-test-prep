@@ -283,33 +283,44 @@ test("tapping every sentence after a miss: the paragraph is marked, the count is
 
 // The end screen says only what is true wherever the app was opened from:
 // on a subject's last step, or opened alone from the Tests page, nothing
-// comes next, so the button is "Done" and never promises a next step. The
+// comes next, so the button is "Close" and never promises a next step. The
 // test account has no once-a-day limit, so it is not told "that's it for today".
 test("the end screen promises nothing that may not come", { skip }, async () => {
   const browser = await chromium.launch();
   try {
-    const ctx = await browser.newContext({ viewport: { width: 1052, height: 646 } });
+    // The app's view inside Compass on the owner's iPad.
+    const ctx = await browser.newContext({ viewport: { width: 1052, height: 646 }, deviceScaleFactor: 2 });
     const p = await ctx.newPage();
     const ending = async () => ({
       text: (await p.innerText("#finished")).replace(/\s+/g, " ").trim(),
       button: (await p.textContent("#continue")).trim(),
     });
-    const later = (id) => url(null, id).replace("compass_contract=1", "compass_contract=9");
 
     // Someone with the once-a-day limit, back after today's session.
     const done = Object.assign(P.newRecord(), { d: today });
     await p.goto(url(JSON.stringify(done), "someone"));
     let e = await ending();
     assert.match(e.text, /That's it for today/);
-    assert.strictEqual(e.button, "Done");
+    assert.strictEqual(e.button, "Close");
     await p.click("#continue");
     assert.doesNotMatch((await ending()).button, /next/i);
 
-    // The test account: no daily limit, so no "for today".
-    await p.goto(later(PICKER));
+    // The test account plays a whole session, all right: no daily limit, so no "for today".
+    await p.clock.install();
+    const rec = sessionRecord("b4", today);
+    await p.goto(url(JSON.stringify(rec), PICKER));
+    await p.click("#start");
+    for (let at = 0; at < 8; at++) {
+      if (!(await visible(p, "question"))) await step(p, 3500);
+      await answerRight(p, await current(p, rec));
+      await check(p);
+      await step(p, 6500);
+    }
+    assert.ok(await visible(p, "finished"), "end screen");
+    if (process.env.SHOTS) await p.screenshot({ path: path.join(process.env.SHOTS, "end-screen-test-account.png") });
     e = await ending();
     assert.doesNotMatch(e.text, /for today|another day/);
-    assert.strictEqual(e.button, "Done");
+    assert.strictEqual(e.button, "Close");
     await p.click("#continue");
     assert.doesNotMatch((await ending()).button, /next/i);
     await ctx.close();

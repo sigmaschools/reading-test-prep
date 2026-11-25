@@ -21,7 +21,7 @@
   // Done on the end screen: only inside Compass, which acts on it. Compass
   // either opens the subject's next step or goes back to Today, and the app
   // cannot tell which (opened alone from the Tests page, nothing comes next),
-  // so the button only says the app is done. The click itself does nothing,
+  // so the button only closes the app. The click itself does nothing,
   // so it is harmless on a shell too old to act on it (that shell moves on by itself).
   var inCompass = new URLSearchParams(location.search).has("compass_contract");
   $("continue").classList.toggle("hidden", !inCompass);
