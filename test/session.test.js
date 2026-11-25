@@ -280,3 +280,40 @@ test("tapping every sentence after a miss: the paragraph is marked, the count is
     await browser.close();
   }
 });
+
+// The end screen says only what is true wherever the app was opened from:
+// on a subject's last step, or opened alone from the Tests page, nothing
+// comes next, so the button is "Done" and never promises a next step. The
+// test account has no once-a-day limit, so it is not told "that's it for today".
+test("the end screen promises nothing that may not come", { skip }, async () => {
+  const browser = await chromium.launch();
+  try {
+    const ctx = await browser.newContext({ viewport: { width: 1052, height: 646 } });
+    const p = await ctx.newPage();
+    const ending = async () => ({
+      text: (await p.innerText("#finished")).replace(/\s+/g, " ").trim(),
+      button: (await p.textContent("#continue")).trim(),
+    });
+    const later = (id) => url(null, id).replace("compass_contract=1", "compass_contract=9");
+
+    // Someone with the once-a-day limit, back after today's session.
+    const done = Object.assign(P.newRecord(), { d: today });
+    await p.goto(url(JSON.stringify(done), "someone"));
+    let e = await ending();
+    assert.match(e.text, /That's it for today/);
+    assert.strictEqual(e.button, "Done");
+    await p.click("#continue");
+    assert.doesNotMatch((await ending()).button, /next/i);
+
+    // The test account: no daily limit, so no "for today".
+    await p.goto(later(PICKER));
+    e = await ending();
+    assert.doesNotMatch(e.text, /for today|another day/);
+    assert.strictEqual(e.button, "Done");
+    await p.click("#continue");
+    assert.doesNotMatch((await ending()).button, /next/i);
+    await ctx.close();
+  } finally {
+    await browser.close();
+  }
+});
