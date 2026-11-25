@@ -191,7 +191,7 @@
       q.phase = "retry";
       strikeWrong();
       // Leaving and coming back does not skip the proof step or reset its count.
-      if (typeof p.proofTaps === "number") {
+      if (typeof p.proofTaps === "number" && passage && item.evidence && item.evidence.length) {
         q.proofTaps = p.proofTaps;
         q.proved = !!p.proved;
         if (!q.proved) q.phase = "evidence";

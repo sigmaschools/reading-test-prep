@@ -256,6 +256,7 @@ test("tapping every sentence after a miss: the paragraph is marked, the count is
         assert.ok(await p.$eval("#check", (b) => b.disabled), "no answering again before the proof is found");
       }
     }
+    assert.ok(wrong >= 2, "the sweep passed the mark and the reload");
     assert.match(await p.textContent("#feedback"), /Now answer again/);
     assert.deepStrictEqual(await hinted(), [], "the mark goes once the proof is found");
 
