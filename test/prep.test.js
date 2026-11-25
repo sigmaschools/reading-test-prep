@@ -187,3 +187,57 @@ test("picking a level drops today's unfinished session and plans a fresh one at 
   assert.strictEqual(r.t, null);
   assert.strictEqual(s.at, 0);
 });
+
+// ---------- the proof step after a miss (issue 15) ----------
+
+test("a sentence's paragraph counts paragraphs from 0", () => {
+  const p = P.findPassage(B, "p-0001");
+  assert.strictEqual(P.paragraphOf(p, 0), 0);
+  assert.strictEqual(P.paragraphOf(p, 2), 1);
+  assert.strictEqual(P.paragraphOf(p, 16), 4);
+  assert.strictEqual(P.paragraphOf(p, 99), -1);
+});
+
+test("the hint marks the paragraph holding most of the proof, the earlier one on a tie", () => {
+  const p = P.findPassage(B, "p-0001");
+  // Proof sentences 7 and 8 are in paragraph 2, sentence 16 in paragraph 4.
+  assert.strictEqual(P.proofParagraph(P.findItem(B, "q-0001-1"), p), 2);
+  assert.strictEqual(P.proofParagraph({ evidence: [16, 2] }, p), 1);
+});
+
+test("a wrong proof tap counts, and the second one marks the paragraph", () => {
+  const item = P.findItem(B, "q-0001-1");
+  const p = P.findPassage(B, "p-0001");
+  let t = P.proofTap(item, p, 0, 0);
+  assert.deepStrictEqual([t.right, t.wrong, t.hint], [false, 1, null]);
+  assert.match(t.say, /Not that one/);
+  t = P.proofTap(item, p, t.wrong, 1);
+  assert.deepStrictEqual([t.right, t.wrong, t.hint], [false, 2, 2]);
+  assert.match(t.say, /marked paragraph/);
+  // Taps after the hint, inside or outside the marked paragraph, still count.
+  t = P.proofTap(item, p, t.wrong, 3);
+  assert.deepStrictEqual([t.right, t.wrong, t.hint], [false, 3, 2]);
+  t = P.proofTap(item, p, t.wrong, 6);
+  assert.deepStrictEqual([t.right, t.wrong, t.hint], [false, 4, 2]);
+  // A proving sentence ends the step, whichever paragraph it is in, and keeps the count.
+  t = P.proofTap(item, p, t.wrong, 16);
+  assert.deepStrictEqual([t.right, t.wrong], [true, 4]);
+  assert.match(t.say, /answer again/);
+});
+
+test("tapping every sentence from the top is no longer a quiet way through", () => {
+  const item = P.findItem(B, "q-0001-1");
+  const p = P.findPassage(B, "p-0001");
+  let wrong = 0;
+  let t;
+  for (let i = 0; ; i++) {
+    t = P.proofTap(item, p, wrong, i);
+    wrong = t.wrong;
+    if (t.right) break;
+  }
+  // The sweep reached the proof, but every wrong tap is on the record, and
+  // from the second one on the marked paragraph showed where to look.
+  assert.strictEqual(wrong, 7);
+  assert.strictEqual(P.proofHint(item, p, wrong), 2);
+  assert.strictEqual(P.proofHint(item, p, 1), null);
+});

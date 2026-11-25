@@ -207,3 +207,76 @@ test("the level row switches the test account to that level", { skip }, async ()
     await browser.close();
   }
 });
+
+// Issue 15: the proof step after a miss could be passed by tapping every
+// sentence. Now the second wrong tap marks the paragraph, leaving does not
+// skip the step, and the report says how many wrong taps it took.
+test("tapping every sentence after a miss: the paragraph is marked, the count is reported", { skip, timeout: 60000 }, async () => {
+  const browser = await chromium.launch();
+  try {
+    const p = await browser.newPage({ viewport: { width: 1194, height: 834 } });
+    await p.clock.install();
+    const id = "student-proof";
+    const rec = sessionRecord("b4", today);
+    await p.goto(url(JSON.stringify(rec), id));
+    await p.click("#start");
+    await step(p, 3500);
+    const it = await current(p, rec);
+    assert.ok(it.evidence && it.evidence.length, "the first question asks for proof after a miss");
+    const passage = P.findPassage(BANK, rec.t.steps[0].passage);
+    const marked = P.proofParagraph(it, passage);
+    const hinted = () => p.$$eval("#passage p.proof-hint", (ps) => ps.map((e) => Number(e.dataset.p)));
+
+    await answerWrong(p, it, 1);
+    await check(p);
+    assert.match(await p.textContent("#feedback"), /Tap the sentence/);
+
+    // Tap from the bottom of the passage up, skipping nothing.
+    const n = await p.locator("#passage .s").count();
+    let wrong = 0;
+    for (let i = n - 1; i >= 0; i--) {
+      await p.locator("#passage .s").nth(i).click();
+      if (it.evidence.indexOf(i) >= 0) break;
+      wrong++;
+      if (wrong === 1) {
+        assert.deepStrictEqual(await hinted(), [], "nothing is marked after one wrong tap");
+        assert.match(await p.textContent("#feedback"), /Not that one\. Look for/);
+      }
+      if (wrong === 2) {
+        assert.deepStrictEqual(await hinted(), [marked], "the second wrong tap marks the proof's paragraph");
+        assert.match(await p.textContent("#feedback"), /marked paragraph/);
+        // Leave now and come back: still the proof step, still marked, count kept.
+        const st = (await reports(p, "state"))[0].data;
+        assert.strictEqual(JSON.parse(st).t.pending.proofTaps, 2);
+        await p.goto(url(st, id));
+        await p.click("#start");
+        if (!(await visible(p, "question"))) await step(p, 3500);
+        assert.match(await p.textContent("#feedback"), /tried this one before\. Tap the sentence/);
+        assert.deepStrictEqual(await hinted(), [marked]);
+        assert.ok(await p.$eval("#check", (b) => b.disabled), "no answering again before the proof is found");
+      }
+    }
+    assert.ok(wrong >= 2, "the sweep passed the mark and the reload");
+    assert.match(await p.textContent("#feedback"), /Now answer again/);
+    assert.deepStrictEqual(await hinted(), [], "the mark goes once the proof is found");
+
+    // Finish the session right, then read the report.
+    await answerRight(p, it);
+    await check(p);
+    for (let at = 1; at < 8; at++) {
+      await step(p, 3500);
+      if (!(await visible(p, "question"))) await step(p, 3500);
+      const q = await current(p, rec);
+      await answerRight(p, q);
+      await check(p);
+    }
+    await step(p, 2000);
+    assert.ok(await visible(p, "finished"));
+    const items = (await reports(p, "part"))[0].items;
+    assert.strictEqual(items[0].proofTaps, wrong);
+    assert.strictEqual(items[0].rightAfterCorrection, true);
+    for (const x of items.slice(1)) assert.ok(!("proofTaps" in x), "no count on a question without the proof step");
+  } finally {
+    await browser.close();
+  }
+});

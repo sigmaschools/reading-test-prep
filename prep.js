@@ -274,6 +274,60 @@
     return out;
   }
 
+  /** The paragraph (from 0) a sentence index falls in, or -1. */
+  function paragraphOf(passage, i) {
+    var at = 0;
+    for (var p = 0; p < passage.paragraphs.length; p++) {
+      at += passage.paragraphs[p].length;
+      if (i >= 0 && i < at) return p;
+    }
+    return -1;
+  }
+
+  // After a miss the student taps the sentence that proves the right answer.
+  // Tapping down the passage until one is accepted would teach guessing, so
+  // from the second wrong tap the paragraph holding the proof is marked, and
+  // every wrong tap is reported to guides (issue 15).
+  var HINT_AFTER = 2;
+
+  /** The paragraph to mark: the one holding most proving sentences, the first on a tie. */
+  function proofParagraph(item, passage) {
+    var count = {};
+    var best = -1;
+    (item.evidence || []).forEach(function (i) {
+      var p = paragraphOf(passage, i);
+      if (p < 0) return;
+      count[p] = (count[p] || 0) + 1;
+      if (best < 0 || count[p] > count[best] || (count[p] === count[best] && p < best)) best = p;
+    });
+    return best < 0 ? null : best;
+  }
+
+  /** The marked paragraph after `wrong` wrong taps, or null while there is none. */
+  function proofHint(item, passage, wrong) {
+    return wrong >= HINT_AFTER ? proofParagraph(item, passage) : null;
+  }
+
+  /**
+   * One tap on sentence `i` in the proof step, after `wrong` wrong taps.
+   * Returns { right, wrong (the new count), hint (paragraph or null), say }.
+   */
+  function proofTap(item, passage, wrong, i) {
+    if ((item.evidence || []).indexOf(i) >= 0) {
+      return { right: true, wrong: wrong, hint: proofHint(item, passage, wrong), say: "Yes, that's the one. Now answer again." };
+    }
+    var n = wrong + 1;
+    var hint = proofHint(item, passage, n);
+    return {
+      right: false,
+      wrong: n,
+      hint: hint,
+      say: hint === null
+        ? "Not that one. Look for the sentence that proves the right answer."
+        : "Not that one. The proof is in the marked paragraph. Read it again.",
+    };
+  }
+
   function findPassage(bank, id) {
     for (var i = 0; i < bank.passages.length; i++) if (bank.passages[i].id === id) return bank.passages[i];
     return null;
@@ -449,6 +503,10 @@
     findItem: findItem,
     findPassage: findPassage,
     sentences: sentences,
+    paragraphOf: paragraphOf,
+    proofParagraph: proofParagraph,
+    proofHint: proofHint,
+    proofTap: proofTap,
     nearestBand: nearestBand,
     canPickLevel: canPickLevel,
     levels: levels,
