@@ -82,6 +82,9 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid var(--teal);
 .s.picked { background: var(--mark); }
 .s.nope { background: var(--miss-soft); }
 .s.good { background: var(--right-soft); box-shadow: 0 0 0 2px var(--right-soft); }
+/* After two wrong proof taps: the paragraph that holds the proof, the rest set back. */
+.passage p.proof-hint { background: var(--teal-soft); border-left: 4px solid var(--teal); border-radius: 6px; margin-left: -16px; margin-right: -12px; padding: 6px 12px; transition: opacity .2s; }
+.passage:has(p.proof-hint) p:not(.proof-hint) { opacity: .45; transition: opacity .2s; }
 .side { padding: 30px 36px 40px; display: flex; flex-direction: column; }
 /* Beside a passage it stays in view as the passage scrolls, while it fits (app.js pinSide). */
 .side.pin { position: sticky; top: 0; }

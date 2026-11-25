@@ -7,7 +7,7 @@
 (function () {
   "use strict";
 
-  var VERSION = "0.3.0";
+  var VERSION = "0.4.0";
   var compass = CompassApp.launch({ appVersion: VERSION });
   var bank = READING_BANK;
   var today = compass.today;
@@ -177,6 +177,8 @@
       min: Prep.minSeconds(item, passage, !prev || prev.passage !== step.passage) * 1000,
       choice: initialChoice(item),
       struck: [],
+      proofTaps: null, // wrong taps in the proof step; null until the step is asked
+      proved: false,
     };
     // A first try already made on an earlier visit today still counts as the first try.
     var p = session.pending;
@@ -188,11 +190,20 @@
       q.rapid = p.rapid;
       q.phase = "retry";
       strikeWrong();
+      // Leaving and coming back does not skip the proof step or reset its count.
+      if (typeof p.proofTaps === "number") {
+        q.proofTaps = p.proofTaps;
+        q.proved = !!p.proved;
+        if (!q.proved) q.phase = "evidence";
+      }
     }
     drawPassage();
     drawAsk();
     $("feedback").textContent = "";
-    if (q.tries === 1) feedback("do", "You tried this one before. Answer it again.");
+    if (q.phase === "evidence") {
+      feedback("do", "You tried this one before. Tap the sentence in the passage that shows the right answer.");
+      markHint(Prep.proofHint(item, passage, q.proofTaps), false);
+    } else if (q.tries === 1) feedback("do", "You tried this one before. Answer it again.");
     var prog = $("progress");
     prog.textContent = "";
     prog.append(progressBar(session.at));
@@ -230,8 +241,8 @@
     // A poem's strings are its lines, one under the other; a stanza is a paragraph.
     box.classList.toggle("poem", p.genre === "poem");
     var idx = 0;
-    p.paragraphs.forEach(function (para) {
-      var pe = el("p");
+    p.paragraphs.forEach(function (para, n) {
+      var pe = el("p", { "data-p": String(n) });
       para.forEach(function (s, j) {
         var i = idx++;
         var span = el("span", { cls: "s", "data-i": String(i), text: s });
@@ -243,6 +254,17 @@
     });
     var tapping = q.item.format === "sentence" && q.phase !== "done";
     box.classList.toggle("tapping", tapping || q.phase === "evidence");
+  }
+
+  /** Mark the paragraph that holds the proof (null: none), bringing it into view the first time. */
+  function markHint(n, scroll) {
+    var all = $("passage").querySelectorAll("p[data-p]");
+    for (var i = 0; i < all.length; i++) {
+      var on = n !== null && Number(all[i].dataset.p) === n;
+      var was = all[i].classList.contains("proof-hint");
+      all[i].classList.toggle("proof-hint", on);
+      if (on && !was && scroll && all[i].scrollIntoView) all[i].scrollIntoView({ block: "nearest", behavior: "smooth" });
+    }
   }
 
   function sentenceEl(i) {
@@ -443,21 +465,31 @@
 
   function tapSentence(i) {
     if (q.phase === "evidence") {
-      var good = q.item.evidence.indexOf(i) >= 0;
+      var t = Prep.proofTap(q.item, q.passage, q.proofTaps || 0, i);
+      q.proofTaps = t.wrong;
       // The explanation of the miss stays; only the line saying what to do changes.
-      if (good) {
+      if (t.right) {
         sentenceEl(i).classList.add("good");
+        q.proved = true;
         q.phase = "retry";
         $("passage").classList.remove("tapping");
-        sayDo("Yes, that's the one. Now answer again.");
+        markHint(null, false);
+        sayDo(t.say);
         redraw();
         showFeedback();
       } else {
-        sayDo("Not that one. Look for the sentence that proves the right answer.");
+        sayDo(t.say);
         // An answer where the finger is, since the message may be off screen.
         var s = sentenceEl(i);
         s.classList.add("nope");
         setTimeout(function () { s.classList.remove("nope"); }, 1200);
+        markHint(t.hint, true);
+      }
+      // Keep the count and the step even if the student leaves now.
+      if (session.pending && session.pending.at === session.at) {
+        session.pending.proofTaps = q.proofTaps;
+        session.pending.proved = q.proved;
+        save();
       }
       return;
     }
@@ -503,6 +535,10 @@
       feedback("miss", box);
       if (q.passage && q.item.evidence && q.item.evidence.length) {
         q.phase = "evidence";
+        q.proofTaps = 0;
+        session.pending.proofTaps = 0;
+        session.pending.proved = false;
+        save();
         $("feedback").append(el("div", { cls: "fb do", text: "Tap the sentence in the passage that shows the right answer." }));
         $("passage").classList.add("tapping");
       } else {
@@ -569,6 +605,7 @@
       rapid: q.rapid,
       ms: q.ms,
       answer: describe(q.item, q.firstAnswer),
+      proofTaps: q.proofTaps,
     };
     Prep.recordAnswer(record, q.item, q.first, today);
     session.pending = null;
@@ -611,7 +648,7 @@
     save();
     var items = session.results.map(function (r) {
       var it = Prep.findItem(bank, r.item);
-      return {
+      var item = {
         id: it.id,
         skill: Prep.skillId(it),
         prompt: promptOf(it),
@@ -622,6 +659,9 @@
         rightAfterCorrection: !r.first && r.final,
         rapid: r.rapid,
       };
+      // Wrong taps before the proving sentence was found, on a question that asked for it.
+      if (typeof r.proofTaps === "number") item.proofTaps = r.proofTaps;
+      return item;
     });
     Prep.finishSession(record, bank, session);
     compass.finishPart({
