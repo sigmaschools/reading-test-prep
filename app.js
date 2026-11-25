@@ -7,7 +7,7 @@
 (function () {
   "use strict";
 
-  var VERSION = "0.4.0";
+  var VERSION = "0.4.1";
   var compass = CompassApp.launch({ appVersion: VERSION });
   var bank = READING_BANK;
   var today = compass.today;
@@ -18,15 +18,18 @@
   // The Test Learner gets a level switch and no once-a-day limit (prep.js says why).
   var picker = Prep.canPickLevel(profile);
 
-  // Continue on the end screen: only inside Compass, which acts on it. The
-  // click itself does nothing but say what is coming, so it is harmless on a
-  // shell too old to act on it (that shell moves on by itself).
+  // Done on the end screen: only inside Compass, which acts on it. Compass
+  // either opens the subject's next step or goes back to Today, and the app
+  // cannot tell which (opened alone from the Tests page, nothing comes next),
+  // so the button only closes the app. The click itself does nothing,
+  // so it is harmless on a shell too old to act on it (that shell moves on by itself).
   var inCompass = new URLSearchParams(location.search).has("compass_contract");
   $("continue").classList.toggle("hidden", !inCompass);
   $("continue").addEventListener("click", function () {
     $("continue").disabled = true;
-    $("continue").textContent = "Opening the next step…";
   });
+  // The test account has no once-a-day limit: it is never told "that's it for today".
+  $("for-today").classList.toggle("hidden", picker);
 
   function show(id) {
     var all = document.querySelectorAll("body > section");
